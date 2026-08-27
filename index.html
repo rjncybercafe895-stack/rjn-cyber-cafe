@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Business | Official Website</title>
+    <title>RJN Cyber Cafe | Digital Services</title>
 
     <style>
         * {
@@ -14,9 +14,13 @@
             font-family: Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: #f5f7fb;
-            color: #222;
+            color: #1f2937;
         }
 
         header {
@@ -26,6 +30,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
@@ -37,15 +44,20 @@
             color: white;
             text-decoration: none;
             margin-left: 20px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
         }
 
         .hero {
-            min-height: 70vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             color: white;
         }
@@ -69,11 +81,31 @@
             font-weight: bold;
             background: white;
             color: #2563eb;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        .whatsapp {
+            background: #25D366;
+            color: white;
         }
 
         .section {
-            padding: 60px 7%;
+            padding: 65px 7%;
             text-align: center;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
         }
 
         .cards {
@@ -86,14 +118,80 @@
 
         .card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            width: 280px;
+            padding: 25px;
+            border-radius: 14px;
+            width: 300px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
 
         .card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-top: 15px;
+        }
+
+        .free {
+            color: #16a34a;
+        }
+
+        .documents {
+            background: #eef4ff;
+        }
+
+        .document-box {
+            max-width: 650px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .document-box h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2563eb;
+        }
+
+        .document-box li {
+            list-style: none;
+            padding: 9px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .document-box li:last-child {
+            border-bottom: none;
+        }
+
+        .contact {
+            background: white;
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: 30px auto 0;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f5f7fb;
+        }
+
+        .contact-box p {
+            margin: 12px 0;
+            font-size: 17px;
         }
 
         footer {
@@ -103,7 +201,14 @@
             padding: 25px;
         }
 
-        @media (max-width: 600px) {
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 700px) {
+
             header {
                 flex-direction: column;
                 gap: 12px;
@@ -111,6 +216,11 @@
 
             nav a {
                 margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 70vh;
             }
 
             .hero h1 {
@@ -120,89 +230,273 @@
             .hero p {
                 font-size: 17px;
             }
+
+            .section {
+                padding: 50px 5%;
+            }
+
+            .section h2 {
+                font-size: 27px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
-        <div class="logo">My Business</div>
+
+        <div class="logo">
+            RJN Cyber Cafe
+        </div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#documents">Documents</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
+
+    <!-- HERO -->
     <section class="hero" id="home">
+
         <div>
-            <h1>Welcome to My Business 🚀</h1>
+
+            <h1>RJN Cyber Cafe 🚀</h1>
 
             <p>
-                Professional service you can trust.
+                Digital Services Made Easy & Fast
             </p>
 
-            <a class="button" href="tel:+919365414365">
+            <a class="button"
+               href="tel:+919365414365">
                 📞 Call Now
             </a>
 
-            <a class="button" href="https://wa.me/919365414365">
+            <a class="button whatsapp"
+               href="https://wa.me/919365414365"
+               target="_blank">
                 💬 WhatsApp
             </a>
+
         </div>
+
     </section>
 
+
+    <!-- SERVICES -->
     <section class="section" id="services">
-        <h2>Our Services</h2>
+
+        <h2>📋 Our Services & Charges</h2>
+
+        <p class="subtitle">
+            Affordable digital and online services
+        </p>
+
 
         <div class="cards">
 
+            <!-- PAN IDs -->
+
             <div class="card">
-                <h3>⭐ Quality Service</h3>
-                <p>
-                    We provide reliable and professional services.
-                </p>
+                <h3>🪪 PAN Retailer ID</h3>
+                <p>Get your PAN Retailer ID.</p>
+                <div class="price">₹199</div>
             </div>
 
             <div class="card">
-                <h3>⚡ Fast Support</h3>
-                <p>
-                    Quick response and helpful customer support.
-                </p>
+                <h3>🪪 PAN Distributor ID</h3>
+                <p>Get your PAN Distributor ID.</p>
+                <div class="price">₹349</div>
             </div>
 
             <div class="card">
-                <h3>🔒 Trusted</h3>
-                <p>
-                    Customer satisfaction is our priority.
-                </p>
+                <h3>🪪 PAN Super Distributor ID</h3>
+                <p>Get your PAN Super Distributor ID.</p>
+                <div class="price">₹799</div>
+            </div>
+
+
+            <!-- RECHARGE -->
+
+            <div class="card">
+                <h3>📱 Mobile Recharge Retailer ID</h3>
+                <p>Retailer ID for mobile recharge services.</p>
+                <div class="price free">FREE</div>
+            </div>
+
+            <div class="card">
+                <h3>📱 Mobile Recharge Distributor ID</h3>
+                <p>Distributor ID for recharge services.</p>
+                <div class="price">₹49</div>
+            </div>
+
+            <div class="card">
+                <h3>📱 Mobile Recharge Master Distributor ID</h3>
+                <p>Master Distributor ID.</p>
+                <div class="price">₹99</div>
+            </div>
+
+
+            <!-- DOCUMENT SERVICES -->
+
+            <div class="card">
+                <h3>📄 PAN Apply</h3>
+                <p>Apply for PAN service.</p>
+                <div class="price">₹199</div>
+            </div>
+
+            <div class="card">
+                <h3>✏️ PAN Correction</h3>
+                <p>PAN correction service.</p>
+                <div class="price">₹199</div>
+            </div>
+
+            <div class="card">
+                <h3>👷 E-Shram</h3>
+                <p>E-Shram related online service.</p>
+                <div class="price">₹99</div>
+            </div>
+
+            <div class="card">
+                <h3>🏥 Ayushman Download</h3>
+                <p>Ayushman document download service.</p>
+                <div class="price">₹99</div>
+            </div>
+
+            <div class="card">
+                <h3>🖼️ Compress Image</h3>
+                <p>Reduce image file size.</p>
+                <div class="price free">FREE</div>
+            </div>
+
+            <div class="card">
+                <h3>📑 Compress PDF</h3>
+                <p>Reduce PDF file size.</p>
+                <div class="price free">FREE</div>
+            </div>
+
+            <div class="card">
+                <h3>📄 Resume</h3>
+                <p>Professional resume preparation.</p>
+                <div class="price">₹49</div>
+            </div>
+
+            <div class="card">
+                <h3>📸 Passport Photo</h3>
+                <p>Passport-size photo service.</p>
+                <div class="price free">FREE</div>
+            </div>
+
+            <div class="card">
+                <h3>🗳️ Voter ID Mobile Link</h3>
+                <p>Voter ID mobile linking service.</p>
+                <div class="price">₹99</div>
             </div>
 
         </div>
+
     </section>
 
-    <section class="section" id="contact">
-        <h2>Contact Us</h2>
 
-        <p style="margin: 15px 0;">
-            📍 Your Address Here Assam , sribhumi ,kalima bazar
+    <!-- PAN DOCUMENTS -->
+    <section class="section documents" id="documents">
+
+        <h2>📄 PAN ID - Required Documents</h2>
+
+        <p class="subtitle">
+            Please keep the following details ready
         </p>
 
-        <p style="margin-bottom: 20px;">
-            📞 +91 93654 14365
-        </p>
+        <div class="document-box">
 
-        <a class="button"
-           style="background:#2563eb;color:white;"
-           href="https://wa.me/919365414365">
-            💬 Contact on WhatsApp
-        </a>
+            <h3>Required Details</h3>
+
+            <ul>
+
+                <li>🔹 Name</li>
+
+                <li>🔹 Shop Name</li>
+
+                <li>🔹 Shop Address</li>
+
+                <li>🔹 Pin Code</li>
+
+                <li>🔹 State</li>
+
+                <li>🔹 Mobile Number</li>
+
+                <li>🔹 Email ID</li>
+
+                <li>🔹 Aadhaar Number</li>
+
+                <li>🔹 PAN Number</li>
+
+            </ul>
+
+            <p class="note">
+                Requirements may vary depending on the service.
+                Please contact us before submitting sensitive documents.
+            </p>
+
+        </div>
+
     </section>
 
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+
+        <h2>📞 Contact Us</h2>
+
+        <p class="subtitle">
+            We are here to help you
+        </p>
+
+        <div class="contact-box">
+
+            <p>
+                📍 <strong>Address:</strong><br>
+                Assam, Sribhumi, Kalima Bazar
+            </p>
+
+            <p>
+                📞 <strong>Mobile:</strong><br>
+                +91 93654 14365
+            </p>
+
+            <a class="button whatsapp"
+               href="https://wa.me/919365414365"
+               target="_blank">
+                💬 Contact on WhatsApp
+            </a>
+
+            <a class="button"
+               href="tel:+919365414365">
+                📞 Call Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 My Business. All Rights Reserved.</p>
+
+        <p>
+            © 2026 RJN Cyber Cafe. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
