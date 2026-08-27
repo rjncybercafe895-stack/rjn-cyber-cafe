@@ -210,6 +210,13 @@ input,select{
     margin-top:20px;
 }
 
+.address-box{
+    margin-top:20px;
+    background:#eef4ff;
+    padding:20px;
+    border-radius:12px;
+}
+
 footer{
     background:#071d40;
     color:white;
@@ -229,6 +236,7 @@ footer{
 
 <header>
 <div class="nav">
+
 <div class="logo">
 <div class="logo-circle">RJN<br>PAN</div>
 RJN Digital Pan Center
@@ -240,12 +248,15 @@ RJN Digital Pan Center
 <a href="#recharge">Mobile Recharge</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </div>
 </header>
+
 
 <!-- HOME -->
 
 <div id="home" class="hero">
+
 <h1>RJN Digital Pan Center</h1>
 
 <p>
@@ -254,13 +265,16 @@ Simple registration and fast assistance.
 </p>
 
 <a class="btn" href="#pan">PAN CARD ID</a>
+
 <a class="btn whatsapp"
-href="https://wa.me/91XXXXXXXXXX?text=Hello%20RJN%20Digital%20Pan%20Center%2C%20I%20need%20PAN%20related%20service.">
+href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center%2C%20I%20need%20PAN%20related%20service.">
 WhatsApp
 </a>
+
 </div>
 
-<!-- PAN -->
+
+<!-- PAN CARD -->
 
 <section id="pan">
 
@@ -270,15 +284,22 @@ WhatsApp
 </div>
 
 <div class="notice">
+
 <strong>📢 PAN CARD RELATED WORK</strong><br>
+
 For PAN Card related services, registration and support,
 please contact us on WhatsApp.
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
+
 <h3>Retailer ID</h3>
+
 <div class="price">₹199</div>
 
 <ul>
@@ -288,14 +309,18 @@ please contact us on WhatsApp.
 <li>✓ Digital service support</li>
 </ul>
 
-<button class="btn" onclick="openForm('PAN Retailer ID','199')">
+<button class="btn"
+onclick="openForm('PAN Retailer ID','199')">
 Register Now →
 </button>
+
 </div>
 
 
 <div class="card">
+
 <h3>Distributor ID</h3>
+
 <div class="price">₹349</div>
 
 <ul>
@@ -305,14 +330,18 @@ Register Now →
 <li>✓ Digital service support</li>
 </ul>
 
-<button class="btn" onclick="openForm('PAN Distributor ID','349')">
+<button class="btn"
+onclick="openForm('PAN Distributor ID','349')">
 Register Now →
 </button>
+
 </div>
 
 
 <div class="card">
+
 <h3>Super Distributor ID</h3>
+
 <div class="price">₹799</div>
 
 <ul>
@@ -322,9 +351,11 @@ Register Now →
 <li>✓ PAN related digital services</li>
 </ul>
 
-<button class="btn" onclick="openForm('PAN Super Distributor ID','799')">
+<button class="btn"
+onclick="openForm('PAN Super Distributor ID','799')">
 Register Now →
 </button>
+
 </div>
 
 </div>
@@ -341,14 +372,21 @@ Register Now →
 <section id="recharge">
 
 <div class="section-title">
+
 <h2>📱 MOBILE RECHARGE ID</h2>
+
 <p>Choose your Mobile Recharge plan.</p>
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
+
 <h3>Retailer ID</h3>
+
 <div class="price">FREE</div>
 
 <ul>
@@ -358,14 +396,18 @@ Register Now →
 <li>✓ Digital service support</li>
 </ul>
 
-<button class="btn" onclick="openForm('Mobile Recharge Retailer ID','FREE')">
+<button class="btn"
+onclick="openForm('Mobile Recharge Retailer ID','FREE')">
 Register Now →
 </button>
+
 </div>
 
 
 <div class="card">
+
 <h3>Distributor ID</h3>
+
 <div class="price">₹49</div>
 
 <ul>
@@ -375,14 +417,18 @@ Register Now →
 <li>✓ Digital service support</li>
 </ul>
 
-<button class="btn" onclick="openForm('Mobile Recharge Distributor ID','49')">
+<button class="btn"
+onclick="openForm('Mobile Recharge Distributor ID','49')">
 Register Now →
 </button>
+
 </div>
 
 
 <div class="card">
+
 <h3>Master Distributor ID</h3>
+
 <div class="price">₹99</div>
 
 <ul>
@@ -392,9 +438,11 @@ Register Now →
 <li>✓ Digital service support</li>
 </ul>
 
-<button class="btn" onclick="openForm('Mobile Recharge Master Distributor ID','99')">
+<button class="btn"
+onclick="openForm('Mobile Recharge Master Distributor ID','99')">
 Register Now →
 </button>
+
 </div>
 
 </div>
@@ -402,7 +450,7 @@ Register Now →
 </section>
 
 
-<!-- REGISTRATION PAGE -->
+<!-- REGISTRATION -->
 
 <section id="registration" class="form-page">
 
@@ -414,20 +462,29 @@ Register Now →
 
 <form id="registrationForm">
 
+
 <label>Name *</label>
 <input id="name" type="text" required>
+
 
 <label>Shop Name</label>
 <input id="shop" type="text">
 
+
 <label>Shop Address *</label>
-<input id="address" type="text" required>
+<input id="address" type="text"
+placeholder="Shop Address" required>
+
 
 <label>PIN Code *</label>
-<input id="pin" type="text" required>
+<input id="pin" type="text"
+placeholder="PIN Code" required>
+
 
 <label>State *</label>
+
 <select id="state" required>
+
 <option value="">Select State</option>
 <option>Andhra Pradesh</option>
 <option>Assam</option>
@@ -448,25 +505,40 @@ Register Now →
 <option>Uttar Pradesh</option>
 <option>Uttarakhand</option>
 <option>West Bengal</option>
+
 </select>
+
 
 <label>Mobile Number *</label>
 <input id="mobile" type="tel" required>
 
+
 <label>Email ID</label>
 <input id="email" type="email">
 
-<!-- These fields are intentionally NOT sent to WhatsApp -->
+
+<!-- PAN FIELDS -->
+
 <div id="panFields">
 
 <label>Aadhaar Number *</label>
-<input id="aadhaar" type="text" inputmode="numeric"
-placeholder="Enter only if required for your authorized process">
+
+<input id="aadhaar"
+type="text"
+inputmode="numeric"
+placeholder="Enter Aadhaar Number">
+
 
 <label>PAN Number *</label>
-<input id="panNumber" type="text"
-placeholder="Enter only if required for your authorized process">
+
+<input id="panNumber"
+type="text"
+placeholder="Enter PAN Number">
+
 </div>
+
+
+<!-- PAYMENT -->
 
 <div class="payment">
 
@@ -478,52 +550,108 @@ placeholder="Enter only if required for your authorized process">
 Please pay the exact amount shown above using the QR code below.
 </p>
 
-<!-- REPLACE qr-code.png WITH YOUR OWN QR IMAGE -->
-<img src="qr-code.png" class="qr" alt="Payment QR Code">
+<img src="qr-code.png"
+class="qr"
+alt="Payment QR Code">
+
 
 <strong>After payment, enter your UTR number:</strong>
 
-<input id="utr" class="utr" type="text"
-placeholder="Enter UTR / Transaction ID" required>
+<input id="utr"
+class="utr"
+type="text"
+placeholder="Enter UTR / Transaction ID"
+required>
 
 </div>
 
-<button type="submit" class="btn whatsapp">
+
+<button type="submit"
+class="btn whatsapp">
+
 Submit & Send on WhatsApp
+
 </button>
 
-<button type="button" class="btn"
+
+<button type="button"
+class="btn"
 onclick="goBack()">
+
 ← Back
+
 </button>
+
 
 </form>
 
 </div>
+
 </section>
 
+
+<!-- CONTACT -->
 
 <section id="contact">
 
 <div class="section-title">
+
 <h2>📞 Contact Us</h2>
-<p>For PAN Card related work, message us on WhatsApp.</p>
+
+<p>
+For PAN Card related work, message us on WhatsApp.
+</p>
+
 
 <a class="btn whatsapp"
-href="https://wa.me/91XXXXXXXXXX?text=Hello%20RJN%20Digital%20Pan%20Center">
+href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center">
+
 Message on WhatsApp
+
 </a>
+
+
+<div class="address-box">
+
+<strong>📍 RJN Digital Pan Center</strong>
+
+<p>
+Assam, Karimganj (Sribhumi)<br>
+Kalima Bazar<br>
+PIN: 788712
+</p>
+
+<p style="margin-top:8px;">
+📱 9365414365
+</p>
+
+</div>
+
 </div>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
-<p><strong>RJN Digital Pan Center</strong></p>
-<p>Mobile Recharge & Digital Service Center</p>
+
+<p>
+<strong>RJN Digital Pan Center</strong>
+</p>
+
+<p>
+Mobile Recharge & Digital Service Center
+</p>
+
+<p>
+Assam, Karimganj (Sribhumi), Kalima Bazar - 788712
+</p>
+
 <p style="margin-top:10px;font-size:13px;">
 Please verify service availability, charges and authorization before payment.
 </p>
+
 </footer>
 
 
@@ -531,6 +659,12 @@ Please verify service availability, charges and authorization before payment.
 
 let selectedPlan = "";
 let selectedAmount = "";
+
+
+/* YOUR WHATSAPP NUMBER */
+
+const whatsappNumber = "919365414365";
+
 
 function openForm(plan, amount){
 
@@ -551,6 +685,7 @@ behavior:"smooth"
 
 }
 
+
 function goBack(){
 
 document.getElementById("registration").style.display = "none";
@@ -562,47 +697,78 @@ behavior:"smooth"
 }
 
 
-document.getElementById("registrationForm").addEventListener("submit",function(e){
+document.getElementById("registrationForm")
+.addEventListener("submit",function(e){
 
 e.preventDefault();
 
-const name = document.getElementById("name").value;
-const shop = document.getElementById("shop").value;
-const address = document.getElementById("address").value;
-const pin = document.getElementById("pin").value;
-const state = document.getElementById("state").value;
-const mobile = document.getElementById("mobile").value;
-const email = document.getElementById("email").value;
-const utr = document.getElementById("utr").value;
+
+const name =
+document.getElementById("name").value;
+
+const shop =
+document.getElementById("shop").value;
+
+const address =
+document.getElementById("address").value;
+
+const pin =
+document.getElementById("pin").value;
+
+const state =
+document.getElementById("state").value;
+
+const mobile =
+document.getElementById("mobile").value;
+
+const email =
+document.getElementById("email").value;
+
+const utr =
+document.getElementById("utr").value;
 
 
 /*
-IMPORTANT:
-Aadhaar and PAN numbers are deliberately NOT included
-in the WhatsApp message because they are sensitive identity
-information.
+Aadhaar and PAN numbers are NOT
+included in the WhatsApp message.
 */
 
 const message =
-"PAN CARD / DIGITAL SERVICE REGISTRATION%0A%0A" +
-"Plan: " + selectedPlan + "%0A" +
-"Amount: ₹" + selectedAmount + "%0A%0A" +
 
-"Name: " + name + "%0A" +
-"Shop Name: " + shop + "%0A" +
-"Shop Address: " + address + "%0A" +
-"PIN Code: " + pin + "%0A" +
-"State: " + state + "%0A" +
-"Mobile Number: " + mobile + "%0A" +
-"Email ID: " + email + "%0A" +
-"UTR No: " + utr + "%0A%0A" +
+"PAN CARD / DIGITAL SERVICE REGISTRATION\n\n" +
+
+"Plan: " + selectedPlan + "\n" +
+
+"Amount: ₹" + selectedAmount + "\n\n" +
+
+"Name: " + name + "\n" +
+
+"Shop Name: " + shop + "\n" +
+
+"Shop Address: " + address + "\n" +
+
+"PIN Code: " + pin + "\n" +
+
+"State: " + state + "\n" +
+
+"Mobile Number: " + mobile + "\n" +
+
+"Email ID: " + email + "\n" +
+
+"UTR No: " + utr + "\n\n" +
 
 "Aadhaar & PAN: Submitted through secure registration form.";
 
-const whatsappNumber = "91XXXXXXXXXX";
 
 window.location.href =
-"https://wa.me/" + whatsappNumber + "?text=" + message;
+
+"https://wa.me/" +
+
+whatsappNumber +
+
+"?text=" +
+
+encodeURIComponent(message);
 
 });
 
