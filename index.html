@@ -6,9 +6,6 @@
 
 <title>RJN Digital Pan Center</title>
 
-<meta name="description"
-content="RJN Digital Pan Center - PAN Agent ID, Mobile Recharge ID and Digital Services.">
-
 <style>
 
 *{
@@ -17,102 +14,238 @@ content="RJN Digital Pan Center - PAN Agent ID, Mobile Recharge ID and Digital S
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:#f4f7fb;
     color:#14213d;
     line-height:1.6;
 }
 
+/* ================= HEADER ================= */
+
 header{
-    background:#082b63;
-    color:white;
-    padding:16px 5%;
+    background:#ffbf00;
+    color:#07336f;
+    padding:10px 5%;
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
 }
 
 .nav{
-    max-width:1150px;
+    max-width:1200px;
     margin:auto;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:15px;
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-size:23px;
-    font-weight:bold;
+    gap:10px;
+    font-size:20px;
+    font-weight:800;
 }
 
-.logo-circle{
-    width:50px;
-    height:50px;
+.logo-img{
+    width:55px;
+    height:55px;
     border-radius:50%;
+    object-fit:cover;
     background:white;
-    color:#082b63;
+    border:3px solid white;
+}
+
+nav{
     display:flex;
     align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:12px;
-    text-align:center;
-    line-height:1.1;
+    gap:4px;
+    flex-wrap:wrap;
 }
 
 nav a{
-    color:white;
+    color:#07336f;
     text-decoration:none;
-    margin-left:20px;
+    padding:9px 12px;
+    border-radius:25px;
     font-weight:bold;
+    font-size:14px;
 }
 
-.hero{
-    background:linear-gradient(135deg,#07336f,#174d9b,#5126a8);
+nav a:hover{
+    background:#07336f;
     color:white;
-    text-align:center;
-    padding:85px 20px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:700px;
+    display:flex;
+    align-items:center;
+    padding:80px 6%;
+    position:relative;
+    overflow:hidden;
+    color:white;
+
+    background:
+    radial-gradient(circle at 85% 20%,rgba(255,193,7,.22),transparent 28%),
+    radial-gradient(circle at 15% 90%,rgba(255,193,7,.10),transparent 25%),
+    linear-gradient(135deg,#041f4d,#07336f 50%,#124b91);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    right:-300px;
+    top:-250px;
+    border-radius:50%;
+    border:85px solid rgba(255,193,7,.07);
+}
+
+.hero-content{
+    max-width:800px;
+    position:relative;
+    z-index:2;
+
+    opacity:0;
+    transform:translateY(120px);
+    animation:heroTextUp 2s ease-out forwards;
+}
+
+@keyframes heroTextUp{
+
+    0%{
+        opacity:0;
+        transform:translateY(120px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 .hero h1{
-    font-size:44px;
+    font-size:58px;
+    line-height:1.05;
+    font-weight:900;
     margin-bottom:15px;
 }
 
-.hero p{
-    font-size:19px;
-    max-width:780px;
-    margin:0 auto 25px;
+.hero h2{
+    font-size:40px;
+    line-height:1.2;
+    font-weight:800;
+    margin-bottom:20px;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:30px;
-    border:none;
-    cursor:pointer;
+.gradient-text{
+    background:linear-gradient(
+        90deg,
+        #fff176,
+        #ffc107,
+        #ff9800,
+        #ffd54f
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:760px;
+    color:#f4f7ff;
+    margin-bottom:25px;
+}
+
+.hero-highlight{
+    color:#ffd54f;
+    font-weight:bold;
+}
+
+.hero-features{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    margin:20px 0 25px;
+}
+
+.hero-feature{
+    font-weight:bold;
+}
+
+.hero-feature span{
+    color:#ffc107;
+    margin-right:7px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.hero-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 28px;
+    border-radius:35px;
     text-decoration:none;
     font-weight:bold;
-    background:#ffb900;
-    color:#111;
-    margin:7px;
-    font-size:15px;
+    transition:.3s;
 }
 
-.whatsapp{
+.hero-register{
+    background:#ffc107;
+    color:#07336f;
+}
+
+.hero-register:hover{
+    transform:translateY(-3px);
+    background:#ffd54f;
+}
+
+.hero-whatsapp{
     background:#19b85b;
     color:white;
 }
 
+.hero-whatsapp:hover{
+    background:#159d4d;
+}
+
+.hero-bottom{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+    font-size:14px;
+}
+
+.hero-bottom span{
+    color:#ffc107;
+}
+
+/* ================= SECTIONS ================= */
+
 section{
-    max-width:1150px;
+    max-width:1200px;
     margin:auto;
-    padding:60px 20px;
+    padding:65px 20px;
 }
 
 .section-title{
@@ -121,47 +254,71 @@ section{
 }
 
 .section-title h2{
-    font-size:35px;
+    font-size:36px;
+    color:#07336f;
+    margin-bottom:7px;
 }
 
-.notice{
-    background:#fff3cd;
-    border-left:5px solid #ffb900;
-    padding:18px;
-    border-radius:10px;
-    margin-bottom:30px;
+.section-title p{
+    color:#617086;
 }
+
+/* ================= NOTICE ================= */
+
+.notice{
+    background:linear-gradient(135deg,#fff8dc,#fff0b0);
+    border-left:6px solid #ffb900;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+/* ================= CARDS ================= */
 
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:23px;
 }
 
 .card{
     background:white;
-    border-radius:18px;
-    padding:28px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    border:2px solid #e4e9f2;
-    transition:.25s;
+    border-radius:20px;
+    padding:29px;
+    box-shadow:0 7px 25px rgba(7,51,111,.10);
+    border:1px solid #e1e7f0;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#07336f,#ffc107,#07336f);
 }
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:0 10px 28px rgba(0,0,0,.12);
+    box-shadow:0 14px 32px rgba(7,51,111,.15);
 }
 
 .card h3{
     font-size:25px;
     color:#07336f;
+    margin-top:5px;
 }
 
 .price{
-    font-size:34px;
-    font-weight:bold;
+    font-size:35px;
+    font-weight:900;
     color:#e87500;
-    margin:10px 0 20px;
+    margin:10px 0 18px;
 }
 
 .card ul{
@@ -170,117 +327,346 @@ section{
 }
 
 .card li{
-    margin:11px 0;
-    font-size:15px;
+    margin:10px 0;
+    color:#34445d;
 }
+
+.btn{
+    display:inline-block;
+    padding:13px 24px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:bold;
+    background:#ffc107;
+    color:#07336f;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp{
+    background:#19b85b;
+    color:white;
+}
+
+.whatsapp:hover{
+    background:#159d4d;
+}
+
+.email{
+    background:#07336f;
+    color:white;
+}
+
+.instagram{
+    background:#c13584;
+    color:white;
+}
+
+/* ================= SERVICE CARDS ================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service-card{
+    background:white;
+    padding:24px;
+    border-radius:17px;
+    border:1px solid #e1e7f0;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.service-card h3{
+    color:#07336f;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#53627a;
+}
+
+/* ================= STATUS ================= */
+
+.status-box{
+    max-width:750px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 7px 25px rgba(0,0,0,.08);
+    border-top:5px solid #ffc107;
+}
+
+/* ================= FORM ================= */
 
 .form-page{
     display:none;
 }
 
 .form-box{
-    max-width:700px;
+    max-width:720px;
     margin:auto;
     background:white;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 5px 25px rgba(0,0,0,.1);
+    padding:32px;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.10);
+    border-top:5px solid #ffc107;
 }
 
 .form-box h2{
     color:#07336f;
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
-.selected{
+.selected-plan{
     background:#eef4ff;
     padding:15px;
     border-radius:10px;
-    margin:15px 0;
+    margin-bottom:10px;
 }
 
 label{
     display:block;
     font-weight:bold;
     margin-top:16px;
+    color:#233653;
 }
 
 input,
-select{
+select,
+textarea{
     width:100%;
-    padding:13px;
+    padding:14px;
     border:1px solid #ccd3df;
-    border-radius:8px;
+    border-radius:9px;
     margin-top:6px;
     font-size:16px;
+    outline:none;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
 }
 
 input:focus,
-select:focus{
-    outline:none;
-    border-color:#174d9b;
+select:focus,
+textarea:focus{
+    border-color:#07336f;
+    box-shadow:0 0 0 3px rgba(7,51,111,.08);
 }
 
+/* ================= PAYMENT ================= */
+
 .payment{
-    background:#eef4ff;
-    padding:20px;
-    border-radius:12px;
-    margin-top:25px;
+    background:#eef5ff;
+    padding:22px;
+    border-radius:14px;
+    margin-top:28px;
+}
+
+.payment h3{
+    color:#07336f;
+}
+
+.payment-warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:14px;
+    border-radius:10px;
+    margin-top:15px;
 }
 
 .qr{
-    width:230px;
-    height:230px;
+    width:240px;
+    height:240px;
     object-fit:contain;
     display:block;
-    margin:20px auto;
-    border:8px solid white;
-    box-shadow:0 2px 10px #bbb;
+    margin:22px auto;
+    padding:8px;
+    background:white;
+    border-radius:15px;
+    border:2px solid #07336f;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
 
 .utr{
     margin-top:10px;
 }
 
-.security-note{
-    background:#fff8e1;
-    border-left:4px solid #ffb900;
-    padding:12px;
-    margin-top:18px;
-    border-radius:7px;
-    font-size:13px;
+/* ================= FINAL NOTICE ================= */
+
+.final-notice{
+    max-width:1000px;
+    margin:30px auto 0;
+    background:linear-gradient(135deg,#fff8dc,#fff0b0);
+    border:2px solid #ffc107;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.07);
 }
+
+.final-notice h3{
+    color:#07336f;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.final-notice p{
+    color:#34445d;
+    margin:7px 0;
+}
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:18px;
+}
+
+/* ================= ADDRESS ================= */
 
 .address-box{
-    margin-top:20px;
+    max-width:600px;
+    margin:25px auto 0;
     background:#eef4ff;
-    padding:20px;
-    border-radius:12px;
+    padding:22px;
+    border-radius:14px;
+    border-left:5px solid #ffc107;
 }
+
+.address-box strong{
+    color:#07336f;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-    background:#071d40;
+    background:#061d40;
     color:white;
     text-align:center;
-    padding:30px 20px;
+    padding:35px 20px;
 }
 
-@media(max-width:800px){
+footer strong{
+    color:#ffc107;
+}
 
-    .cards{
+footer p{
+    margin:5px 0;
+    color:#dbe5f5;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .cards,
+    .service-grid{
         grid-template-columns:1fr;
     }
 
     .hero h1{
-        font-size:34px;
+        font-size:45px;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:7px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:8px 14px;
+    }
+
+    .logo{
+        font-size:15px;
+    }
+
+    .logo-img{
+        width:47px;
+        height:47px;
     }
 
     nav{
         display:none;
     }
 
-    .logo{
-        font-size:18px;
+    .hero{
+        min-height:650px;
+        padding:55px 22px;
+    }
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .hero h2{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-btn{
+        width:100%;
+    }
+
+    .hero-bottom{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .form-box{
+        padding:22px 18px;
+    }
+
+    .qr{
+        width:210px;
+        height:210px;
+    }
+
+    .contact-links{
+        flex-direction:column;
+    }
+
+    .contact-links .btn{
+        width:100%;
     }
 
 }
@@ -291,7 +677,9 @@ footer{
 <body>
 
 
-<!-- HEADER -->
+<!-- =====================================================
+HEADER
+===================================================== -->
 
 <header>
 
@@ -299,9 +687,10 @@ footer{
 
 <div class="logo">
 
-<div class="logo-circle">
-RJN<br>PAN
-</div>
+<img
+src="logo.png"
+class="logo-img"
+alt="RJN Digital Pan Center Logo">
 
 RJN Digital Pan Center
 
@@ -310,8 +699,12 @@ RJN Digital Pan Center
 <nav>
 
 <a href="#home">Home</a>
-<a href="#pan">PAN Card ID</a>
-<a href="#recharge">Mobile Recharge</a>
+<a href="#pan">PAN Card</a>
+<a href="#pan-services">PAN Services</a>
+<a href="#voter">Voter ID</a>
+<a href="#print">Print</a>
+<a href="#recharge">Recharge</a>
+<a href="#pan-status">PAN Status</a>
 <a href="#contact">Contact</a>
 
 </nav>
@@ -321,32 +714,85 @@ RJN Digital Pan Center
 </header>
 
 
-<!-- HOME -->
+<!-- =====================================================
+HERO
+===================================================== -->
 
 <div id="home" class="hero">
 
-<h1>RJN Digital Pan Center</h1>
+<div class="hero-content">
+
+<h1>
+RJN DIGITAL PAN CENTER
+</h1>
+
+<h2>
+By <span class="gradient-text">Paperless PAN Apply</span><br>
+With <span class="gradient-text">Digital Service Centre</span>
+</h2>
 
 <p>
-Professional PAN Agent ID, Mobile Recharge ID and Digital Service Support.
-Choose your plan and register easily.
+Get convenient digital PAN and other digital services
+through a simple, fast and easy process.
 </p>
 
-<a class="btn" href="#pan">
-VIEW PAN PLANS
+<div class="hero-features">
+
+<div class="hero-feature">
+<span>✓</span> Fast & Easy Digital Process
+</div>
+
+<div class="hero-feature">
+<span>✓</span> PAN Application & Correction Support
+</div>
+
+<div class="hero-feature">
+<span>✓</span> WhatsApp Support
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<a
+href="#pan"
+class="hero-btn hero-register">
+
+📝 Register Now
+
 </a>
 
-<a class="btn whatsapp"
-href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center%2C%20I%20need%20PAN%20related%20service.">
 
-WhatsApp Us
+<!-- WHATSAPP FIXED -->
+
+<a
+href="https://api.whatsapp.com/send?phone=919365414365"
+target="_blank"
+rel="noopener noreferrer"
+class="hero-btn hero-whatsapp">
+
+💬 WhatsApp
 
 </a>
 
 </div>
 
+<div class="hero-bottom">
 
-<!-- PAN CARD -->
+<div><span>⚡</span> Fast Support</div>
+<div><span>✓</span> Digital Services</div>
+<div><span>🎧</span> WhatsApp Support</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+PAN PLANS
+===================================================== -->
 
 <section id="pan">
 
@@ -355,21 +801,18 @@ WhatsApp Us
 <h2>🪪 PAN CARD AGENT ID</h2>
 
 <p>
-Choose the right plan for your digital service business.
+Choose your plan and register.
 </p>
 
 </div>
 
-
 <div class="notice">
 
-<strong>📢 PAN CARD AGENT ID REGISTRATION</strong>
+<strong>📢 PAN CARD DIGITAL SERVICES</strong><br>
 
-<br>
-
-Select your preferred plan and click
-<strong>Register Now</strong>
-to submit your registration details.
+Choose the PAN Agent plan according to your requirement.
+Availability, permissions and applicable terms depend on the actual
+service provider.
 
 </div>
 
@@ -387,26 +830,19 @@ to submit your registration details.
 
 <ul>
 
-<li>✓ Make Unlimited PAN Applications*</li>
-
-<li>✓ NSDL PAN Agent</li>
-
-<li>✓ UTI 2.0 Service</li>
-
-<li>✓ NSDL 2.0 Service</li>
-
-<li>✓ OTP / Biometric PAN Apply</li>
-
-<li>✓ PAN Apply Without OTP & Biometric*</li>
-
-<li>✓ Automatic Refund*</li>
-
-<li>✓ Free 24×7 WhatsApp Support</li>
+<li>✓ PAN Agent Service</li>
+<li>✓ UTI 2.0 Service*</li>
+<li>✓ PAN Application Support</li>
+<li>✓ PAN Correction Support</li>
+<li>✓ Digital Service Support</li>
+<li>✓ WhatsApp Support</li>
 
 </ul>
 
-<button class="btn"
-onclick="openForm('PAN Retailer ID','199')">
+<button
+type="button"
+class="btn"
+onclick="openForm('PAN Retailer ID','199','pan')">
 
 Register Now →
 
@@ -425,28 +861,19 @@ Register Now →
 
 <ul>
 
-<li>✓ Create Unlimited Retailers*</li>
-
-<li>✓ NSDL PAN Agent</li>
-
-<li>✓ UTI 2.0 Service</li>
-
-<li>✓ NSDL 2.0 Service</li>
-
-<li>✓ OTP / Biometric PAN Apply</li>
-
-<li>✓ PAN Apply Without OTP & Biometric*</li>
-
-<li>✓ Automatic Refund*</li>
-
-<li>✓ Free 24×7 WhatsApp Support</li>
-
-<li>✓ Earn Commission on All Retailer Transactions</li>
+<li>✓ Distributor Service</li>
+<li>✓ Create / Manage Retailers*</li>
+<li>✓ PAN Agent Service*</li>
+<li>✓ PAN Application Support</li>
+<li>✓ PAN Correction Support</li>
+<li>✓ WhatsApp Support</li>
 
 </ul>
 
-<button class="btn"
-onclick="openForm('PAN Distributor ID','349')">
+<button
+type="button"
+class="btn"
+onclick="openForm('PAN Distributor ID','349','pan')">
 
 Register Now →
 
@@ -465,30 +892,19 @@ Register Now →
 
 <ul>
 
-<li>✓ Create Unlimited Distributors / Retailers*</li>
-
-<li>✓ Create Unlimited Retailers*</li>
-
-<li>✓ NSDL PAN Agent</li>
-
-<li>✓ UTI 2.0 Service</li>
-
-<li>✓ NSDL 2.0 Service</li>
-
-<li>✓ OTP / Biometric PAN Apply</li>
-
-<li>✓ PAN Apply Without OTP & Biometric*</li>
-
-<li>✓ Automatic Refund*</li>
-
-<li>✓ Free 24×7 WhatsApp Support</li>
-
-<li>✓ Earn Commission on All Retailer & Distributor Transactions</li>
+<li>✓ Super Distributor Service</li>
+<li>✓ Manage Distributors / Retailers*</li>
+<li>✓ PAN Agent Service*</li>
+<li>✓ PAN Application Support</li>
+<li>✓ PAN Correction Support</li>
+<li>✓ WhatsApp Support</li>
 
 </ul>
 
-<button class="btn"
-onclick="openForm('PAN Super Distributor ID','799')">
+<button
+type="button"
+class="btn"
+onclick="openForm('PAN Super Distributor ID','799','pan')">
 
 Register Now →
 
@@ -498,18 +914,418 @@ Register Now →
 
 </div>
 
+<p style="margin-top:18px;font-size:13px;color:#68768c;">
 
-<p style="margin-top:20px;font-size:13px;">
-
-*Services, permissions, limits, refunds and commissions are subject to
-the applicable service provider's terms and authorization.
+*Availability, permissions, commissions and refund conditions depend
+on the actual service provider.
 
 </p>
 
 </section>
 
 
-<!-- MOBILE RECHARGE -->
+<!-- =====================================================
+PAN SERVICES
+===================================================== -->
+
+<section id="pan-services">
+
+<div class="section-title">
+
+<h2>📄 PAN CARD SERVICES</h2>
+
+<p>
+Digital assistance for various PAN-related services.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+<h3>🆕 PAN Card Apply</h3>
+<p>Assistance for new PAN card application.</p>
+</div>
+
+<div class="service-card">
+<h3>✏️ PAN Card Correction</h3>
+<p>Assistance for eligible PAN detail corrections.</p>
+</div>
+
+<div class="service-card">
+<h3>👤 Name Correction</h3>
+<p>Assistance for eligible name correction requests.</p>
+</div>
+
+<div class="service-card">
+<h3>👨‍👦 Father Name Correction</h3>
+<p>Assistance for eligible father name corrections.</p>
+</div>
+
+<div class="service-card">
+<h3>📅 Date of Birth Correction</h3>
+<p>Assistance for eligible DOB corrections.</p>
+</div>
+
+<div class="service-card">
+<h3>📍 PAN Details Update</h3>
+<p>Assistance for eligible PAN detail updates.</p>
+</div>
+
+<div class="service-card">
+<h3>🔗 PAN-Aadhaar Linking</h3>
+<p>Assistance through the applicable official process.</p>
+</div>
+
+<div class="service-card">
+<h3>🔄 PAN Reprint</h3>
+<p>Assistance for eligible PAN reprint requests.</p>
+</div>
+
+<div class="service-card">
+<h3>🔍 PAN Application Status</h3>
+<p>Track your PAN application through the official portal.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+PAN STATUS
+===================================================== -->
+
+<section id="pan-status">
+
+<div class="section-title">
+
+<h2>🔍 PAN CARD STATUS CHECK</h2>
+
+<p>
+Check your PAN application status through the official PAN service portal.
+</p>
+
+</div>
+
+<div class="status-box">
+
+<h3>
+📄 Track PAN Application
+</h3>
+
+<p style="margin:12px 0 20px;color:#5c6b81;">
+
+Use the official PAN application-status service to track your application.
+
+</p>
+
+
+<!-- EXACT PAN STATUS LINK -->
+
+<a
+href="https://tin.tin.proteantech.in/pantan/StatusTrack.html"
+target="_blank"
+rel="noopener noreferrer"
+class="btn">
+
+🔍 Official PAN Status Check →
+
+</a>
+
+<p style="font-size:13px;margin-top:18px;color:#68768c;">
+
+Official PAN Status Portal – Protean eGov Technologies
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+VOTER SERVICES
+===================================================== -->
+
+<section id="voter">
+
+<div class="section-title">
+
+<h2>🗳️ VOTER ID DIGITAL SERVICES</h2>
+
+<p>
+Choose the required Voter ID service.
+</p>
+
+</div>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>Voter ID Mobile Link</h3>
+
+<div class="price">₹99</div>
+
+<ul>
+
+<li>✓ EPIC Number</li>
+<li>✓ Mobile Number</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('Voter ID Mobile Number Link','99','voter-basic')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Voter ID Original PDF</h3>
+
+<div class="price">₹99</div>
+
+<ul>
+
+<li>✓ EPIC Number</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('Voter ID Original PDF','99','voter-basic')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>New Voter ID Apply</h3>
+
+<div class="price">₹199</div>
+
+<ul>
+
+<li>✓ Required Documents</li>
+<li>✓ Address Proof</li>
+<li>✓ DOB Proof</li>
+<li>✓ Passport Size Photo</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('New Voter ID Apply','199','voter-new')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Voter ID Correction</h3>
+
+<div class="price">₹199</div>
+
+<ul>
+
+<li>✓ Required Documents</li>
+<li>✓ Address Proof</li>
+<li>✓ DOB Proof</li>
+<li>✓ Passport Size Photo</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('Voter ID Correction Apply','199','voter-new')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>Voter ID PVC Card</h3>
+
+<div class="price">Coming Soon</div>
+
+<ul>
+
+<li>✓ PVC Card Print Service</li>
+<li>✓ Available Soon</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+disabled
+style="opacity:.6;cursor:not-allowed;">
+
+Coming Soon
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+PRINT SERVICES
+===================================================== -->
+
+<section id="print">
+
+<div class="section-title">
+
+<h2>🖨️ CARD PRINT SERVICES</h2>
+
+<p>
+Print services for eligible card documents.
+</p>
+
+</div>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>🪪 Aadhaar Original Print</h3>
+
+<div class="price">₹149</div>
+
+<ul>
+
+<li>✓ Aadhaar Print</li>
+<li>✓ Quality Card Print</li>
+<li>✓ Digital Print Service</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('Aadhaar Original Print','149','aadhaar-print')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>💳 PAN Card Print</h3>
+
+<div class="price">₹149</div>
+
+<ul>
+
+<li>✓ PAN Card Print</li>
+<li>✓ Quality Print</li>
+<li>✓ Digital Service</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('PAN Card Print','149','pan-print')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>🪪 Aadhaar PVC Card</h3>
+
+<div class="price">₹149</div>
+
+<ul>
+
+<li>✓ PVC Card Print</li>
+<li>✓ Quality Print</li>
+<li>✓ Digital Service</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('Aadhaar PVC Card Print','149','aadhaar-pvc')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h3>💳 PAN Card PVC Print</h3>
+
+<div class="price">₹149</div>
+
+<ul>
+
+<li>✓ PVC Card Print</li>
+<li>✓ Quality Print</li>
+<li>✓ PAN Reprint Assistance</li>
+
+</ul>
+
+<button
+type="button"
+class="btn"
+onclick="openForm('PAN Card PVC Print','149','pan-pvc')">
+
+Apply Now →
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+MOBILE RECHARGE
+===================================================== -->
 
 <section id="recharge">
 
@@ -523,11 +1339,8 @@ Choose your Mobile Recharge plan.
 
 </div>
 
-
 <div class="cards">
 
-
-<!-- RECHARGE RETAILER -->
 
 <div class="card">
 
@@ -537,733 +1350,4 @@ Choose your Mobile Recharge plan.
 
 <ul>
 
-<li>✓ Mobile Recharge</li>
-
-<li>✓ DTH Recharge</li>
-
-<li>✓ Easy-to-use platform</li>
-
-<li>✓ Digital Service Support</li>
-
-</ul>
-
-<button class="btn"
-onclick="openForm('Mobile Recharge Retailer ID','FREE')">
-
-Register Now →
-
-</button>
-
-</div>
-
-
-<!-- RECHARGE DISTRIBUTOR -->
-
-<div class="card">
-
-<h3>Distributor ID</h3>
-
-<div class="price">₹49</div>
-
-<ul>
-
-<li>✓ Mobile Recharge</li>
-
-<li>✓ DTH Recharge</li>
-
-<li>✓ Retailer Management*</li>
-
-<li>✓ Digital Service Support</li>
-
-</ul>
-
-<button class="btn"
-onclick="openForm('Mobile Recharge Distributor ID','49')">
-
-Register Now →
-
-</button>
-
-</div>
-
-
-<!-- MASTER DISTRIBUTOR -->
-
-<div class="card">
-
-<h3>Master Distributor ID</h3>
-
-<div class="price">₹99</div>
-
-<ul>
-
-<li>✓ Mobile Recharge</li>
-
-<li>✓ DTH Recharge</li>
-
-<li>✓ Distributor / Retailer Management*</li>
-
-<li>✓ Digital Service Support</li>
-
-</ul>
-
-<button class="btn"
-onclick="openForm('Mobile Recharge Master Distributor ID','99')">
-
-Register Now →
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- REGISTRATION -->
-
-<section id="registration" class="form-page">
-
-<div class="form-box">
-
-<h2>📄 Registration Form</h2>
-
-<p>
-Please enter the required details for your selected plan.
-</p>
-
-
-<div class="selected">
-
-<p id="selectedPlan"></p>
-
-<p id="amountText"></p>
-
-</div>
-
-
-<form id="registrationForm">
-
-
-<!-- NAME -->
-
-<label>
-Name *
-</label>
-
-<input
-id="name"
-type="text"
-placeholder="Enter Full Name"
-required
->
-
-
-<!-- PAN ONLY FIELDS -->
-
-<div id="panOnlyFields">
-
-
-<label>
-Shop Name *
-</label>
-
-<input
-id="shop"
-type="text"
-placeholder="Enter Shop Name"
->
-
-
-<label>
-Shop Address *
-</label>
-
-<input
-id="address"
-type="text"
-placeholder="Enter Shop Address"
->
-
-
-<label>
-PIN Code *
-</label>
-
-<input
-id="pin"
-type="text"
-inputmode="numeric"
-maxlength="6"
-placeholder="Enter 6 Digit PIN Code"
->
-
-
-<label>
-Aadhaar Number *
-</label>
-
-<input
-id="aadhaar"
-type="text"
-inputmode="numeric"
-maxlength="12"
-placeholder="Enter Aadhaar Number"
->
-
-
-<label>
-PAN Number *
-</label>
-
-<input
-id="panNumber"
-type="text"
-maxlength="10"
-placeholder="Enter PAN Number"
->
-
-</div>
-
-
-<!-- MOBILE -->
-
-<label>
-Mobile Number *
-</label>
-
-<input
-id="mobile"
-type="tel"
-inputmode="numeric"
-maxlength="10"
-placeholder="Enter Mobile Number"
-required
->
-
-
-<!-- EMAIL -->
-
-<label>
-Email ID *
-</label>
-
-<input
-id="email"
-type="email"
-placeholder="Enter Email ID"
-required
->
-
-
-<!-- STATE -->
-
-<label>
-State *
-</label>
-
-<select id="state" required>
-
-<option value="">
-Select State
-</option>
-
-<option>Andhra Pradesh</option>
-<option>Assam</option>
-<option>Bihar</option>
-<option>Delhi</option>
-<option>Gujarat</option>
-<option>Haryana</option>
-<option>Jharkhand</option>
-<option>Karnataka</option>
-<option>Kerala</option>
-<option>Madhya Pradesh</option>
-<option>Maharashtra</option>
-<option>Odisha</option>
-<option>Punjab</option>
-<option>Rajasthan</option>
-<option>Tamil Nadu</option>
-<option>Telangana</option>
-<option>Uttar Pradesh</option>
-<option>Uttarakhand</option>
-<option>West Bengal</option>
-
-</select>
-
-
-<!-- SECURITY NOTICE -->
-
-<div id="panSecurityNote"
-class="security-note">
-
-<strong>🔐 Important:</strong>
-
-Aadhaar and PAN details are required only where applicable
-for the authorized PAN registration process.
-
-Do not send sensitive identity numbers through WhatsApp.
-
-</div>
-
-
-<!-- PAYMENT -->
-
-<div id="paymentSection" class="payment">
-
-<h3>💰 Payment</h3>
-
-<p id="paymentAmount"></p>
-
-<p style="margin-top:8px;">
-
-Please pay the applicable amount using the payment QR code.
-
-</p>
-
-
-<img
-src="qr-code.png"
-class="qr"
-alt="Payment QR Code"
->
-
-
-<label>
-UTR / Transaction ID *
-</label>
-
-<input
-id="utr"
-class="utr"
-type="text"
-placeholder="Enter UTR / Transaction ID"
->
-
-
-</div>
-
-
-<button
-type="submit"
-class="btn whatsapp">
-
-Submit & Send on WhatsApp
-
-</button>
-
-
-<button
-type="button"
-class="btn"
-onclick="goBack()">
-
-← Back
-
-</button>
-
-
-</form>
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="section-title">
-
-<h2>📞 Contact Us</h2>
-
-<p>
-For PAN Card related work and registration support,
-contact us on WhatsApp.
-</p>
-
-
-<a
-class="btn whatsapp"
-href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center">
-
-📱 WhatsApp: 9365414365
-
-</a>
-
-
-<div class="address-box">
-
-<strong>📍 RJN Digital Pan Center</strong>
-
-<p style="margin-top:8px;">
-
-Assam, Karimganj (Sribhumi)<br>
-
-Kalima Bazar<br>
-
-PIN: 788712
-
-</p>
-
-<p style="margin-top:8px;">
-
-📱 9365414365
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-<strong>RJN Digital Pan Center</strong>
-</p>
-
-<p>
-PAN Agent ID • Mobile Recharge • Digital Services
-</p>
-
-<p>
-Assam, Karimganj (Sribhumi), Kalima Bazar - 788712
-</p>
-
-<p style="margin-top:10px;font-size:13px;">
-
-Please verify service availability, charges, authorization,
-refund policy and applicable terms before payment.
-
-</p>
-
-</footer>
-
-
-
-<script>
-
-let selectedPlan = "";
-let selectedAmount = "";
-
-const whatsappNumber = "919365414365";
-
-
-/* ==========================
-   OPEN REGISTRATION FORM
-========================== */
-
-function openForm(plan, amount){
-
-    selectedPlan = plan;
-    selectedAmount = amount;
-
-
-    document.getElementById("selectedPlan").innerHTML =
-        "<strong>Selected Plan:</strong> " + plan;
-
-
-    document.getElementById("amountText").innerHTML =
-        "<strong>Payment: " +
-        (amount === "FREE"
-        ? "FREE"
-        : "₹" + amount + "/-") +
-        "</strong>";
-
-
-    document.getElementById("paymentAmount").innerHTML =
-        "<strong>Payment: " +
-        (amount === "FREE"
-        ? "FREE"
-        : "₹" + amount + "/-") +
-        "</strong>";
-
-
-    const isMobileRecharge =
-        plan.toLowerCase().includes("mobile recharge");
-
-
-    const panOnlyFields =
-        document.getElementById("panOnlyFields");
-
-
-    const panSecurityNote =
-        document.getElementById("panSecurityNote");
-
-
-    const paymentSection =
-        document.getElementById("paymentSection");
-
-
-    const shop =
-        document.getElementById("shop");
-
-
-    const address =
-        document.getElementById("address");
-
-
-    const pin =
-        document.getElementById("pin");
-
-
-    const aadhaar =
-        document.getElementById("aadhaar");
-
-
-    const panNumber =
-        document.getElementById("panNumber");
-
-
-    const utr =
-        document.getElementById("utr");
-
-
-    /* ==========================
-       MOBILE RECHARGE
-    ========================== */
-
-    if(isMobileRecharge){
-
-        panOnlyFields.style.display = "none";
-
-        panSecurityNote.style.display = "none";
-
-
-        shop.required = false;
-        address.required = false;
-        pin.required = false;
-
-        aadhaar.required = false;
-        panNumber.required = false;
-
-
-        /* FREE RETAILER */
-
-        if(amount === "FREE"){
-
-            paymentSection.style.display = "none";
-
-            utr.required = false;
-
-        }
-
-        /* PAID RECHARGE PLAN */
-
-        else{
-
-            paymentSection.style.display = "block";
-
-            utr.required = true;
-
-        }
-
-    }
-
-
-    /* ==========================
-       PAN CARD
-    ========================== */
-
-    else{
-
-        panOnlyFields.style.display = "block";
-
-        panSecurityNote.style.display = "block";
-
-        paymentSection.style.display = "block";
-
-
-        shop.required = true;
-
-        address.required = true;
-
-        pin.required = true;
-
-        aadhaar.required = true;
-
-        panNumber.required = true;
-
-        utr.required = true;
-
-    }
-
-
-    document.getElementById("registration").style.display =
-        "block";
-
-
-    document.getElementById("registration")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-
-/* ==========================
-   BACK BUTTON
-========================== */
-
-function goBack(){
-
-    document.getElementById("registration").style.display =
-        "none";
-
-    document.getElementById("pan")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-
-/* ==========================
-   FORM SUBMIT
-========================== */
-
-document.getElementById("registrationForm")
-.addEventListener("submit",function(e){
-
-    e.preventDefault();
-
-
-    const name =
-        document.getElementById("name").value.trim();
-
-
-    const shop =
-        document.getElementById("shop").value.trim();
-
-
-    const address =
-        document.getElementById("address").value.trim();
-
-
-    const pin =
-        document.getElementById("pin").value.trim();
-
-
-    const state =
-        document.getElementById("state").value;
-
-
-    const mobile =
-        document.getElementById("mobile").value.trim();
-
-
-    const email =
-        document.getElementById("email").value.trim();
-
-
-    const utr =
-        document.getElementById("utr").value.trim();
-
-
-    const isMobileRecharge =
-        selectedPlan.toLowerCase().includes("mobile recharge");
-
-
-    let message = "";
-
-
-    /* ==========================
-       MOBILE RECHARGE MESSAGE
-    ========================== */
-
-    if(isMobileRecharge){
-
-        message =
-
-        "MOBILE RECHARGE ID REGISTRATION\n\n" +
-
-        "Plan: " + selectedPlan + "\n" +
-
-        "Amount: " +
-        (selectedAmount === "FREE"
-        ? "FREE"
-        : "₹" + selectedAmount) +
-        "\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Mobile Number: " + mobile + "\n" +
-
-        "Email ID: " + email + "\n" +
-
-        "State: " + state;
-
-
-        if(selectedAmount !== "FREE"){
-
-            message +=
-            "\nUTR No: " + utr;
-
-        }
-
-    }
-
-
-    /* ==========================
-       PAN MESSAGE
-    ========================== */
-
-    else{
-
-        message =
-
-        "PAN CARD AGENT ID REGISTRATION\n\n" +
-
-        "Plan: " + selectedPlan + "\n" +
-
-        "Amount: ₹" + selectedAmount + "\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Shop Name: " + shop + "\n" +
-
-        "Shop Address: " + address + "\n" +
-
-        "PIN Code: " + pin + "\n" +
-
-        "State: " + state + "\n" +
-
-        "Mobile Number: " + mobile + "\n" +
-
-        "Email ID: " + email + "\n" +
-
-        "UTR No: " + utr + "\n\n" +
-
-        "Aadhaar & PAN details are required for the authorized " +
-        "registration process and are not included in this WhatsApp message.";
-
-    }
-
-
-    window.location.href =
-
-        "https://wa.me/" +
-
-        whatsappNumber +
-
-        "?text=" +
-
-        encodeURIComponent(message);
-
-});
-
-</script>
-
-</body>
-</html>
+<li>✓ Mobile Rec
