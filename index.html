@@ -25,6 +25,8 @@ body{
     line-height:1.6;
 }
 
+/* ================= HEADER ================= */
+
 header{
     background:#ffbf00;
     color:#07336f;
@@ -82,6 +84,8 @@ nav a:hover{
     color:white;
 }
 
+/* ================= HERO ================= */
+
 .hero{
     min-height:700px;
     display:flex;
@@ -119,6 +123,7 @@ nav a:hover{
 }
 
 @keyframes heroTextUp{
+
     0%{
         opacity:0;
         transform:translateY(120px);
@@ -128,6 +133,7 @@ nav a:hover{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 .hero h1{
@@ -234,6 +240,8 @@ nav a:hover{
     color:#ffc107;
 }
 
+/* ================= SECTIONS ================= */
+
 section{
     max-width:1200px;
     margin:auto;
@@ -255,6 +263,8 @@ section{
     color:#617086;
 }
 
+/* ================= NOTICE ================= */
+
 .notice{
     background:linear-gradient(135deg,#fff8dc,#fff0b0);
     border-left:6px solid #ffb900;
@@ -263,6 +273,8 @@ section{
     margin-bottom:30px;
     box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
+
+/* ================= CARDS ================= */
 
 .cards{
     display:grid;
@@ -345,6 +357,18 @@ section{
     background:#159d4d;
 }
 
+.email{
+    background:#07336f;
+    color:white;
+}
+
+.instagram{
+    background:#c13584;
+    color:white;
+}
+
+/* ================= SERVICE CARDS ================= */
+
 .service-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -368,6 +392,8 @@ section{
     color:#53627a;
 }
 
+/* ================= STATUS ================= */
+
 .status-box{
     max-width:750px;
     margin:auto;
@@ -378,6 +404,8 @@ section{
     box-shadow:0 7px 25px rgba(0,0,0,.08);
     border-top:5px solid #ffc107;
 }
+
+/* ================= FORM ================= */
 
 .form-page{
     display:none;
@@ -413,7 +441,8 @@ label{
 }
 
 input,
-select{
+select,
+textarea{
     width:100%;
     padding:14px;
     border:1px solid #ccd3df;
@@ -423,11 +452,19 @@ select{
     outline:none;
 }
 
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
 input:focus,
-select:focus{
+select:focus,
+textarea:focus{
     border-color:#07336f;
     box-shadow:0 0 0 3px rgba(7,51,111,.08);
 }
+
+/* ================= PAYMENT ================= */
 
 .payment{
     background:#eef5ff;
@@ -438,6 +475,14 @@ select:focus{
 
 .payment h3{
     color:#07336f;
+}
+
+.payment-warning{
+    background:#fff3cd;
+    border-left:5px solid #ffc107;
+    padding:14px;
+    border-radius:10px;
+    margin-top:15px;
 }
 
 .qr{
@@ -456,6 +501,8 @@ select:focus{
 .utr{
     margin-top:10px;
 }
+
+/* ================= FINAL NOTICE ================= */
 
 .final-notice{
     max-width:1000px;
@@ -487,6 +534,8 @@ select:focus{
     margin-top:18px;
 }
 
+/* ================= ADDRESS ================= */
+
 .address-box{
     max-width:600px;
     margin:25px auto 0;
@@ -499,6 +548,8 @@ select:focus{
 .address-box strong{
     color:#07336f;
 }
+
+/* ================= FOOTER ================= */
 
 footer{
     background:#061d40;
@@ -515,6 +566,16 @@ footer p{
     margin:5px 0;
     color:#dbe5f5;
 }
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0;
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
@@ -587,6 +648,10 @@ footer p{
         gap:8px;
     }
 
+    .section-title h2{
+        font-size:29px;
+    }
+
     .form-box{
         padding:22px 18px;
     }
@@ -596,12 +661,25 @@ footer p{
         height:210px;
     }
 
+    .contact-links{
+        flex-direction:column;
+    }
+
+    .contact-links .btn{
+        width:100%;
+    }
+
 }
 
 </style>
 </head>
 
 <body>
+
+
+<!-- =====================================================
+HEADER
+===================================================== -->
 
 <header>
 
@@ -635,11 +713,18 @@ RJN Digital Pan Center
 
 </header>
 
+
+<!-- =====================================================
+HERO
+===================================================== -->
+
 <div id="home" class="hero">
 
 <div class="hero-content">
 
-<h1>RJN DIGITAL PAN CENTER</h1>
+<h1>
+RJN DIGITAL PAN CENTER
+</h1>
 
 <h2>
 By <span class="gradient-text">Paperless PAN Apply</span><br>
@@ -647,8 +732,8 @@ With <span class="gradient-text">Digital Service Centre</span>
 </h2>
 
 <p>
-Get convenient digital PAN services through a simple,
-fast and easy process.
+Get convenient digital PAN and other digital services
+through a simple, fast and easy process.
 </p>
 
 <div class="hero-features">
@@ -672,15 +757,22 @@ fast and easy process.
 <a
 href="#pan"
 class="hero-btn hero-register">
+
 📝 Register Now
+
 </a>
 
+
+<!-- WHATSAPP FIXED -->
+
 <a
-href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center%2C%20I%20need%20service%20support."
-class="hero-btn hero-whatsapp"
+href="https://api.whatsapp.com/send?phone=919365414365"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+class="hero-btn hero-whatsapp">
+
 💬 WhatsApp
+
 </a>
 
 </div>
@@ -697,13 +789,20 @@ rel="noopener noreferrer">
 
 </div>
 
+
+<!-- =====================================================
+PAN PLANS
+===================================================== -->
+
 <section id="pan">
 
 <div class="section-title">
 
 <h2>🪪 PAN CARD AGENT ID</h2>
 
-<p>Choose your plan and register.</p>
+<p>
+Choose your plan and register.
+</p>
 
 </div>
 
@@ -712,11 +811,16 @@ rel="noopener noreferrer">
 <strong>📢 PAN CARD DIGITAL SERVICES</strong><br>
 
 Choose the PAN Agent plan according to your requirement.
-Availability, permissions and applicable terms depend on the service provider.
+Availability, permissions and applicable terms depend on the actual
+service provider.
 
 </div>
 
+
 <div class="cards">
+
+
+<!-- RETAILER -->
 
 <div class="card">
 
@@ -736,6 +840,7 @@ Availability, permissions and applicable terms depend on the service provider.
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('PAN Retailer ID','199','pan')">
 
@@ -744,6 +849,9 @@ Register Now →
 </button>
 
 </div>
+
+
+<!-- DISTRIBUTOR -->
 
 <div class="card">
 
@@ -763,6 +871,7 @@ Register Now →
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('PAN Distributor ID','349','pan')">
 
@@ -771,6 +880,9 @@ Register Now →
 </button>
 
 </div>
+
+
+<!-- SUPER DISTRIBUTOR -->
 
 <div class="card">
 
@@ -790,6 +902,7 @@ Register Now →
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('PAN Super Distributor ID','799','pan')">
 
@@ -803,11 +916,17 @@ Register Now →
 
 <p style="margin-top:18px;font-size:13px;color:#68768c;">
 
-*Availability, permissions, commissions and refund conditions depend on the actual service provider.
+*Availability, permissions, commissions and refund conditions depend
+on the actual service provider.
 
 </p>
 
 </section>
+
+
+<!-- =====================================================
+PAN SERVICES
+===================================================== -->
 
 <section id="pan-services">
 
@@ -815,7 +934,9 @@ Register Now →
 
 <h2>📄 PAN CARD SERVICES</h2>
 
-<p>Digital assistance for various PAN-related services.</p>
+<p>
+Digital assistance for various PAN-related services.
+</p>
 
 </div>
 
@@ -870,6 +991,11 @@ Register Now →
 
 </section>
 
+
+<!-- =====================================================
+PAN STATUS
+===================================================== -->
+
 <section id="pan-status">
 
 <div class="section-title">
@@ -884,7 +1010,9 @@ Check your PAN application status through the official PAN service portal.
 
 <div class="status-box">
 
-<h3>📄 Track PAN Application</h3>
+<h3>
+📄 Track PAN Application
+</h3>
 
 <p style="margin:12px 0 20px;color:#5c6b81;">
 
@@ -892,20 +1020,35 @@ Use the official PAN application-status service to track your application.
 
 </p>
 
+
+<!-- EXACT PAN STATUS LINK -->
+
 <a
 href="https://tin.tin.proteantech.in/pantan/StatusTrack.html"
 target="_blank"
 rel="noopener noreferrer"
 class="btn">
 
-🔍 Official PAN Status Portal →
+🔍 Official PAN Status Check →
 
 </a>
 
+<p style="font-size:13px;margin-top:18px;color:#68768c;">
+
+Official PAN Status Portal – Protean eGov Technologies
+
+</p>
+
 </div>
 
-</section
-    <section id="voter">
+</section>
+
+
+<!-- =====================================================
+VOTER SERVICES
+===================================================== -->
+
+<section id="voter">
 
 <div class="section-title">
 
@@ -919,7 +1062,6 @@ Choose the required Voter ID service.
 
 <div class="cards">
 
-<!-- VOTER MOBILE LINK -->
 
 <div class="card">
 
@@ -928,11 +1070,14 @@ Choose the required Voter ID service.
 <div class="price">₹99</div>
 
 <ul>
+
 <li>✓ EPIC Number</li>
 <li>✓ Mobile Number</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Voter ID Mobile Number Link','99','voter-basic')">
 
@@ -943,8 +1088,6 @@ Apply Now →
 </div>
 
 
-<!-- VOTER PDF -->
-
 <div class="card">
 
 <h3>Voter ID Original PDF</h3>
@@ -952,10 +1095,13 @@ Apply Now →
 <div class="price">₹99</div>
 
 <ul>
-<li>✓ EPIC Number Only</li>
+
+<li>✓ EPIC Number</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Voter ID Original PDF','99','voter-basic')">
 
@@ -966,8 +1112,6 @@ Apply Now →
 </div>
 
 
-<!-- NEW VOTER -->
-
 <div class="card">
 
 <h3>New Voter ID Apply</h3>
@@ -975,15 +1119,16 @@ Apply Now →
 <div class="price">₹199</div>
 
 <ul>
-<li>✓ DOB Proof</li>
+
+<li>✓ Required Documents</li>
 <li>✓ Address Proof</li>
+<li>✓ DOB Proof</li>
 <li>✓ Passport Size Photo</li>
-<li>✓ Father / Guardian EPIC No.</li>
-<li>✓ Aadhaar Number*</li>
-<li>✓ Aadhaar OTP*</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('New Voter ID Apply','199','voter-new')">
 
@@ -994,8 +1139,6 @@ Apply Now →
 </div>
 
 
-<!-- VOTER CORRECTION -->
-
 <div class="card">
 
 <h3>Voter ID Correction</h3>
@@ -1003,15 +1146,16 @@ Apply Now →
 <div class="price">₹199</div>
 
 <ul>
-<li>✓ DOB Proof</li>
+
+<li>✓ Required Documents</li>
 <li>✓ Address Proof</li>
+<li>✓ DOB Proof</li>
 <li>✓ Passport Size Photo</li>
-<li>✓ Father / Guardian EPIC No.</li>
-<li>✓ Aadhaar Number*</li>
-<li>✓ Aadhaar OTP*</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Voter ID Correction Apply','199','voter-new')">
 
@@ -1022,8 +1166,6 @@ Apply Now →
 </div>
 
 
-<!-- VOTER PVC -->
-
 <div class="card">
 
 <h3>Voter ID PVC Card</h3>
@@ -1031,11 +1173,14 @@ Apply Now →
 <div class="price">Coming Soon</div>
 
 <ul>
+
 <li>✓ PVC Card Print Service</li>
-<li>✓ Service Coming Soon</li>
+<li>✓ Available Soon</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 disabled
 style="opacity:.6;cursor:not-allowed;">
@@ -1048,16 +1193,12 @@ Coming Soon
 
 </div>
 
-<p style="margin-top:18px;font-size:13px;color:#68768c;">
-
-*Requirements may vary according to the applicable official process.
-
-</p>
-
 </section>
 
 
-<!-- ================= PRINT SERVICES ================= -->
+<!-- =====================================================
+PRINT SERVICES
+===================================================== -->
 
 <section id="print">
 
@@ -1074,8 +1215,6 @@ Print services for eligible card documents.
 <div class="cards">
 
 
-<!-- AADHAAR PRINT -->
-
 <div class="card">
 
 <h3>🪪 Aadhaar Original Print</h3>
@@ -1083,13 +1222,15 @@ Print services for eligible card documents.
 <div class="price">₹149</div>
 
 <ul>
-<li>✓ Aadhaar Number</li>
-<li>✓ Mobile Number</li>
-<li>✓ Email ID</li>
-<li>✓ Print Service</li>
+
+<li>✓ Aadhaar Print</li>
+<li>✓ Quality Card Print</li>
+<li>✓ Digital Print Service</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Aadhaar Original Print','149','aadhaar-print')">
 
@@ -1100,8 +1241,6 @@ Apply Now →
 </div>
 
 
-<!-- PAN PRINT -->
-
 <div class="card">
 
 <h3>💳 PAN Card Print</h3>
@@ -1109,14 +1248,15 @@ Apply Now →
 <div class="price">₹149</div>
 
 <ul>
-<li>✓ PAN Number</li>
-<li>✓ Aadhaar Number</li>
-<li>✓ Mobile Number</li>
-<li>✓ Email ID</li>
-<li>✓ Print Service</li>
+
+<li>✓ PAN Card Print</li>
+<li>✓ Quality Print</li>
+<li>✓ Digital Service</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('PAN Card Print','149','pan-print')">
 
@@ -1127,8 +1267,6 @@ Apply Now →
 </div>
 
 
-<!-- AADHAAR PVC -->
-
 <div class="card">
 
 <h3>🪪 Aadhaar PVC Card</h3>
@@ -1136,13 +1274,15 @@ Apply Now →
 <div class="price">₹149</div>
 
 <ul>
-<li>✓ Aadhaar Number</li>
-<li>✓ Mobile Number</li>
-<li>✓ Email ID</li>
-<li>✓ PVC Print Service</li>
+
+<li>✓ PVC Card Print</li>
+<li>✓ Quality Print</li>
+<li>✓ Digital Service</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Aadhaar PVC Card Print','149','aadhaar-pvc')">
 
@@ -1153,8 +1293,6 @@ Apply Now →
 </div>
 
 
-<!-- PAN PVC -->
-
 <div class="card">
 
 <h3>💳 PAN Card PVC Print</h3>
@@ -1162,14 +1300,15 @@ Apply Now →
 <div class="price">₹149</div>
 
 <ul>
-<li>✓ PAN Number</li>
-<li>✓ Aadhaar Number</li>
-<li>✓ Mobile Number</li>
-<li>✓ Email ID</li>
-<li>✓ PVC Print Service</li>
+
+<li>✓ PVC Card Print</li>
+<li>✓ Quality Print</li>
+<li>✓ PAN Reprint Assistance</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('PAN Card PVC Print','149','pan-pvc')">
 
@@ -1181,30 +1320,12 @@ Apply Now →
 
 </div>
 
-<div class="final-notice">
-
-<h3>📦 Service Processing Information</h3>
-
-<p>
-After successful payment, please send the <strong>payment screenshot</strong> on WhatsApp.
-</p>
-
-<p>
-You will receive the service after successful payment,
-normally within <strong>10 minutes to under 24 hours</strong>,
-depending on the service and processing time.
-</p>
-
-<p>
-For any work, query or problem, contact us on WhatsApp or Email.
-</p>
-
-</div>
-
 </section>
 
 
-<!-- ================= MOBILE RECHARGE ================= -->
+<!-- =====================================================
+MOBILE RECHARGE
+===================================================== -->
 
 <section id="recharge">
 
@@ -1213,15 +1334,13 @@ For any work, query or problem, contact us on WhatsApp or Email.
 <h2>📱 MOBILE RECHARGE ID</h2>
 
 <p>
-Choose your Mobile Recharge ID plan.
+Choose your Mobile Recharge plan.
 </p>
 
 </div>
 
 <div class="cards">
 
-
-<!-- RETAILER -->
 
 <div class="card">
 
@@ -1230,13 +1349,16 @@ Choose your Mobile Recharge ID plan.
 <div class="price">FREE</div>
 
 <ul>
+
 <li>✓ Mobile Recharge</li>
 <li>✓ DTH Recharge</li>
 <li>✓ Easy Platform</li>
 <li>✓ Digital Support</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Mobile Recharge Retailer ID','FREE','recharge')">
 
@@ -1256,13 +1378,16 @@ Register Now →
 <div class="price">₹49</div>
 
 <ul>
+
 <li>✓ Mobile Recharge</li>
 <li>✓ DTH Recharge</li>
 <li>✓ Manage Retailers*</li>
 <li>✓ Digital Support</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Mobile Recharge Distributor ID','49','recharge')">
 
@@ -1282,13 +1407,16 @@ Register Now →
 <div class="price">₹99</div>
 
 <ul>
+
 <li>✓ Mobile Recharge</li>
 <li>✓ DTH Recharge</li>
 <li>✓ Manage Distributors / Retailers*</li>
 <li>✓ Digital Support</li>
+
 </ul>
 
 <button
+type="button"
 class="btn"
 onclick="openForm('Mobile Recharge Master Distributor ID','99','recharge')">
 
@@ -1302,14 +1430,17 @@ Register Now →
 
 <p style="margin-top:18px;font-size:13px;color:#68768c;">
 
-*Management, commission and other features depend on the actual service provider.
+*Availability, permissions, commissions and applicable terms depend
+on the actual service provider.
 
 </p>
 
 </section>
 
 
-<!-- ================= REGISTRATION FORM ================= -->
+<!-- =====================================================
+REGISTRATION / SERVICE FORM
+===================================================== -->
 
 <section
 id="registration"
@@ -1321,19 +1452,23 @@ class="form-page">
 
 <div class="selected-plan">
 
-<p id="selectedPlan"></p>
+<p id="selectedPlan">
+Please select a service.
+</p>
 
 </div>
+
 
 <form id="registrationForm">
 
 
-<!-- NAME -->
-
-<label>Name *</label>
+<label for="name">
+Name *
+</label>
 
 <input
 id="name"
+name="name"
 type="text"
 placeholder="Enter full name"
 required>
@@ -1343,82 +1478,51 @@ required>
 
 <div id="panShopFields">
 
-<label>Shop Name *</label>
+<label for="shop">
+Shop Name *
+</label>
 
 <input
 id="shop"
+name="shop"
 type="text"
 placeholder="Enter shop name">
 
 
-<label>Shop Address *</label>
+<label for="address">
+Shop Address *
+</label>
 
-<input
+<textarea
 id="address"
-type="text"
-placeholder="Enter shop address">
+name="address"
+placeholder="Enter complete shop address"></textarea>
 
 
-<label>PIN Code *</label>
+<label for="pin">
+PIN Code *
+</label>
 
 <input
 id="pin"
+name="pin"
 type="text"
 inputmode="numeric"
-placeholder="Enter PIN Code">
+maxlength="6"
+placeholder="Enter PIN code">
 
 </div>
 
 
-<!-- STATE -->
+<!-- MOBILE NUMBER -->
 
-<label>State *</label>
-
-<select
-id="state"
-required>
-
-<option value="">Select State</option>
-
-<option>Andhra Pradesh</option>
-<option>Arunachal Pradesh</option>
-<option>Assam</option>
-<option>Bihar</option>
-<option>Chhattisgarh</option>
-<option>Delhi</option>
-<option>Goa</option>
-<option>Gujarat</option>
-<option>Haryana</option>
-<option>Himachal Pradesh</option>
-<option>Jharkhand</option>
-<option>Karnataka</option>
-<option>Kerala</option>
-<option>Madhya Pradesh</option>
-<option>Maharashtra</option>
-<option>Manipur</option>
-<option>Meghalaya</option>
-<option>Mizoram</option>
-<option>Nagaland</option>
-<option>Odisha</option>
-<option>Punjab</option>
-<option>Rajasthan</option>
-<option>Sikkim</option>
-<option>Tamil Nadu</option>
-<option>Telangana</option>
-<option>Tripura</option>
-<option>Uttar Pradesh</option>
-<option>Uttarakhand</option>
-<option>West Bengal</option>
-
-</select>
-
-
-<!-- MOBILE -->
-
-<label>Mobile Number *</label>
+<label for="mobile">
+Mobile Number *
+</label>
 
 <input
 id="mobile"
+name="mobile"
 type="tel"
 inputmode="numeric"
 maxlength="10"
@@ -1428,129 +1532,157 @@ required>
 
 <!-- EMAIL -->
 
-<label>Email ID *</label>
-
-<input
-id="email"
-type="email"
-placeholder="Enter email address"
-required>
-
-
-<!-- PAN AGENT FIELDS -->
-
-<div id="panFields">
-
-<label>Aadhaar Number *</label>
-
-<input
-id="aadhaar"
-type="text"
-inputmode="numeric"
-maxlength="12"
-placeholder="Enter 12 digit Aadhaar Number">
-
-
-<label>PAN Number *</label>
-
-<input
-id="panNumber"
-type="text"
-maxlength="10"
-placeholder="Enter PAN Number">
-
-</div>
-
-
-<!-- OTHER SERVICE -->
-
-<div id="serviceFields">
-
-<label id="serviceLabel">
-Additional Details
+<label for="email">
+Email Address
 </label>
 
 <input
-id="serviceInput"
-type="text"
-placeholder="Enter required details">
+id="email"
+name="email"
+type="email"
+placeholder="Enter email address">
 
-</div>
+
+<!-- SERVICE EXTRA FIELDS -->
+
+<div id="serviceFields"></div>
 
 
 <!-- PAYMENT -->
 
 <div class="payment">
 
-<h3>💰 Payment</h3>
-
-<p id="amountText"></p>
+<h3>💳 Payment Details</h3>
 
 <p style="margin-top:8px;">
-Please pay the applicable amount using the QR code below.
+Selected Service:
+<strong id="paymentService">-</strong>
 </p>
+
+<p>
+Amount:
+<strong id="paymentAmount">-</strong>
+</p>
+
+<p style="margin-top:12px;">
+Please complete the payment using the QR code below.
+</p>
+
+
+<!-- IMPORTANT:
+     Replace qr.png with your actual payment QR image.
+-->
 
 <img
-src="qr-code.png"
+src="qr.png"
 class="qr"
-alt="RJN Digital Pan Center Payment QR Code">
+alt="Payment QR Code">
 
-<strong>
-After payment, enter UTR / Transaction ID:
-</strong>
 
-<input
-id="utr"
-class="utr"
-type="text"
-placeholder="Enter UTR / Transaction ID"
-required>
+<div class="payment-warning">
 
-<p style="margin-top:15px;color:#07336f;font-weight:bold;">
-📸 After payment, please send the payment screenshot on WhatsApp.
-</p>
+<strong>⚠️ Important:</strong>
+
+After successful payment, send the payment screenshot
+along with your details on WhatsApp.
 
 </div>
 
 
-<br>
+<label for="utr">
+UTR / Transaction ID *
+</label>
+
+<input
+id="utr"
+name="utr"
+type="text"
+placeholder="Enter payment UTR / Transaction ID"
+required>
+
+
+<label for="message">
+Additional Message
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="Enter any additional information"></textarea>
 
 
 <button
 type="submit"
-class="btn whatsapp">
+class="btn"
+style="width:100%;margin-top:20px;font-size:17px;">
 
-📲 Submit & Send on WhatsApp
+📲 Submit & Send Details on WhatsApp
 
 </button>
 
+</div>
+
+</form>
+
+
+<!-- CLOSE FORM -->
 
 <button
 type="button"
 class="btn"
-onclick="goBack()">
+onclick="closeForm()"
+style="margin-top:15px;background:#e9edf5;color:#07336f;">
 
-← Back
+← Back to Services
 
 </button>
-
-</form>
 
 </div>
 
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+FINAL NOTICE / CONTACT
+===================================================== -->
 
 <section id="contact">
 
 <div class="section-title">
 
-<h2>📞 CONTACT RJN DIGITAL PAN CENTER</h2>
+<h2>📞 CONTACT & SUPPORT</h2>
 
 <p>
-For any work, service, query or problem, contact us.
+Need help with any service? Contact us directly.
+</p>
+
+</div>
+
+
+<div class="final-notice">
+
+<h3>
+⚡ After Payment – Service Process
+</h3>
+
+<p>
+<strong>After successful payment, send the payment screenshot
+to us on WhatsApp.</strong>
+</p>
+
+<p>
+Your service will be processed after payment verification.
+</p>
+
+<p>
+⏱️ <strong>Service Time:</strong>
+10 minutes to under 24 hours after successful payment
+and verification.
+</p>
+
+<p>
+If you have any problem or need help with any service,
+please contact us.
 </p>
 
 
@@ -1560,10 +1692,10 @@ For any work, service, query or problem, contact us.
 <!-- WHATSAPP -->
 
 <a
-class="btn whatsapp"
-href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center%2C%20I%20need%20help%20with%20your%20service."
+href="https://wa.me/919365414365"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+class="btn whatsapp">
 
 💬 WhatsApp
 </a>
@@ -1572,8 +1704,8 @@ rel="noopener noreferrer">
 <!-- EMAIL -->
 
 <a
-class="btn"
-href="mailto:rjn.digitalstudio@gmail.com?subject=RJN%20Digital%20Pan%20Center%20Enquiry&body=Hello%2C%20I%20need%20information%20about%20your%20services.">
+href="mailto:rjn.digitalstudio@gmail.com"
+class="btn email">
 
 📧 Email Us
 </a>
@@ -1582,10 +1714,10 @@ href="mailto:rjn.digitalstudio@gmail.com?subject=RJN%20Digital%20Pan%20Center%20
 <!-- INSTAGRAM -->
 
 <a
-class="btn"
-href="https://www.instagram.com/rjn_digital_studio?igsi=bDVxbDdzcDl2MWJn"
+href="https://www.instagram.com/rjn_digital_studio?igsh=bDVxbDdzcDl2MWJn"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+class="btn instagram">
 
 📸 Instagram
 </a>
@@ -1594,12 +1726,12 @@ rel="noopener noreferrer">
 <!-- PAN STATUS -->
 
 <a
-class="btn"
 href="https://tin.tin.proteantech.in/pantan/StatusTrack.html"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener noreferrer"
+class="btn">
 
-🔍 PAN Status
+🔍 PAN Status Check
 </a>
 
 </div>
@@ -1607,398 +1739,18 @@ rel="noopener noreferrer">
 
 <div class="address-box">
 
-<strong>📍 RJN Digital Pan Center</strong>
-
-<p>
-Assam, Karimganj (Sribhumi)<br>
-Kalima Bazar<br>
-PIN: 788712
-</p>
-
-<p style="margin-top:8px;">
-📱 <a
-href="tel:+919365414365"
-style="color:#07336f;font-weight:bold;text-decoration:none;">
+<strong>📱 WhatsApp:</strong>
 9365414365
-</a>
-</p>
-
-<p style="margin-top:8px;">
-📧 <a
-href="mailto:rjn.digitalstudio@gmail.com"
-style="color:#07336f;font-weight:bold;text-decoration:none;">
-rjn.digitalstudio@gmail.com
-</a>
-</p>
-
-<p style="margin-top:8px;">
-📸 @rjn_digital_studio
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= FINAL CONTACT NOTICE ================= -->
-
-<div class="final-notice">
-
-<h3>💬 Need Help?</h3>
-
-<p>
-For any work or any problem, message us on WhatsApp:
-</p>
-
-<p>
-<strong>📱 9365414365</strong>
-</p>
-
-<p>
-or email us at:
-</p>
-
-<p>
-<strong>📧 rjn.digitalstudio@gmail.com</strong>
-</p>
-
-<p style="margin-top:15px;">
-After payment, send your payment screenshot on WhatsApp.
-</p>
-
-<p>
-Service will normally be provided within
-<strong>10 minutes to under 24 hours</strong>
-after successful payment, depending on the service.
-</p>
-
-<div class="contact-links">
-
-<a
-class="btn whatsapp"
-href="https://wa.me/919365414365?text=Hello%20RJN%20Digital%20Pan%20Center%2C%20I%20have%20completed%20the%20payment%20and%20need%20service."
-target="_blank"
-rel="noopener noreferrer">
-
-📲 Send Payment Screenshot
-
-</a>
-
-<a
-class="btn"
-href="mailto:rjn.digitalstudio@gmail.com?subject=RJN%20Digital%20Pan%20Center%20Support">
-
-📧 Email Support
-
-</a>
-
-</div>
-
-</div>
-<!-- ================= REGISTRATION FORM ================= -->
-
-<section id="registration" class="form-page">
-
-<div class="form-box">
-
-<h2>📝 Registration / Service Form</h2>
-
-<div class="selected-plan">
-<p id="selectedPlan"></p>
-</div>
-
-<form id="registrationForm">
-
-<label>Name *</label>
-<input
-id="name"
-type="text"
-placeholder="Enter full name"
-required
->
-
-<!-- PAN SHOP DETAILS -->
-
-<div id="panShopFields" style="display:none;">
-
-<label>Shop Name *</label>
-<input
-id="shop"
-type="text"
-placeholder="Enter shop name"
->
-
-<label>Shop Address *</label>
-<input
-id="address"
-type="text"
-placeholder="Enter shop address"
->
-
-<label>PIN Code *</label>
-<input
-id="pin"
-type="text"
-inputmode="numeric"
-placeholder="Enter PIN Code"
->
-
-</div>
-
-
-<!-- STATE -->
-
-<label>State *</label>
-
-<select id="state" required>
-
-<option value="">Select State</option>
-<option>Andhra Pradesh</option>
-<option>Arunachal Pradesh</option>
-<option>Assam</option>
-<option>Bihar</option>
-<option>Chhattisgarh</option>
-<option>Delhi</option>
-<option>Goa</option>
-<option>Gujarat</option>
-<option>Haryana</option>
-<option>Himachal Pradesh</option>
-<option>Jharkhand</option>
-<option>Karnataka</option>
-<option>Kerala</option>
-<option>Madhya Pradesh</option>
-<option>Maharashtra</option>
-<option>Manipur</option>
-<option>Meghalaya</option>
-<option>Mizoram</option>
-<option>Nagaland</option>
-<option>Odisha</option>
-<option>Punjab</option>
-<option>Rajasthan</option>
-<option>Sikkim</option>
-<option>Tamil Nadu</option>
-<option>Telangana</option>
-<option>Tripura</option>
-<option>Uttar Pradesh</option>
-<option>Uttarakhand</option>
-<option>West Bengal</option>
-
-</select>
-
-
-<!-- MOBILE -->
-
-<label>Mobile Number *</label>
-
-<input
-id="mobile"
-type="tel"
-inputmode="numeric"
-maxlength="10"
-placeholder="Enter 10 digit mobile number"
-required
->
-
-
-<!-- EMAIL -->
-
-<label>Email ID *</label>
-
-<input
-id="email"
-type="email"
-placeholder="Enter email address"
-required
->
-
-
-<!-- PAN AGENT DETAILS -->
-
-<div id="panFields" style="display:none;">
-
-<label>Aadhaar Number *</label>
-
-<input
-id="aadhaar"
-type="text"
-inputmode="numeric"
-maxlength="12"
-placeholder="Enter 12 digit Aadhaar Number"
->
-
-<label>PAN Number *</label>
-
-<input
-id="panNumber"
-type="text"
-maxlength="10"
-placeholder="Enter PAN Number"
->
-
-</div>
-
-
-<!-- OTHER SERVICE DETAILS -->
-
-<div id="serviceFields" style="display:none;">
-
-<label id="serviceLabel">
-Additional Details
-</label>
-
-<input
-id="serviceInput"
-type="text"
-placeholder="Enter required details"
->
-
-</div>
-
-
-<!-- PAYMENT -->
-
-<div class="payment">
-
-<h3>💰 Payment</h3>
-
-<p id="amountText"></p>
-
-<p style="margin-top:8px;">
-Please complete the payment using the QR code below.
-</p>
-
-<img
-src="qr-code.png"
-class="qr"
-alt="RJN Digital Pan Center Payment QR Code"
->
-
-<strong>
-After payment, enter UTR / Transaction ID:
-</strong>
-
-<input
-id="utr"
-class="utr"
-type="text"
-placeholder="Enter UTR / Transaction ID"
-required
->
-
-<p style="
-margin-top:15px;
-font-size:14px;
-color:#07336f;
-font-weight:bold;
-">
-📸 After payment, send the payment screenshot on WhatsApp.
-</p>
-
-<p style="
-margin-top:7px;
-font-size:14px;
-color:#34445d;
-">
-⏱️ After successful payment, service will normally be provided
-within 10 minutes to 24 hours.
-</p>
-
-</div>
-
 
 <br>
 
-<button
-type="submit"
-class="btn whatsapp"
->
+<strong>📧 Email:</strong>
+rjn.digitalstudio@gmail.com
 
-📲 Submit & Send on WhatsApp
+<br>
 
-</button>
-
-<button
-type="button"
-class="btn"
-onclick="goBack()"
->
-
-← Back
-
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-
-<!-- ================= FINAL CONTACT NOTICE ================= -->
-
-<section>
-
-<div class="final-notice">
-
-<h3>
-📞 Need Help With Your Work?
-</h3>
-
-<p>
-For any service, work-related enquiry, payment issue,
-or other problem, please contact us.
-</p>
-
-<p>
-<strong>📱 WhatsApp:</strong> 9365414365
-</p>
-
-<p>
-<strong>📧 Email:</strong> rjn.digitalstudio@gmail.com
-</p>
-
-<p>
-⏱️ After successful payment, service will normally be provided
-within <strong>10 minutes to 24 hours</strong>.
-</p>
-
-<div class="contact-links">
-
-<a
-href="https://wa.me/919365414365"
-target="_blank"
-rel="noopener noreferrer"
-class="btn whatsapp"
->
-💬 WhatsApp Us
-</a>
-
-<a
-href="mailto:rjn.digitalstudio@gmail.com"
-class="btn"
->
-📧 Email Us
-</a>
-
-<a
-href="https://www.instagram.com/rjn_digital_studio?igsi=bDVxbDdzcDl2MWJn"
-target="_blank"
-rel="noopener noreferrer"
-class="btn"
->
-📸 Instagram
-</a>
-
-<a
-href="https://tin.tin.proteantech.in/pantan/StatusTrack.html"
-target="_blank"
-rel="noopener noreferrer"
-class="btn"
->
-🔍 Official PAN Status
-</a>
+<strong>📸 Instagram:</strong>
+@rjn_digital_studio
 
 </div>
 
@@ -2007,77 +1759,9 @@ class="btn"
 </section>
 
 
-<!-- ================= CONTACT ================= -->
-
-<section id="contact">
-
-<div class="section-title">
-
-<h2>📞 Contact RJN Digital Pan Center</h2>
-
-<p>
-For PAN Card, Voter ID, print and digital service assistance,
-contact us.
-</p>
-
-<div class="contact-links">
-
-<a
-href="https://wa.me/919365414365"
-target="_blank"
-rel="noopener noreferrer"
-class="btn whatsapp"
->
-💬 WhatsApp
-</a>
-
-<a
-href="mailto:rjn.digitalstudio@gmail.com"
-class="btn"
->
-📧 Email
-</a>
-
-<a
-href="https://www.instagram.com/rjn_digital_studio?igsi=bDVxbDdzcDl2MWJn"
-target="_blank"
-rel="noopener noreferrer"
-class="btn"
->
-📸 Instagram
-</a>
-
-</div>
-
-
-<div class="address-box">
-
-<strong>
-📍 RJN Digital Pan Center
-</strong>
-
-<p>
-Assam, Karimganj (Sribhumi)<br>
-Kalima Bazar<br>
-PIN: 788712
-</p>
-
-<p style="margin-top:8px;">
-📱 9365414365
-</p>
-
-<p style="margin-top:8px;">
-📧 rjn.digitalstudio@gmail.com
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+FOOTER
+===================================================== -->
 
 <footer>
 
@@ -2086,535 +1770,669 @@ PIN: 788712
 </p>
 
 <p>
-PAN Card • Voter ID • Card Print • Mobile Recharge
+Paperless PAN Apply & Digital Service Centre
 </p>
 
-<p>
-Assam, Karimganj (Sribhumi), Kalima Bazar - 788712
-</p>
+<div class="footer-links">
 
-<p>
-📱 9365414365
-</p>
-
-<p>
-📧 rjn.digitalstudio@gmail.com
-</p>
-
-<p style="margin-top:12px;">
 
 <a
 href="https://wa.me/919365414365"
 target="_blank"
 rel="noopener noreferrer"
-style="color:#25D366;text-decoration:none;font-weight:bold;"
->
-WhatsApp
+class="btn whatsapp">
+
+💬 WhatsApp
+
 </a>
 
-&nbsp; | &nbsp;
 
 <a
 href="mailto:rjn.digitalstudio@gmail.com"
-style="color:#ffc107;text-decoration:none;font-weight:bold;"
->
-Email
+class="btn email">
+
+📧 Email
+
 </a>
 
-&nbsp; | &nbsp;
 
 <a
-href="https://www.instagram.com/rjn_digital_studio?igsi=bDVxbDdzcDl2MWJn"
+href="https://www.instagram.com/rjn_digital_studio?igsh=bDVxbDdzcDl2MWJn"
 target="_blank"
 rel="noopener noreferrer"
-style="color:#ffc107;text-decoration:none;font-weight:bold;"
->
-Instagram
+class="btn instagram">
+
+📸 Instagram
+
 </a>
 
-&nbsp; | &nbsp;
 
 <a
 href="https://tin.tin.proteantech.in/pantan/StatusTrack.html"
 target="_blank"
 rel="noopener noreferrer"
-style="color:#ffc107;text-decoration:none;font-weight:bold;"
->
-PAN Status
+class="btn">
+
+🔍 PAN Status
+
 </a>
 
-</p>
+</div>
 
-<p style="
-margin-top:15px;
-font-size:13px;
-">
+<p style="font-size:13px;margin-top:15px;">
 
-Service availability, charges, processing,
-delivery and authorization depend on the applicable
-service provider and official authority.
+© 2026 RJN Digital Pan Center. All Rights Reserved.
 
 </p>
 
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
 
 <script>
 
-let selectedPlan = "";
-let selectedAmount = "";
-let selectedType = "";
+/* =====================================================
+CONTACT DETAILS
+===================================================== */
 
-const whatsappNumber = "919365414365";
+const WHATSAPP_NUMBER = "919365414365";
+
+const WHATSAPP_URL =
+"https://wa.me/" + WHATSAPP_NUMBER;
+
+const EMAIL_ADDRESS =
+"rjn.digitalstudio@gmail.com";
+
+const INSTAGRAM_URL =
+"https://www.instagram.com/rjn_digital_studio?igsh=bDVxbDdzcDl2MWJn";
+
+const PAN_STATUS_URL =
+"https://tin.tin.proteantech.in/pantan/StatusTrack.html";
 
 
-/* ================= OPEN FORM ================= */
+/* =====================================================
+SERVICE DATA
+===================================================== */
 
-function openForm(plan, amount, type){
+let currentService = "";
 
-    selectedPlan = plan;
-    selectedAmount = amount;
-    selectedType = type;
-
-    document.getElementById("selectedPlan").innerHTML =
-        "<strong>Selected Service:</strong> " + plan;
+let currentAmount = "";
 
 
-    if(amount === "FREE"){
+/* =====================================================
+OPEN REGISTRATION FORM
+===================================================== */
 
-        document.getElementById("amountText").innerHTML =
-            "<strong>Payment: FREE</strong>";
+function openForm(service, amount, type){
+
+    currentService = service;
+
+    currentAmount = amount;
+
+
+    const formPage =
+    document.getElementById("registration");
+
+    const selectedPlan =
+    document.getElementById("selectedPlan");
+
+    const paymentService =
+    document.getElementById("paymentService");
+
+    const paymentAmount =
+    document.getElementById("paymentAmount");
+
+
+    selectedPlan.innerHTML =
+    "<strong>Selected Service:</strong> "
+    + service
+    + "<br><strong>Amount:</strong> ₹"
+    + amount;
+
+
+    paymentService.textContent =
+    service;
+
+
+    paymentAmount.textContent =
+    amount === "FREE"
+    ? "FREE"
+    : "₹" + amount;
+
+
+    formPage.style.display = "block";
+
+
+    /* Scroll to form */
+
+    setTimeout(function(){
+
+        formPage.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    },100);
+
+
+    /* Service-specific fields */
+
+    createServiceFields(type);
+
+
+    /* Show / hide shop fields */
+
+    const panShopFields =
+    document.getElementById("panShopFields");
+
+
+    if(
+        type === "pan" ||
+        type === "recharge"
+    ){
+
+        panShopFields.style.display =
+        "block";
 
     }else{
 
-        document.getElementById("amountText").innerHTML =
-            "<strong>Payment: ₹" + amount + "/-</strong>";
+        panShopFields.style.display =
+        "none";
+
+    }
+
+}
+
+
+/* =====================================================
+CREATE SERVICE-SPECIFIC FIELDS
+===================================================== */
+
+function createServiceFields(type){
+
+    const container =
+    document.getElementById("serviceFields");
+
+    container.innerHTML = "";
+
+
+    if(type === "voter-basic"){
+
+        container.innerHTML = `
+
+        <label for="epic">
+        EPIC / Voter ID Number *
+        </label>
+
+        <input
+        id="epic"
+        name="epic"
+        type="text"
+        placeholder="Enter EPIC number"
+        required>
+
+        `;
 
     }
 
 
-    const panFields =
-        document.getElementById("panFields");
+    if(type === "voter-new"){
 
-    const panShopFields =
-        document.getElementById("panShopFields");
+        container.innerHTML = `
 
-    const serviceFields =
-        document.getElementById("serviceFields");
+        <label for="epic">
+        EPIC Number
+        </label>
 
-    const serviceLabel =
-        document.getElementById("serviceLabel");
+        <input
+        id="epic"
+        name="epic"
+        type="text"
+        placeholder="Enter EPIC number if available">
 
-    const serviceInput =
-        document.getElementById("serviceInput");
+        <label for="dob">
+        Date of Birth
+        </label>
 
-    const aadhaar =
-        document.getElementById("aadhaar");
+        <input
+        id="dob"
+        name="dob"
+        type="date">
 
-    const panNumber =
-        document.getElementById("panNumber");
-
-    const shop =
-        document.getElementById("shop");
-
-    const address =
-        document.getElementById("address");
-
-    const pin =
-        document.getElementById("pin");
-
-
-    /* RESET */
-
-    panFields.style.display = "none";
-    panShopFields.style.display = "none";
-    serviceFields.style.display = "none";
-
-    aadhaar.required = false;
-    panNumber.required = false;
-
-    shop.required = false;
-    address.required = false;
-    pin.required = false;
-
-    serviceInput.required = false;
-
-
-    /* ================= PAN AGENT ================= */
-
-    if(type === "pan"){
-
-        panFields.style.display = "block";
-        panShopFields.style.display = "block";
-
-        aadhaar.required = true;
-        panNumber.required = true;
-
-        shop.required = true;
-        address.required = true;
-        pin.required = true;
+        `;
 
     }
 
 
-    /* ================= MOBILE RECHARGE ================= */
-
-    else if(type === "recharge"){
-
-        /*
-        Required:
-        Name
-        Mobile Number
-        Email ID
-        State
-        UTR
-        */
-
-    }
-
-
-    /* ================= VOTER BASIC ================= */
-
-    else if(type === "voter-basic"){
-
-        serviceFields.style.display = "block";
-
-        serviceLabel.innerHTML =
-            "EPIC Number *";
-
-        serviceInput.placeholder =
-            "Enter EPIC Number";
-
-        serviceInput.required = true;
-
-    }
-
-
-    /* ================= VOTER NEW / CORRECTION ================= */
-
-    else if(type === "voter-new"){
-
-        serviceFields.style.display = "block";
-
-        serviceLabel.innerHTML =
-            "Required Details *";
-
-        serviceInput.placeholder =
-            "Enter EPIC / required information";
-
-        serviceInput.required = true;
-
-    }
-
-
-    /* ================= AADHAAR ================= */
-
-    else if(
+    if(
         type === "aadhaar-print" ||
         type === "aadhaar-pvc"
     ){
 
-        serviceFields.style.display = "block";
+        container.innerHTML = `
 
-        serviceLabel.innerHTML =
-            "Aadhaar Number *";
+        <label for="aadhaar">
+        Aadhaar Number *
+        </label>
 
-        serviceInput.placeholder =
-            "Enter Aadhaar Number";
+        <input
+        id="aadhaar"
+        name="aadhaar"
+        type="text"
+        inputmode="numeric"
+        maxlength="12"
+        placeholder="Enter Aadhaar number"
+        required>
 
-        serviceInput.required = true;
+        `;
 
     }
 
 
-    /* ================= PAN PRINT ================= */
-
-    else if(
+    if(
         type === "pan-print" ||
         type === "pan-pvc"
     ){
 
-        serviceFields.style.display = "block";
+        container.innerHTML = `
 
-        serviceLabel.innerHTML =
-            "PAN Number *";
+        <label for="panNumber">
+        PAN Number *
+        </label>
 
-        serviceInput.placeholder =
-            "Enter PAN Number";
+        <input
+        id="panNumber"
+        name="panNumber"
+        type="text"
+        maxlength="10"
+        placeholder="Enter PAN number"
+        required>
 
-        serviceInput.required = true;
+        `;
 
     }
 
+}
+
+
+/* =====================================================
+CLOSE FORM
+===================================================== */
+
+function closeForm(){
 
     document.getElementById("registration").style.display =
-        "block";
+    "none";
 
+    document.getElementById("registrationForm").reset();
 
-    document.getElementById("registration").scrollIntoView({
+    document.getElementById("serviceFields").innerHTML = "";
+
+    document.getElementById("panShopFields").style.display =
+    "block";
+
+    document.getElementById("home").scrollIntoView({
         behavior:"smooth"
     });
 
 }
 
 
-/* ================= BACK ================= */
-
-function goBack(){
-
-    document.getElementById("registration").style.display =
-        "none";
-
-
-    if(selectedType === "recharge"){
-
-        document.getElementById("recharge").scrollIntoView({
-            behavior:"smooth"
-        });
-
-    }
-
-    else if(
-        selectedType === "voter-basic" ||
-        selectedType === "voter-new"
-    ){
-
-        document.getElementById("voter").scrollIntoView({
-            behavior:"smooth"
-        });
-
-    }
-
-    else if(
-        selectedType === "aadhaar-print" ||
-        selectedType === "aadhaar-pvc" ||
-        selectedType === "pan-print" ||
-        selectedType === "pan-pvc"
-    ){
-
-        document.getElementById("print").scrollIntoView({
-            behavior:"smooth"
-        });
-
-    }
-
-    else{
-
-        document.getElementById("pan").scrollIntoView({
-            behavior:"smooth"
-        });
-
-    }
-
-}
-
-
-/* ================= FORM SUBMIT ================= */
+/* =====================================================
+SEND FORM DETAILS TO WHATSAPP
+===================================================== */
 
 document
 .getElementById("registrationForm")
-.addEventListener("submit", function(e){
+.addEventListener("submit", function(event){
 
-    e.preventDefault();
+    event.preventDefault();
 
 
     const name =
-        document.getElementById("name").value.trim();
-
-    const shop =
-        document.getElementById("shop").value.trim();
-
-    const address =
-        document.getElementById("address").value.trim();
-
-    const pin =
-        document.getElementById("pin").value.trim();
-
-    const state =
-        document.getElementById("state").value;
+    document.getElementById("name").value.trim();
 
     const mobile =
-        document.getElementById("mobile").value.trim();
+    document.getElementById("mobile").value.trim();
 
     const email =
-        document.getElementById("email").value.trim();
+    document.getElementById("email").value.trim();
 
-    const aadhaar =
-        document.getElementById("aadhaar").value.trim();
+    const shop =
+    document.getElementById("shop").value.trim();
 
-    const panNumber =
-        document.getElementById("panNumber").value.trim();
+    const address =
+    document.getElementById("address").value.trim();
 
-    const serviceInput =
-        document.getElementById("serviceInput").value.trim();
+    const pin =
+    document.getElementById("pin").value.trim();
 
     const utr =
-        document.getElementById("utr").value.trim();
+    document.getElementById("utr").value.trim();
+
+    const message =
+    document.getElementById("message").value.trim();
 
 
-    /* ================= MOBILE VALIDATION ================= */
+    /* Basic mobile validation */
 
     if(!/^[0-9]{10}$/.test(mobile)){
 
-        alert("Please enter a valid 10 digit mobile number.");
+        alert(
+        "Please enter a valid 10 digit mobile number."
+        );
 
         return;
 
     }
 
 
-    /* ================= PAN AGENT VALIDATION ================= */
+    /* Build WhatsApp message */
 
-    if(selectedType === "pan"){
-
-        if(!/^[0-9]{12}$/.test(aadhaar)){
-
-            alert(
-                "Please enter a valid 12 digit Aadhaar Number."
-            );
-
-            return;
-
-        }
-
-
-        if(panNumber.length !== 10){
-
-            alert(
-                "Please enter a valid 10 character PAN Number."
-            );
-
-            return;
-
-        }
-
-    }
+    let text =
+    "Hello RJN Digital Pan Center,%0A%0A"
+    + "I want to apply for:%0A"
+    + currentService
+    + "%0A%0A"
+    + "Amount: "
+    + (
+        currentAmount === "FREE"
+        ? "FREE"
+        : "₹" + currentAmount
+      )
+    + "%0A%0A"
+    + "Name: "
+    + name
+    + "%0A"
+    + "Mobile: "
+    + mobile;
 
 
-    let message = "";
+    if(email){
 
-
-    /* ================= MOBILE RECHARGE ================= */
-
-    if(selectedType === "recharge"){
-
-        message =
-
-        "MOBILE RECHARGE ID REGISTRATION\n\n" +
-
-        "Plan: " + selectedPlan + "\n" +
-
-        "Payment: " + selectedAmount + "\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Mobile Number: " + mobile + "\n" +
-
-        "Email ID: " + email + "\n" +
-
-        "State: " + state + "\n\n" +
-
-        "UTR / Transaction ID: " + utr;
+        text +=
+        "%0AEmail: "
+        + email;
 
     }
 
 
-    /* ================= PAN AGENT ================= */
+    if(shop){
 
-    else if(selectedType === "pan"){
-
-        message =
-
-        "PAN CARD AGENT ID REGISTRATION\n\n" +
-
-        "Plan: " + selectedPlan + "\n" +
-
-        "Payment: ₹" + selectedAmount + "\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Shop Name: " + shop + "\n" +
-
-        "Shop Address: " + address + "\n" +
-
-        "PIN Code: " + pin + "\n" +
-
-        "State: " + state + "\n" +
-
-        "Mobile Number: " + mobile + "\n" +
-
-        "Email ID: " + email + "\n" +
-
-        "Aadhaar Number: " + aadhaar + "\n" +
-
-        "PAN Number: " + panNumber + "\n" +
-
-        "UTR / Transaction ID: " + utr;
+        text +=
+        "%0AShop Name: "
+        + shop;
 
     }
 
 
-    /* ================= OTHER SERVICES ================= */
+    if(address){
 
-    else{
-
-        message =
-
-        "RJN DIGITAL PAN CENTER\n\n" +
-
-        "SERVICE REQUEST\n\n" +
-
-        "Service: " + selectedPlan + "\n" +
-
-        "Payment: ₹" + selectedAmount + "\n\n" +
-
-        "Name: " + name + "\n" +
-
-        "Mobile Number: " + mobile + "\n" +
-
-        "Email ID: " + email + "\n" +
-
-        "State: " + state + "\n" +
-
-        "Required Details: " + serviceInput + "\n" +
-
-        "UTR / Transaction ID: " + utr + "\n\n" +
-
-        "Payment screenshot will be sent on WhatsApp.";
+        text +=
+        "%0AShop Address: "
+        + address;
 
     }
 
 
-    /* ================= OPEN WHATSAPP ================= */
+    if(pin){
 
-    const whatsappURL =
-        "https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        encodeURIComponent(message);
+        text +=
+        "%0APIN Code: "
+        + pin;
+
+    }
+
+
+    /* Get dynamic service fields */
+
+    const epic =
+    document.getElementById("epic");
+
+    const aadhaar =
+    document.getElementById("aadhaar");
+
+    const panNumber =
+    document.getElementById("panNumber");
+
+    const dob =
+    document.getElementById("dob");
+
+
+    if(epic && epic.value){
+
+        text +=
+        "%0AEPIC Number: "
+        + epic.value.trim();
+
+    }
+
+
+    if(aadhaar && aadhaar.value){
+
+        text +=
+        "%0AAadhaar Number: "
+        + aadhaar.value.trim();
+
+    }
+
+
+    if(panNumber && panNumber.value){
+
+        text +=
+        "%0APAN Number: "
+        + panNumber.value.trim();
+
+    }
+
+
+    if(dob && dob.value){
+
+        text +=
+        "%0ADate of Birth: "
+        + dob.value;
+
+    }
+
+
+    text +=
+    "%0A%0AUTR / Transaction ID: "
+    + utr;
+
+
+    if(message){
+
+        text +=
+        "%0AAdditional Message: "
+        + message;
+
+    }
+
+
+    text +=
+    "%0A%0APayment screenshot will be sent separately on WhatsApp.";
+
+
+    /* Open WhatsApp */
+
+    const whatsappLink =
+    WHATSAPP_URL
+    + "?text="
+    + text;
 
 
     window.open(
-        whatsappURL,
-        "_blank"
+        whatsappLink,
+        "_blank",
+        "noopener,noreferrer"
     );
 
 });
 
 
-/* ================= OFFICIAL PAN STATUS ================= */
+/* =====================================================
+MAKE CONTACT LINKS WORK EVEN IF BROWSER
+BLOCKS TARGET BLANK
+===================================================== */
 
-function openPanStatus(){
+document.addEventListener(
+"click",
+function(event){
 
-    window.open(
-        "https://tin.tin.proteantech.in/pantan/StatusTrack.html",
-        "_blank",
-        "noopener,noreferrer"
-    );
+    const link =
+    event.target.closest("a");
 
-}
+    if(!link) return;
+
+
+    const href =
+    link.getAttribute("href");
+
+
+    if(!href) return;
+
+
+    /* WhatsApp */
+
+    if(
+        href.includes("wa.me") ||
+        href.includes("api.whatsapp.com")
+    ){
+
+        event.preventDefault();
+
+        window.location.href =
+        href;
+
+    }
+
+
+    /* Instagram */
+
+    if(
+        href.includes("instagram.com")
+    ){
+
+        event.preventDefault();
+
+        window.location.href =
+        href;
+
+    }
+
+
+    /* Email */
+
+    if(
+        href.startsWith("mailto:")
+    ){
+
+        window.location.href =
+        href;
+
+    }
+
+
+    /* PAN Status */
+
+    if(
+        href.includes("proteantech.in")
+    ){
+
+        event.preventDefault();
+
+        window.location.href =
+        PAN_STATUS_URL;
+
+    }
+
+},
+false
+);
+
+
+/* =====================================================
+REMOVE TARGET BLANK PROBLEM
+===================================================== */
+
+document
+.querySelectorAll("a")
+.forEach(function(link){
+
+    link.addEventListener(
+    "auxclick",
+    function(event){
+
+        if(event.button === 1){
+
+            event.preventDefault();
+
+        }
+
+    });
+
+});
+
+
+/* =====================================================
+PAGE LOAD
+===================================================== */
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+    document
+    .querySelectorAll(
+        'a[href^="https://wa.me/"]'
+    )
+    .forEach(function(link){
+
+        link.href =
+        WHATSAPP_URL;
+
+    });
+
+
+    document
+    .querySelectorAll(
+        'a[href^="mailto:"]'
+    )
+    .forEach(function(link){
+
+        link.href =
+        "mailto:" + EMAIL_ADDRESS;
+
+    });
+
+
+    document
+    .querySelectorAll(
+        'a[href*="instagram.com"]'
+    )
+    .forEach(function(link){
+
+        link.href =
+        INSTAGRAM_URL;
+
+    });
+
+
+    document
+    .querySelectorAll(
+        'a[href*="proteantech.in"]'
+    )
+    .forEach(function(link){
+
+        link.href =
+        PAN_STATUS_URL;
+
+    });
+
+});
 
 </script>
 
