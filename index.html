@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -119,7 +120,7 @@ nav a:hover{
 
     opacity:0;
     transform:translateY(120px);
-    animation:heroTextUp 2s ease-out forwards;
+    animation:heroTextUp 1.4s ease-out forwards;
 }
 
 @keyframes heroTextUp{
@@ -169,11 +170,6 @@ nav a:hover{
     max-width:760px;
     color:#f4f7ff;
     margin-bottom:25px;
-}
-
-.hero-highlight{
-    color:#ffd54f;
-    font-weight:bold;
 }
 
 .hero-features{
@@ -247,7 +243,7 @@ nav a:hover{
     margin:0 auto;
     padding:24px 28px;
     border-radius:22px;
-    background:rgba(7,51,111,.92);
+    background:linear-gradient(135deg,#07336f,#124b91);
     border:2px solid rgba(255,193,7,.55);
     box-shadow:0 10px 30px rgba(0,0,0,.15);
     text-align:center;
@@ -284,7 +280,7 @@ nav a:hover{
     color:#c8d6ec;
 }
 
-/* ================= TODAY OFFER ================= */
+/* ================= OFFER ================= */
 
 .offer-section{
     max-width:1100px;
@@ -459,19 +455,6 @@ section{
     margin:10px 0 18px;
 }
 
-.old-price{
-    font-size:18px;
-    color:#7c8798;
-    text-decoration:line-through;
-    margin-bottom:-8px;
-}
-
-.discount-price{
-    color:#19a957;
-    font-size:35px;
-    font-weight:900;
-}
-
 .card ul{
     list-style:none;
     margin-bottom:20px;
@@ -497,6 +480,7 @@ section{
 
 .btn:hover{
     transform:translateY(-2px);
+    filter:brightness(1.03);
 }
 
 .whatsapp{
@@ -504,17 +488,8 @@ section{
     color:white;
 }
 
-.whatsapp:hover{
-    background:#159d4d;
-}
-
 .email{
     background:#07336f;
-    color:white;
-}
-
-.instagram{
-    background:#c13584;
     color:white;
 }
 
@@ -582,17 +557,6 @@ section{
     padding:15px;
     border-radius:10px;
     margin-bottom:10px;
-}
-
-.discount-info{
-    display:none;
-    margin-top:12px;
-    padding:13px;
-    border-radius:10px;
-    background:#e9fff1;
-    border-left:5px solid #19b85b;
-    color:#08753a;
-    font-weight:bold;
 }
 
 label{
@@ -693,10 +657,6 @@ textarea:focus{
     border-radius:15px;
     border:2px solid #07336f;
     box-shadow:0 5px 20px rgba(0,0,0,.12);
-}
-
-.utr{
-    margin-top:10px;
 }
 
 .final-amount{
@@ -968,9 +928,7 @@ RJN Digital Pan Center
 
 <div class="hero-content">
 
-<h1>
-RJN DIGITAL PAN CENTER
-</h1>
+<h1>RJN DIGITAL PAN CENTER</h1>
 
 <h2>
 By <span class="gradient-text">Paperless PAN Apply</span><br>
@@ -1000,12 +958,8 @@ through a simple, fast and easy process.
 
 <div class="hero-buttons">
 
-<a
-href="#pan"
-class="hero-btn hero-register">
-
+<a href="#pan" class="hero-btn hero-register">
 📝 Register Now
-
 </a>
 
 <a
@@ -1045,15 +999,11 @@ class="hero-btn hero-whatsapp">
 Current Date & Time
 </div>
 
-<div
-id="dateDisplay"
-class="date-display">
+<div id="dateDisplay" class="date-display">
 Loading date...
 </div>
 
-<div
-id="timeDisplay"
-class="time-display">
+<div id="timeDisplay" class="time-display">
 Loading time...
 </div>
 
@@ -1098,8 +1048,10 @@ SAVE20OFF
 </div>
 
 <p style="margin-top:15px;font-size:14px;">
+
 Use this coupon code during registration and click
 <strong>APPLY</strong> to get 20% OFF.
+
 </p>
 
 </div>
@@ -1107,7 +1059,7 @@ Use this coupon code during registration and click
 </div>
 
 
-<!-- ================= LAST 30 DAYS ================= -->
+<!-- ================= REGISTRATION COUNT ================= -->
 
 <section style="padding-top:30px;padding-bottom:20px;">
 
@@ -1165,9 +1117,6 @@ service provider.
 
 <div class="cards">
 
-
-<!-- RETAILER -->
-
 <div class="card">
 
 <h3>Retailer ID</h3>
@@ -1177,20 +1126,18 @@ service provider.
 </div>
 
 <ul>
-
 <li>✓ PAN Agent Service</li>
 <li>✓ UTI 2.0 Service*</li>
 <li>✓ PAN Application Support</li>
 <li>✓ PAN Correction Support</li>
 <li>✓ Digital Service Support</li>
 <li>✓ WhatsApp Support</li>
-
 </ul>
 
 <button
 type="button"
 class="btn"
-onclick="openForm('PAN Retailer ID','199','pan')">
+onclick="openForm('PAN Retailer ID',199,'pan')">
 
 Register Now →
 
@@ -1198,8 +1145,6 @@ Register Now →
 
 </div>
 
-
-<!-- DISTRIBUTOR -->
 
 <div class="card">
 
@@ -1210,20 +1155,18 @@ Register Now →
 </div>
 
 <ul>
-
 <li>✓ Distributor Service</li>
 <li>✓ Create / Manage Retailers*</li>
 <li>✓ PAN Agent Service*</li>
 <li>✓ PAN Application Support</li>
 <li>✓ PAN Correction Support</li>
 <li>✓ WhatsApp Support</li>
-
 </ul>
 
 <button
 type="button"
 class="btn"
-onclick="openForm('PAN Distributor ID','349','pan')">
+onclick="openForm('PAN Distributor ID',349,'pan')">
 
 Register Now →
 
@@ -1231,8 +1174,6 @@ Register Now →
 
 </div>
 
-
-<!-- SUPER DISTRIBUTOR -->
 
 <div class="card">
 
@@ -1243,20 +1184,18 @@ Register Now →
 </div>
 
 <ul>
-
 <li>✓ Super Distributor Service</li>
 <li>✓ Manage Distributors / Retailers*</li>
 <li>✓ PAN Agent Service*</li>
 <li>✓ PAN Application Support</li>
 <li>✓ PAN Correction Support</li>
 <li>✓ WhatsApp Support</li>
-
 </ul>
 
 <button
 type="button"
 class="btn"
-onclick="openForm('PAN Super Distributor ID','799','pan')">
+onclick="openForm('PAN Super Distributor ID',799,'pan')">
 
 Register Now →
 
@@ -1316,6 +1255,7 @@ Digital assistance for various PAN-related services.
 <h3>📅 Date of Birth Correction</h3>
 <p>Assistance for eligible DOB corrections.</p>
 </div>
+
 <div class="service-card">
 <h3>📱 PAN Download / Reprint</h3>
 <p>Assistance for eligible PAN download and reprint services.</p>
@@ -1346,9 +1286,7 @@ Digital assistance for voter-related services.
 
 <h3>New Voter ID</h3>
 
-<div class="price">
-₹99
-</div>
+<div class="price">₹99</div>
 
 <ul>
 <li>✓ New Voter Registration Support</li>
@@ -1358,174 +1296,7 @@ Digital assistance for voter-related services.
 </ul>
 
 <button
-type="button"
-class="btn"
-onclick="openForm('Voter ID Service','99','voter')">
-
-Register Now →
-
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Voter Correction</h3>
-
-<div class="price">
-₹99
-</div>
-
-<ul>
-<li>✓ Name Correction Support</li>
-<li>✓ Address Correction Support</li>
-<li>✓ DOB Correction Support</li>
-<li>✓ Application Assistance</li>
-</ul>
-
-<button
-type="button"
-class="btn"
-onclick="openForm('Voter Correction','99','voter')">
-
-Register Now →
-
-</button>
-
-</div>
-
-
-<div class="card">
-
-<h3>Voter Download</h3>
-
-<div class="price">
-₹49
-</div>
-
-<ul>
-<li>✓ Voter Document Assistance</li>
-<li>✓ Download Support</li>
-<li>✓ Digital Service Support</li>
-<li>✓ WhatsApp Support</li>
-</ul>
-
-<button
-type="button"
-class="btn"
-onclick="openForm('Voter Download','49','voter')">
-
-Register Now →
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= PRINT SERVICES ================= -->
-
-<section id="print">
-
-<div class="section-title">
-
-<h2>🖨️ PRINT & DIGITAL SERVICES</h2>
-
-<p>
-Useful printing and digital assistance for customers.
-</p>
-
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-<h3>📄 Document Print</h3>
-<p>Black & white and colour document printing assistance.</p>
-</div>
-
-<div class="service-card">
-<h3>📸 Photo Print</h3>
-<p>Passport-size and document photo printing.</p>
-</div>
-
-<div class="service-card">
-<h3>🪪 ID Card Print</h3>
-<p>Digital ID card and document printing support.</p>
-</div>
-
-<div class="service-card">
-<h3>📑 Form Print</h3>
-<p>Online form and application print assistance.</p>
-</div>
-
-<div class="service-card">
-<h3>📋 Scan & Print</h3>
-<p>Document scanning and printing support.</p>
-</div>
-
-<div class="service-card">
-<h3>💻 Online Services</h3>
-<p>General digital service and online application assistance.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= MOBILE RECHARGE ================= -->
-
-<section id="recharge">
-
-<div class="section-title">
-
-<h2>📱 MOBILE RECHARGE ID</h2>
-
-<p>
-Register quickly with only the basic details required.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Mobile Recharge Retailer ID</h3>
-
-<div class="price">
-₹99
-</div>
-
-<ul>
-<li>✓ Mobile Recharge Service</li>
-<li>✓ Fast Digital Process</li>
-<li>✓ Retailer Support</li>
-<li>✓ WhatsApp Support</li>
-</ul>
-
-<button
-type="button"
-class="btn"
-onclick="openForm('Mobile Recharge Retailer ID','99','recharge')">
-
-Register Now →
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= PAN STATUS ================= -->
+    <!-- ================= PAN STATUS ================= -->
 
 <section id="pan-status">
 
@@ -1615,9 +1386,7 @@ Registration
 
 <div id="panFields">
 
-<label>
-Name *
-</label>
+<label>Name *</label>
 
 <input
 type="text"
@@ -1625,9 +1394,7 @@ id="name"
 placeholder="Enter your full name">
 
 
-<label>
-Shop Name *
-</label>
+<label>Shop Name *</label>
 
 <input
 type="text"
@@ -1635,18 +1402,14 @@ id="shopName"
 placeholder="Enter shop name">
 
 
-<label>
-Shop Address *
-</label>
+<label>Shop Address *</label>
 
 <textarea
 id="shopAddress"
 placeholder="Enter complete shop address"></textarea>
 
 
-<label>
-Pin Code *
-</label>
+<label>Pin Code *</label>
 
 <input
 type="text"
@@ -1656,15 +1419,11 @@ maxlength="6"
 placeholder="Enter 6 digit PIN code">
 
 
-<label>
-State *
-</label>
+<label>State *</label>
 
 <select id="state">
 
-<option value="">
-Select State
-</option>
+<option value="">Select State</option>
 
 <option>Andhra Pradesh</option>
 <option>Arunachal Pradesh</option>
@@ -1706,9 +1465,7 @@ Select State
 </select>
 
 
-<label>
-Mobile Number *
-</label>
+<label>Mobile Number *</label>
 
 <input
 type="tel"
@@ -1718,9 +1475,7 @@ maxlength="10"
 placeholder="Enter 10 digit mobile number">
 
 
-<label>
-Email ID *
-</label>
+<label>Email ID *</label>
 
 <input
 type="email"
@@ -1728,9 +1483,7 @@ id="email"
 placeholder="Enter email address">
 
 
-<label>
-Aadhaar Number *
-</label>
+<label>Aadhaar Number *</label>
 
 <input
 type="text"
@@ -1740,9 +1493,7 @@ maxlength="12"
 placeholder="Enter 12 digit Aadhaar number">
 
 
-<label>
-PAN Number *
-</label>
+<label>PAN Number *</label>
 
 <input
 type="text"
@@ -1756,16 +1507,15 @@ style="text-transform:uppercase;">
 
 <strong>⚠️ Important:</strong>
 
-PAN Agent ID registration requires both Aadhaar Number
-and PAN Number. Without these required document numbers,
-the PAN Agent ID cannot be created.
+PAN Agent ID registration requires the required identity
+information for processing.
 
 <br><br>
 
 <strong>🔐 Privacy:</strong>
 
-For security, sensitive document numbers should be processed
-through a secure backend rather than exposed in WhatsApp URLs.
+Sensitive document information should be handled through a
+secure backend and should not be exposed in WhatsApp URLs.
 
 </div>
 
@@ -1776,9 +1526,7 @@ through a secure backend rather than exposed in WhatsApp URLs.
 
 <div id="rechargeFields" style="display:none;">
 
-<label>
-Name *
-</label>
+<label>Name *</label>
 
 <input
 type="text"
@@ -1786,9 +1534,7 @@ id="rechargeName"
 placeholder="Enter your full name">
 
 
-<label>
-Mobile Number *
-</label>
+<label>Mobile Number *</label>
 
 <input
 type="tel"
@@ -1798,9 +1544,7 @@ maxlength="10"
 placeholder="Enter 10 digit mobile number">
 
 
-<label>
-Email ID *
-</label>
+<label>Email ID *</label>
 
 <input
 type="email"
@@ -1808,15 +1552,11 @@ id="rechargeEmail"
 placeholder="Enter email address">
 
 
-<label>
-State *
-</label>
+<label>State *</label>
 
 <select id="rechargeState">
 
-<option value="">
-Select State
-</option>
+<option value="">Select State</option>
 
 <option>Andhra Pradesh</option>
 <option>Arunachal Pradesh</option>
@@ -1853,13 +1593,11 @@ Select State
 </div>
 
 
-<!-- ================= OTHER SERVICE FORM ================= -->
+<!-- ================= OTHER FORM ================= -->
 
 <div id="otherFields" style="display:none;">
 
-<label>
-Name *
-</label>
+<label>Name *</label>
 
 <input
 type="text"
@@ -1867,9 +1605,7 @@ id="otherName"
 placeholder="Enter your full name">
 
 
-<label>
-Mobile Number *
-</label>
+<label>Mobile Number *</label>
 
 <input
 type="tel"
@@ -1879,9 +1615,7 @@ maxlength="10"
 placeholder="Enter 10 digit mobile number">
 
 
-<label>
-Email ID *
-</label>
+<label>Email ID *</label>
 
 <input
 type="email"
@@ -1889,9 +1623,7 @@ id="otherEmail"
 placeholder="Enter email address">
 
 
-<label>
-Message / Requirement
-</label>
+<label>Message / Requirement</label>
 
 <textarea
 id="otherMessage"
@@ -1950,9 +1682,7 @@ Original Amount
 </span>
 
 <strong>
-₹<span id="displayOriginal">
-0
-</span>
+₹<span id="displayOriginal">0</span>
 </strong>
 
 <br>
@@ -1969,9 +1699,7 @@ style="display:none;margin-top:8px;">
 id="discountDisplay"
 style="display:none;color:#19a957;">
 
-- ₹<span id="discountAmount">
-0
-</span>
+- ₹<span id="discountAmount">0</span>
 
 </strong>
 
@@ -1982,9 +1710,7 @@ Amount Payable
 </span>
 
 <strong>
-₹<span id="finalPrice">
-0
-</span>
+₹<span id="finalPrice">0</span>
 </strong>
 
 </div>
@@ -2003,9 +1729,6 @@ Amount Payable
 Complete the payment of the final amount shown above.
 
 </p>
-
-
-<!-- Replace this image with your actual QR image -->
 
 <img
 src="qr-code.png"
@@ -2056,7 +1779,6 @@ onclick="closeForm()">
 
 </button>
 
-
 </div>
 
 </section>
@@ -2075,8 +1797,8 @@ Please enter correct information while registering.
 </p>
 
 <p>
-For PAN Agent ID registration, Aadhaar Number and PAN Number
-are required.
+For PAN Agent ID registration, required identity information
+is needed for processing.
 </p>
 
 <p>
@@ -2182,36 +1904,20 @@ Digital Services • PAN Services • Recharge Services
 
 <div class="footer-links">
 
-<a
-href="#home"
-class="btn">
-
+<a href="#home" class="btn">
 Home
-
 </a>
 
-<a
-href="#pan"
-class="btn">
-
+<a href="#pan" class="btn">
 PAN Agent ID
-
 </a>
 
-<a
-href="#recharge"
-class="btn">
-
+<a href="#recharge" class="btn">
 Recharge ID
-
 </a>
 
-<a
-href="#contact"
-class="btn">
-
+<a href="#contact" class="btn">
 Contact
-
 </a>
 
 </div>
@@ -2227,52 +1933,78 @@ Contact
 
 <script>
 
-/* ================= DATE & TIME ================= */
+/* ==================================================
+   DATE & TIME
+   Reliable India Standard Time
+================================================== */
 
 function updateDateTime(){
 
-    const now = new Date();
+    const dateElement =
+        document.getElementById("dateDisplay");
 
-    const options = {
-        timeZone:"Asia/Kolkata",
-        weekday:"short",
-        day:"2-digit",
-        month:"short",
-        year:"numeric"
-    };
+    const timeElement =
+        document.getElementById("timeDisplay");
 
-    const dateText =
-        new Intl.DateTimeFormat(
-            "en-IN",
-            options
-        ).format(now);
+    try{
 
-    const timeText =
-        new Intl.DateTimeFormat(
-            "en-IN",
-            {
+        const now = new Date();
+
+        const dateFormatter =
+            new Intl.DateTimeFormat("en-IN",{
+                timeZone:"Asia/Kolkata",
+                weekday:"long",
+                day:"2-digit",
+                month:"long",
+                year:"numeric"
+            });
+
+        const timeFormatter =
+            new Intl.DateTimeFormat("en-IN",{
                 timeZone:"Asia/Kolkata",
                 hour:"2-digit",
                 minute:"2-digit",
                 second:"2-digit",
                 hour12:true
-            }
-        ).format(now);
+            });
 
-    document.getElementById("dateDisplay").textContent =
-        dateText;
+        dateElement.textContent =
+            dateFormatter.format(now);
 
-    document.getElementById("timeDisplay").textContent =
-        timeText;
+        timeElement.textContent =
+            timeFormatter.format(now);
+
+    }
+
+    catch(error){
+
+        /* Fallback if Intl is unavailable */
+
+        const now = new Date();
+
+        dateElement.textContent =
+            now.toDateString();
+
+        timeElement.textContent =
+            now.toLocaleTimeString();
+
+    }
 
 }
 
+
+/* Run immediately */
+
 updateDateTime();
+
+/* Update every second */
 
 setInterval(updateDateTime,1000);
 
 
-/* ================= REGISTRATION VARIABLES ================= */
+/* ==================================================
+   REGISTRATION VARIABLES
+================================================== */
 
 let selectedService = "";
 let selectedPrice = 0;
@@ -2280,15 +2012,19 @@ let selectedType = "";
 let couponApplied = false;
 
 
-/* ================= OPEN FORM ================= */
+/* ==================================================
+   OPEN REGISTRATION FORM
+================================================== */
 
 function openForm(service,price,type){
 
     selectedService = service;
     selectedPrice = Number(price);
     selectedType = type;
-
     couponApplied = false;
+
+
+    /* Basic information */
 
     document.getElementById("formTitle").textContent =
         "Register for " + service;
@@ -2297,13 +2033,16 @@ function openForm(service,price,type){
         service;
 
     document.getElementById("originalPrice").textContent =
-        selectedPrice;
+        selectedPrice.toFixed(2);
 
     document.getElementById("displayOriginal").textContent =
-        selectedPrice;
+        selectedPrice.toFixed(2);
 
     document.getElementById("finalPrice").textContent =
-        selectedPrice;
+        selectedPrice.toFixed(2);
+
+
+    /* Reset coupon */
 
     document.getElementById("couponInput").value = "";
 
@@ -2315,22 +2054,26 @@ function openForm(service,price,type){
     document.getElementById("discountDisplay").style.display =
         "none";
 
+    document.getElementById("discountAmount").textContent =
+        "0.00";
 
-    /* PAN FORM */
+
+    /* Hide all form sections */
 
     document.getElementById("panFields").style.display =
         "none";
 
-    /* RECHARGE FORM */
-
     document.getElementById("rechargeFields").style.display =
         "none";
-
-    /* OTHER FORM */
 
     document.getElementById("otherFields").style.display =
         "none";
 
+    document.getElementById("couponArea").style.display =
+        "none";
+
+
+    /* PAN */
 
     if(type === "pan"){
 
@@ -2342,38 +2085,51 @@ function openForm(service,price,type){
 
     }
 
+
+    /* RECHARGE */
+
     else if(type === "recharge"){
 
         document.getElementById("rechargeFields").style.display =
             "block";
 
-        document.getElementById("couponArea").style.display =
-            "none";
-
     }
+
+
+    /* VOTER / OTHER */
 
     else{
 
         document.getElementById("otherFields").style.display =
             "block";
 
-        document.getElementById("couponArea").style.display =
-            "none";
-
     }
 
+
+    /* Show registration form */
 
     document.getElementById("registrationForm").style.display =
         "block";
 
-    document.getElementById("registrationForm").scrollIntoView({
-        behavior:"smooth"
-    });
+
+    /* Scroll to form */
+
+    setTimeout(function(){
+
+        document.getElementById("registrationForm")
+        .scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    },50);
 
 }
 
 
-/* ================= CLOSE FORM ================= */
+/* ==================================================
+   CLOSE FORM
+================================================== */
 
 function closeForm(){
 
@@ -2388,23 +2144,31 @@ function closeForm(){
 }
 
 
-/* ================= APPLY COUPON ================= */
+/* ==================================================
+   APPLY COUPON
+================================================== */
 
 function applyCoupon(){
 
-    const coupon =
-        document.getElementById("couponInput")
-        .value
-        .trim()
-        .toUpperCase();
+    const input =
+        document.getElementById("couponInput");
 
     const message =
         document.getElementById("couponMessage");
+
+    const coupon =
+        input.value
+        .trim()
+        .toUpperCase();
+
 
     if(selectedType !== "pan"){
 
         message.textContent =
             "Coupon is available for PAN Agent ID plans only.";
+
+        message.style.color =
+            "#b42318";
 
         return;
 
@@ -2423,22 +2187,20 @@ function applyCoupon(){
 
 
         document.getElementById("discountAmount")
-            .textContent =
+        .textContent =
             discount.toFixed(2);
 
         document.getElementById("finalPrice")
-            .textContent =
+        .textContent =
             finalAmount.toFixed(2);
 
-
         document.getElementById("discountRow")
-            .style.display =
+        .style.display =
             "block";
 
         document.getElementById("discountDisplay")
-            .style.display =
+        .style.display =
             "block";
-
 
         message.textContent =
             "✅ Coupon applied successfully! You save 20%.";
@@ -2453,17 +2215,16 @@ function applyCoupon(){
         couponApplied = false;
 
         document.getElementById("finalPrice")
-            .textContent =
-            selectedPrice;
+        .textContent =
+            selectedPrice.toFixed(2);
 
         document.getElementById("discountRow")
-            .style.display =
+        .style.display =
             "none";
 
         document.getElementById("discountDisplay")
-            .style.display =
+        .style.display =
             "none";
-
 
         message.textContent =
             "❌ Invalid coupon code.";
@@ -2476,7 +2237,9 @@ function applyCoupon(){
 }
 
 
-/* ================= VALIDATE MOBILE ================= */
+/* ==================================================
+   MOBILE VALIDATION
+================================================== */
 
 function validMobile(number){
 
@@ -2485,12 +2248,11 @@ function validMobile(number){
 }
 
 
-/* ================= SUBMIT ================= */
+/* ==================================================
+   SUBMIT REGISTRATION
+================================================== */
 
 function submitRegistration(){
-
-    let message = "";
-
 
     /* ================= PAN ================= */
 
@@ -2522,11 +2284,14 @@ function submitRegistration(){
 
         const pan =
             document.getElementById("panNumber")
-            .value.trim()
+            .value
+            .trim()
             .toUpperCase();
 
         const utr =
-            document.getElementById("utr").value.trim();
+            document.getElementById("utr")
+            .value
+            .trim();
 
 
         if(
@@ -2601,10 +2366,105 @@ function submitRegistration(){
             : selectedPrice;
 
 
-        /*
-         IMPORTANT:
+        alert(
+            "Registration details validated successfully.\n\n" +
+            "Service: " + selectedService + "\n" +
+            "Amount Payable: ₹" +
+            finalAmount.toFixed(2) +
+            "\n\n" +
+            "Connect this form to your secure backend " +
+            "to complete registration."
+        );
 
-         Do NOT put Aadhaar/PAN numbers into a
-         WhatsApp URL or expose them in frontend JavaScript.
+        return;
 
-         Connect this submit action to your secure
+    }
+
+
+    /* ================= RECHARGE ================= */
+
+    if(selectedType === "recharge"){
+
+        const name =
+            document.getElementById("rechargeName")
+            .value
+            .trim();
+
+        const mobile =
+            document.getElementById("rechargeMobile")
+            .value
+            .trim();
+
+        const email =
+            document.getElementById("rechargeEmail")
+            .value
+            .trim();
+
+        const state =
+            document.getElementById("rechargeState")
+            .value;
+
+        const utr =
+            document.getElementById("utr")
+            .value
+            .trim();
+
+
+        if(
+            !name ||
+            !mobile ||
+            !email ||
+            !state ||
+            !utr
+        ){
+
+            alert(
+                "Please fill all required fields."
+            );
+
+            return;
+
+        }
+
+
+        if(!validMobile(mobile)){
+
+            alert(
+                "Please enter a valid 10 digit mobile number."
+            );
+
+            return;
+
+        }
+
+
+        alert(
+            "Registration details validated successfully.\n\n" +
+            "Service: " + selectedService + "\n" +
+            "Amount Payable: ₹" +
+            selectedPrice.toFixed(2) +
+            "\n\n" +
+            "Connect this form to your secure backend " +
+            "to complete registration."
+        );
+
+        return;
+
+    }
+
+
+    /* ================= OTHER SERVICES ================= */
+
+    if(selectedType === "other"){
+
+        const name =
+            document.getElementById("otherName")
+            .value
+            .trim();
+
+        const mobile =
+            document.getElementById("otherMobile")
+            .value
+            .trim();
+
+        const email =
