@@ -2,70 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RJN Digital Pan Center</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f7fb;
-color:#14213d;
-line-height:1.6
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f7fb;
+    color:#14213d;
+    line-height:1.6;
 }
 button,input,select,textarea{font-family:inherit}
 
+/* TOP OFFER */
 .top-offer{
-background:#d60000;color:#fff;text-align:center;
-padding:11px 15px;font-weight:800;font-size:15px
+    background:#d60000;color:#fff;text-align:center;
+    padding:11px 15px;font-weight:800;font-size:15px
 }
 .top-offer span{color:#ffe600}
 .top-offer strong{
-background:#fff;color:#d60000;padding:4px 10px;
-border-radius:5px;margin-left:6px
+    background:#fff;color:#d60000;padding:4px 10px;
+    border-radius:5px;margin-left:6px
 }
 
+/* HEADER */
 header{
-background:#ffbf00;color:#07336f;padding:10px 5%;
-position:sticky;top:0;z-index:1000;
-box-shadow:0 3px 15px rgba(0,0,0,.15)
+    background:#ffbf00;color:#07336f;padding:10px 5%;
+    position:sticky;top:0;z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15)
 }
 .nav{
-max-width:1200px;margin:auto;display:flex;
-align-items:center;justify-content:space-between;gap:15px
+    max-width:1200px;margin:auto;display:flex;
+    align-items:center;justify-content:space-between;gap:15px
 }
 .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800}
 .logo-img{
-width:55px;height:55px;border-radius:50%;
-object-fit:cover;background:white;border:3px solid white
+    width:55px;height:55px;border-radius:50%;
+    object-fit:cover;background:#fff;border:3px solid #fff
 }
 nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
 nav a{
-color:#07336f;text-decoration:none;padding:9px 12px;
-border-radius:25px;font-weight:bold;font-size:14px
+    color:#07336f;text-decoration:none;padding:9px 12px;
+    border-radius:25px;font-weight:bold;font-size:14px
 }
-nav a:hover{background:#07336f;color:white}
+nav a:hover{background:#07336f;color:#fff}
 
+/* HERO */
 .hero{
-min-height:600px;display:flex;align-items:center;
-padding:70px 6%;position:relative;overflow:hidden;color:white;
-background:
-radial-gradient(circle at 85% 20%,rgba(255,193,7,.22),transparent 28%),
-radial-gradient(circle at 15% 90%,rgba(255,193,7,.10),transparent 25%),
-linear-gradient(135deg,#041f4d,#07336f 50%,#124b91)
+    min-height:600px;display:flex;align-items:center;
+    padding:70px 6%;position:relative;overflow:hidden;color:#fff;
+    background:
+    radial-gradient(circle at 85% 20%,rgba(255,193,7,.22),transparent 28%),
+    radial-gradient(circle at 15% 90%,rgba(255,193,7,.10),transparent 25%),
+    linear-gradient(135deg,#041f4d,#07336f 50%,#124b91)
 }
 .hero::before{
-content:"";position:absolute;width:650px;height:650px;
-right:-300px;top:-250px;border-radius:50%;
-border:85px solid rgba(255,193,7,.07)
+    content:"";position:absolute;width:650px;height:650px;
+    right:-300px;top:-250px;border-radius:50%;
+    border:85px solid rgba(255,193,7,.07)
 }
 .hero-content{max-width:850px;position:relative;z-index:2}
 .hero h1{font-size:58px;line-height:1.05;font-weight:900;margin-bottom:15px}
 .hero h2{font-size:38px;line-height:1.2;font-weight:800;margin-bottom:20px}
 .gradient-text{
-background:linear-gradient(90deg,#fff176,#ffc107,#ff9800,#ffd54f);
--webkit-background-clip:text;-webkit-text-fill-color:transparent
+    background:linear-gradient(90deg,#fff176,#ffc107,#ff9800,#ffd54f);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent
 }
 .hero p{font-size:18px;max-width:760px;color:#f4f7ff;margin-bottom:25px}
 .hero-features{display:flex;flex-direction:column;gap:9px;margin:20px 0 25px}
@@ -73,152 +76,160 @@ background:linear-gradient(90deg,#fff176,#ffc107,#ff9800,#ffd54f);
 .hero-feature span{color:#ffc107;margin-right:7px}
 .hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
 .hero-btn{
-display:inline-flex;align-items:center;justify-content:center;
-padding:15px 28px;border-radius:35px;text-decoration:none;
-font-weight:bold;transition:.3s
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:15px 28px;border-radius:35px;text-decoration:none;
+    font-weight:bold;transition:.3s
 }
 .hero-register{background:#ffc107;color:#07336f}
-.hero-whatsapp{background:#19b85b;color:white}
+.hero-whatsapp{background:#19b85b;color:#fff}
 .hero-btn:hover{transform:translateY(-3px)}
 .hero-bottom{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;font-size:14px}
 .hero-bottom span{color:#ffc107}
 
+/* COMMON */
 section{max-width:1200px;margin:auto;padding:60px 20px}
 .section-title{text-align:center;margin-bottom:35px}
 .section-title h2{font-size:36px;color:#07336f;margin-bottom:7px}
 .section-title p{color:#617086}
 
+/* TIME */
 .time-section{padding:40px 20px 25px}
 .time-card{
-max-width:1100px;margin:auto;
-background:linear-gradient(135deg,#285b91,#124b91,#07336f);
-color:white;border-radius:35px;padding:32px 40px;
-box-shadow:0 15px 40px rgba(7,51,111,.22);
-position:relative;overflow:hidden
+    max-width:1100px;margin:auto;
+    background:linear-gradient(135deg,#285b91,#124b91,#07336f);
+    color:#fff;border-radius:35px;padding:32px 40px;
+    box-shadow:0 15px 40px rgba(7,51,111,.22);
+    position:relative;overflow:hidden
 }
 .time-card:after{
-content:"";position:absolute;width:500px;height:300px;
-right:-150px;top:-150px;border-radius:50%;
-background:rgba(255,255,255,.06)
+    content:"";position:absolute;width:500px;height:300px;
+    right:-150px;top:-150px;border-radius:50%;
+    background:rgba(255,255,255,.06)
 }
 .time-content{position:relative;z-index:2}
 .time-date{font-size:24px;margin-bottom:12px}
 .time-display{font-size:70px;line-height:1;font-weight:900;color:#ffc107}
 .time-zone{margin-top:12px;color:#e6edf8}
 
+/* OFFER */
 .offer-card{
-max-width:1000px;margin:auto;
-background:linear-gradient(135deg,#07336f,#124b91);
-color:white;border-radius:28px;padding:35px 22px;
-text-align:center;border:3px solid #ffc107;
-box-shadow:0 15px 40px rgba(7,51,111,.20)
+    max-width:1000px;margin:auto;
+    background:linear-gradient(135deg,#07336f,#124b91);
+    color:#fff;border-radius:28px;padding:35px 22px;text-align:center;
+    border:3px solid #ffc107;box-shadow:0 15px 40px rgba(7,51,111,.20)
 }
 .offer-badge{
-display:inline-block;background:#ffc107;color:#07336f;
-padding:10px 22px;border-radius:30px;font-weight:900;margin-bottom:15px
+    display:inline-block;background:#ffc107;color:#07336f;
+    padding:10px 22px;border-radius:30px;font-weight:900;margin-bottom:15px
 }
 .offer-card h2{font-size:42px}
 .offer-card h2 span{color:#ffc107}
 .offer-card p{font-size:18px}
 .coupon-code{
-display:inline-block;margin-top:15px;border:2px dashed #ffc107;
-padding:10px 20px;border-radius:12px;color:#ffc107;
-font-size:25px;font-weight:900;letter-spacing:2px
+    display:inline-block;margin-top:15px;border:2px dashed #ffc107;
+    padding:10px 20px;border-radius:12px;color:#ffc107;
+    font-size:25px;font-weight:900;letter-spacing:2px
 }
 
+/* NOTICE */
 .notice{
-background:linear-gradient(135deg,#fff8dc,#fff0b0);
-border-left:6px solid #ffb900;padding:20px;
-border-radius:12px;margin-bottom:30px
+    background:linear-gradient(135deg,#fff8dc,#fff0b0);
+    border-left:6px solid #ffb900;padding:20px;border-radius:12px;
+    margin-bottom:30px
 }
 
+/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
 .card{
-background:white;border-radius:20px;padding:29px;
-box-shadow:0 7px 25px rgba(7,51,111,.10);
-border:1px solid #e1e7f0;position:relative;
-overflow:hidden;transition:.3s
+    background:#fff;border-radius:20px;padding:29px;
+    box-shadow:0 7px 25px rgba(7,51,111,.10);
+    border:1px solid #e1e7f0;position:relative;
+    overflow:hidden;transition:.3s
 }
 .card:before{
-content:"";position:absolute;left:0;top:0;width:100%;height:5px;
-background:linear-gradient(90deg,#07336f,#ffc107,#07336f)
+    content:"";position:absolute;left:0;top:0;width:100%;height:5px;
+    background:linear-gradient(90deg,#07336f,#ffc107,#07336f)
 }
 .card:hover{transform:translateY(-5px)}
 .card h3{font-size:24px;color:#07336f}
-.price,.offer-price{
-font-size:35px;font-weight:900;color:#e87500;margin:10px 0
-}
+.price{font-size:35px;font-weight:900;color:#e87500;margin:10px 0 18px}
 .old-price{font-size:17px;color:#888;text-decoration:line-through}
+.offer-price{color:#e87500;font-size:35px;font-weight:900}
 .discount-tag,.free-tag{
-display:inline-block;background:#e8fff1;color:#0b9347;
-padding:5px 10px;border-radius:15px;font-size:12px;font-weight:bold
+    display:inline-block;background:#e8fff1;color:#0b9347;
+    padding:5px 10px;border-radius:15px;font-size:12px;font-weight:bold
 }
-.free-tag{font-size:14px}
 .card ul{list-style:none;margin-bottom:20px}
 .card li{margin:10px 0;color:#34445d}
 
+/* BUTTON */
 .btn{
-display:inline-block;padding:13px 24px;border-radius:30px;
-border:none;cursor:pointer;text-decoration:none;font-weight:bold;
-background:#ffc107;color:#07336f;transition:.3s
+    display:inline-block;padding:13px 24px;border-radius:30px;
+    border:none;cursor:pointer;text-decoration:none;font-weight:bold;
+    background:#ffc107;color:#07336f;transition:.3s
 }
 .btn:hover{transform:translateY(-2px)}
 .card .btn{width:100%}
-.whatsapp{background:#19b85b;color:white}
-.email{background:#07336f;color:white}
-.instagram{background:#c13584;color:white}
+.whatsapp{background:#19b85b;color:#fff}
+.email{background:#07336f;color:#fff}
+.instagram{background:#c13584;color:#fff}
 
+/* DOCUMENTS */
 .documents-box{
-max-width:900px;margin:40px auto 0;background:white;padding:30px;
-border-radius:20px;box-shadow:0 8px 28px rgba(7,51,111,.10);
-border-left:6px solid #ffc107
+    max-width:850px;margin:40px auto 0;background:#fff;padding:30px;
+    border-radius:20px;box-shadow:0 8px 28px rgba(7,51,111,.10);
+    border-left:6px solid #ffc107
 }
 .documents-box h3{color:#07336f;font-size:25px;margin-bottom:18px}
 .document-list{
-list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px
+    list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px
 }
 .document-list li{
-background:#f4f7fb;padding:11px 14px;border-radius:9px;
-color:#34445d;font-weight:600
+    background:#f4f7fb;padding:11px 14px;border-radius:9px;
+    color:#34445d;font-weight:600
 }
 
+/* FORM */
 .form-page{display:none;max-width:100%;background:#eef4ff}
 .form-box{
-max-width:800px;margin:auto;background:white;padding:30px;
-border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,.10);
-border-top:5px solid #ffc107
+    max-width:780px;margin:auto;background:#fff;padding:30px;
+    border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,.10);
+    border-top:5px solid #ffc107
 }
 .form-box h2{color:#07336f}
 .selected-plan{
-background:#eef4ff;padding:16px;border-radius:10px;margin:15px 0;font-weight:bold
+    background:#eef4ff;padding:16px;border-radius:10px;margin:15px 0;
+    font-weight:bold
 }
 label{display:block;font-weight:bold;margin-top:16px;color:#233653}
 input,select,textarea{
-width:100%;padding:14px;border:1px solid #ccd3df;
-border-radius:9px;margin-top:6px;font-size:16px;outline:none;background:white
+    width:100%;padding:14px;border:1px solid #ccd3df;
+    border-radius:9px;margin-top:6px;font-size:16px;outline:none;background:#fff
 }
 input:focus,select:focus,textarea:focus{
-border-color:#07336f;box-shadow:0 0 0 3px rgba(7,51,111,.08)
+    border-color:#07336f;box-shadow:0 0 0 3px rgba(7,51,111,.08)
 }
 textarea{min-height:90px;resize:vertical}
 
+/* PAYMENT */
 .payment{
-background:#eef5ff;padding:25px;border-radius:18px;
-margin-top:28px;border:1px solid #d5e0f2
+    background:#eef5ff;padding:25px;border-radius:18px;margin-top:28px;
+    border:1px solid #d5e0f2
 }
 .payment h3{color:#07336f;font-size:24px}
 .payment-old{color:#888;text-decoration:line-through}
 .payment-discount{color:#0b9347;font-weight:bold}
 .payment-final-box{
-background:#edf4ff;border:1px solid #d4e0f0;border-radius:15px;
-padding:20px;margin-top:15px;text-align:center
+    background:#edf4ff;border:1px solid #d4e0f0;border-radius:15px;
+    padding:20px;margin-top:15px;text-align:center
 }
 .payment-final-title{color:#718096;font-size:15px}
 .payment-final{font-size:34px;font-weight:900;color:#07336f}
 
+/* COUPON */
 .coupon-area{
-margin-top:20px;background:#fff9df;padding:18px;
-border-radius:14px;border:2px dashed #e7bf19
+    margin-top:20px;background:#fff9df;padding:18px;border-radius:14px;
+    border:2px dashed #e7bf19
 }
 .coupon-area h4{color:#07336f;margin-bottom:5px}
 .coupon-help{color:#667085;font-size:14px;margin-bottom:10px}
@@ -229,95 +240,100 @@ border-radius:14px;border:2px dashed #e7bf19
 .success{color:#0b9347}
 .error{color:#c62828}
 
+/* QR */
 .qr-payment-box{
-margin-top:25px;background:white;border:3px solid #07336f;
-border-radius:20px;padding:22px;text-align:center
+    margin-top:25px;background:#fff;border:3px solid #07336f;
+    border-radius:20px;padding:22px;text-align:center
 }
 .qr-title{font-size:26px;color:#07336f;font-weight:900}
 .qr-subtitle{color:#667085;margin-top:5px}
 .payment-qr{
-display:block;width:280px;height:280px;object-fit:contain;
-margin:20px auto;padding:8px;border:2px dashed #07336f;
-border-radius:15px;background:white
+    display:block;width:280px;height:280px;object-fit:contain;
+    margin:20px auto;padding:8px;border:2px dashed #07336f;
+    border-radius:15px;background:#fff
 }
 .qr-note{
-background:#fff3cd;border-left:5px solid #ffc107;
-padding:14px;border-radius:10px;text-align:left
+    background:#fff3cd;border-left:5px solid #ffc107;padding:14px;
+    border-radius:10px;text-align:left
 }
 
+/* SCREENSHOT */
 .screenshot-box{
-margin-top:22px;background:white;border:1px solid #d6deeb;
-padding:20px;border-radius:15px
+    margin-top:22px;background:#fff;border:1px solid #d6deeb;
+    padding:20px;border-radius:15px
 }
 .screenshot-box h4{color:#07336f;font-size:19px}
 .screenshot-box p{color:#667085;font-size:14px}
 .screenshot-preview{
-display:none;max-width:100%;max-height:300px;margin:15px auto 0;
-border-radius:12px;border:2px solid #07336f
+    display:none;max-width:100%;max-height:300px;margin:15px auto 0;
+    border-radius:12px;border:2px solid #07336f
 }
 
-.payment-warning{
-background:#fff3cd;border-left:5px solid #ffc107;
-padding:14px;border-radius:10px;margin-top:15px
+/* SERVICE INFO */
+.service-info{
+    margin-top:20px;padding:18px;background:#f8fbff;
+    border-left:5px solid #07336f;border-radius:10px
 }
-.submit-btn{
-width:100%;margin-top:25px;padding:17px;font-size:18px;
-background:#ffc107;color:#07336f
-}
-.back-btn{background:#07336f;color:white;margin-bottom:15px}
+.service-info h4{color:#07336f;margin-bottom:10px}
+.service-info ul{padding-left:20px}
+.service-info li{margin:5px 0}
 
+/* CONTACT */
 .final-notice{
-max-width:1000px;margin:auto;
-background:linear-gradient(135deg,#fff8dc,#fff0b0);
-border:2px solid #ffc107;padding:25px;border-radius:18px;text-align:center
+    max-width:1000px;margin:auto;
+    background:linear-gradient(135deg,#fff8dc,#fff0b0);
+    border:2px solid #ffc107;padding:25px;border-radius:18px;text-align:center
 }
 .contact-links{
-display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:18px
+    display:flex;justify-content:center;flex-wrap:wrap;
+    gap:12px;margin-top:18px
 }
 .address-box{
-max-width:600px;margin:25px auto 0;background:#eef4ff;
-padding:22px;border-radius:14px;border-left:5px solid #ffc107
+    max-width:600px;margin:25px auto 0;background:#eef4ff;
+    padding:22px;border-radius:14px;border-left:5px solid #ffc107
 }
 
+/* FOOTER */
 footer{
-background:#061d40;color:white;text-align:center;padding:35px 20px
+    background:#061d40;color:#fff;text-align:center;padding:35px 20px
 }
 footer strong{color:#ffc107}
 .footer-links{
-display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:20px 0
+    display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:20px 0
 }
-.footer-links a{color:white;text-decoration:none}
+.footer-links a{color:#fff;text-decoration:none}
 
+/* MOBILE */
 @media(max-width:900px){
-.cards{grid-template-columns:1fr}
-.hero h1{font-size:45px}
-.hero h2{font-size:32px}
-.document-list{grid-template-columns:1fr}
-.time-display{font-size:55px}
+    .cards{grid-template-columns:1fr}
+    .hero h1{font-size:45px}
+    .hero h2{font-size:32px}
+    .document-list{grid-template-columns:1fr}
+    .time-display{font-size:55px}
 }
 @media(max-width:600px){
-.top-offer{font-size:13px}
-header{padding:8px 14px}
-.logo{font-size:15px}
-.logo-img{width:47px;height:47px}
-nav{display:none}
-.hero{min-height:620px;padding:55px 22px}
-.hero h1{font-size:37px}
-.hero h2{font-size:27px}
-.hero-buttons{flex-direction:column}
-.hero-btn{width:100%}
-.hero-bottom{flex-direction:column;gap:8px}
-.section-title h2{font-size:29px}
-.time-card{padding:28px 22px;border-radius:25px}
-.time-date{font-size:18px}
-.time-display{font-size:42px}
-.offer-card h2{font-size:32px}
-.coupon-row{flex-direction:column}
-.coupon-row button{width:100%}
-.form-box{padding:22px 18px}
-.payment-qr{width:230px;height:230px}
-.contact-links{flex-direction:column}
-.contact-links .btn{width:100%}
+    .top-offer{font-size:13px}
+    header{padding:8px 14px}
+    .logo{font-size:15px}
+    .logo-img{width:47px;height:47px}
+    nav{display:none}
+    .hero{min-height:620px;padding:55px 22px}
+    .hero h1{font-size:37px}
+    .hero h2{font-size:27px}
+    .hero-buttons{flex-direction:column}
+    .hero-btn{width:100%}
+    .hero-bottom{flex-direction:column;gap:8px}
+    .section-title h2{font-size:29px}
+    .time-card{padding:28px 22px;border-radius:25px}
+    .time-date{font-size:18px}
+    .time-display{font-size:42px}
+    .offer-card h2{font-size:32px}
+    .coupon-row{flex-direction:column}
+    .coupon-row button{width:100%}
+    .form-box{padding:22px 18px}
+    .payment-qr{width:230px;height:230px}
+    .contact-links{flex-direction:column}
+    .contact-links .btn{width:100%}
 }
 </style>
 </head>
@@ -336,6 +352,7 @@ Use Coupon Code <strong>SAVE20OFF</strong>
 <img src="logo.png" class="logo-img" alt="RJN Digital Pan Center Logo">
 RJN Digital Pan Center
 </div>
+
 <nav>
 <a href="#home">Home</a>
 <a href="#pan">PAN ID</a>
@@ -349,26 +366,32 @@ RJN Digital Pan Center
 
 <div id="home" class="hero">
 <div class="hero-content">
+
 <h1>RJN DIGITAL PAN CENTER</h1>
+
 <h2>
 Professional <span class="gradient-text">Digital Services</span><br>
 Fast, Simple & <span class="gradient-text">Convenient</span>
 </h2>
+
 <p>
-Get PAN Card services, PAN Agent ID, Mobile Recharge ID and Voter ID services through a simple registration process.
+Get convenient PAN, Mobile Recharge and Voter ID services
+through a simple registration process.
 </p>
 
 <div class="hero-features">
 <div class="hero-feature"><span>✓</span> PAN Agent ID Registration</div>
 <div class="hero-feature"><span>✓</span> New PAN Card & Correction</div>
-<div class="hero-feature"><span>✓</span> Mobile Recharge ID</div>
-<div class="hero-feature"><span>✓</span> Voter ID Services</div>
+<div class="hero-feature"><span>✓</span> PAN-Aadhaar Services</div>
+<div class="hero-feature"><span>✓</span> Mobile Recharge & Voter ID Services</div>
 <div class="hero-feature"><span>✓</span> WhatsApp Support</div>
 </div>
 
 <div class="hero-buttons">
 <a href="#pan" class="hero-btn hero-register">📝 Register Now</a>
-<a href="https://wa.me/919365414365" class="hero-btn hero-whatsapp" target="_blank">💬 WhatsApp</a>
+<a href="https://wa.me/919365414365" class="hero-btn hero-whatsapp" target="_blank">
+💬 WhatsApp
+</a>
 </div>
 
 <div class="hero-bottom">
@@ -376,6 +399,7 @@ Get PAN Card services, PAN Agent ID, Mobile Recharge ID and Voter ID services th
 <div><span>✓</span> Digital Services</div>
 <div><span>🎧</span> WhatsApp Support</div>
 </div>
+
 </div>
 </div>
 
@@ -393,26 +417,29 @@ Get PAN Card services, PAN Agent ID, Mobile Recharge ID and Voter ID services th
 <div class="offer-card">
 <div class="offer-badge">🔥 TODAY SPECIAL OFFER</div>
 <h2>Get <span>20% OFF</span> on PAN Agent ID</h2>
-<p>Offer is available only for PAN Agent ID registration.</p>
+<p>Offer is applicable only to PAN Agent ID registration.</p>
 <div class="coupon-code">SAVE20OFF</div>
 </div>
 </section>
 
-<!-- ================= PAN AGENT ID ================= -->
-
+<!-- PAN AGENT ID -->
 <section id="pan">
+
 <div class="section-title">
 <h2>🪪 PAN CARD AGENT ID</h2>
 <p>Choose your PAN Agent ID plan.</p>
 </div>
 
 <div class="notice">
-<strong>📢 PAN AGENT ID SPECIAL OFFER</strong><br><br>
+<strong>📢 PAN AGENT ID OFFER</strong><br><br>
 Retailer: ₹249 → ₹199<br>
 Distributor: ₹399 → ₹319<br>
 Super Distributor: ₹799 → ₹639<br><br>
-<strong>20% discount applies only when the valid coupon code SAVE20OFF is entered.</strong><br><br>
-For PAN Agent ID registration, <strong>Aadhaar Number and PAN Number are mandatory.</strong>
+20% discount is available only with the valid coupon:
+<strong>SAVE20OFF</strong>
+<br><br>
+<strong>Mandatory:</strong> Aadhaar Number and PAN Number are required for PAN Agent ID registration.
+No document/photo upload is required for Agent ID registration.
 </div>
 
 <div class="cards">
@@ -421,7 +448,7 @@ For PAN Agent ID registration, <strong>Aadhaar Number and PAN Number are mandato
 <h3>Retailer ID</h3>
 <div class="old-price">₹249</div>
 <div class="offer-price">₹199</div>
-<div class="discount-tag">20% OFF</div>
+<div class="discount-tag">20% OFF with coupon</div>
 <ul>
 <li>✓ PAN Agent Service</li>
 <li>✓ PAN Application Support</li>
@@ -436,7 +463,7 @@ For PAN Agent ID registration, <strong>Aadhaar Number and PAN Number are mandato
 <h3>Distributor ID</h3>
 <div class="old-price">₹399</div>
 <div class="offer-price">₹319</div>
-<div class="discount-tag">20% OFF</div>
+<div class="discount-tag">20% OFF with coupon</div>
 <ul>
 <li>✓ Distributor Service</li>
 <li>✓ Manage Retailers*</li>
@@ -451,7 +478,7 @@ For PAN Agent ID registration, <strong>Aadhaar Number and PAN Number are mandato
 <h3>Super Distributor ID</h3>
 <div class="old-price">₹799</div>
 <div class="offer-price">₹639</div>
-<div class="discount-tag">20% OFF</div>
+<div class="discount-tag">20% OFF with coupon</div>
 <ul>
 <li>✓ Super Distributor Service</li>
 <li>✓ Manage Distributors / Retailers*</li>
@@ -475,81 +502,81 @@ For PAN Agent ID registration, <strong>Aadhaar Number and PAN Number are mandato
 <li>🔹 Pin Code</li>
 <li>🔹 Mobile Number</li>
 <li>🔹 Email ID</li>
-<li>🔹 Aadhaar Number</li>
-<li>🔹 PAN Number</li>
+<li>🔹 Aadhaar Number — Mandatory</li>
+<li>🔹 PAN Number — Mandatory</li>
 </ul>
 </div>
+
 </section>
 
-<!-- ================= PAN SERVICES ================= -->
-
+<!-- OTHER PAN SERVICES -->
 <section id="services">
+
 <div class="section-title">
-<h2>📋 PAN CARD SERVICES</h2>
-<p>Apply for PAN related services online.</p>
+<h2>📄 PAN CARD SERVICES</h2>
+<p>Apply for PAN and get PAN-related support.</p>
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h3>🆕 New PAN Card Apply</h3>
+<h3>New PAN Card Apply</h3>
 <div class="price">₹199</div>
 <ul>
-<li>✓ Passport Size Photo</li>
-<li>✓ Signature</li>
-<li>✓ Father's Name</li>
-<li>✓ Aadhaar Card Front & Back</li>
+<li>✓ New PAN Card Application</li>
+<li>✓ Application Support</li>
+<li>✓ Digital Processing Support</li>
 </ul>
-<button class="btn" onclick="openForm('New PAN Card Apply',199,'newpan')">
+<button class="btn" onclick="openForm('New PAN Card Apply',199,'new-pan')">
 Apply Now →
 </button>
 </div>
 
 <div class="card">
-<h3>✏️ PAN Card Correction</h3>
+<h3>PAN Card Correction</h3>
 <div class="price">₹199</div>
 <ul>
-<li>✓ Passport Size Photo</li>
-<li>✓ Signature</li>
-<li>✓ Father's Name</li>
-<li>✓ Aadhaar Card Front & Back</li>
-<li>✓ Details to be changed</li>
-<li>✓ Change-proof document</li>
+<li>✓ Name / DOB / Father Name</li>
+<li>✓ Address / Other Details</li>
+<li>✓ Document Verification Support</li>
 </ul>
-<button class="btn" onclick="openForm('PAN Card Correction',199,'correction')">
+<button class="btn" onclick="openForm('PAN Card Correction',199,'pan-correction')">
 Apply Now →
 </button>
 </div>
 
 <div class="card">
-<h3>🔎 PAN No. Find by Aadhaar</h3>
+<h3>PAN No. Find by Aadhaar</h3>
 <div class="price">₹99</div>
 <ul>
 <li>✓ Aadhaar Number Required</li>
+<li>✓ PAN Number Finding Service</li>
 </ul>
-<button class="btn" onclick="openForm('PAN No. Find by Aadhaar',99,'panfind')">
+<button class="btn" onclick="openForm('PAN No. Find by Aadhaar',99,'pan-find')">
 Apply Now →
 </button>
 </div>
 
 <div class="card">
-<h3>🔗 PAN Card Link With Aadhaar</h3>
+<h3>Link PAN with Aadhaar</h3>
 <div class="price">₹99</div>
 <ul>
 <li>✓ PAN Number</li>
 <li>✓ Aadhaar Number</li>
+<li>✓ PAN-Aadhaar Linking Support</li>
 </ul>
-<button class="btn" onclick="openForm('PAN Card Link With Aadhaar',99,'panlink')">
+<button class="btn" onclick="openForm('PAN Link with Aadhaar',99,'pan-link')">
 Apply Now →
 </button>
 </div>
 
 </div>
+
 </section>
 
-<!-- ================= RECHARGE ================= -->
-
+<!-- RECHARGE -->
 <section id="recharge">
+
 <div class="section-title">
 <h2>📱 MOBILE RECHARGE ID</h2>
 <p>Choose your Mobile Recharge ID plan.</p>
@@ -587,20 +614,21 @@ Register Now →
 </div>
 
 </div>
+
 </section>
 
-<!-- ================= VOTER ================= -->
-
+<!-- VOTER -->
 <section id="voter">
+
 <div class="section-title">
 <h2>🗳️ VOTER ID SERVICES</h2>
-<p>Voter ID related services.</p>
+<p>Voter ID digital services.</p>
 </div>
 
 <div class="cards">
 
 <div class="card">
-<h3>📱 Voter ID Mobile Number Link</h3>
+<h3>Voter ID Mobile Number Link</h3>
 <div class="price">₹99</div>
 <ul>
 <li>✓ Name</li>
@@ -608,63 +636,71 @@ Register Now →
 <li>✓ EPIC Number</li>
 <li>✓ Mobile Number</li>
 </ul>
-<button class="btn" onclick="openForm('Voter ID Mobile Number Link',99,'voterlink')">
+<button class="btn" onclick="openForm('Voter ID Mobile Number Link',99,'voter-mobile')">
 Apply Now →
 </button>
 </div>
 
 <div class="card">
-<h3>📄 Voter ID PDF</h3>
+<h3>Voter ID PDF</h3>
 <div class="price">₹99</div>
 <ul>
 <li>✓ Name</li>
-<li>✓ State Name</li>
+<li>✓ State</li>
 <li>✓ EPIC Number</li>
 <li>✓ Mobile Number</li>
 </ul>
-<button class="btn" onclick="openForm('Voter ID PDF',99,'voterpdf')">
-Get PDF →
+<button class="btn" onclick="openForm('Voter ID PDF',99,'voter-pdf')">
+Apply Now →
 </button>
 </div>
 
 </div>
+
 </section>
 
-<!-- ================= FORM ================= -->
-
+<!-- FORM -->
 <section id="formPage" class="form-page">
+
 <div class="form-box">
 
 <button class="btn back-btn" onclick="closeForm()">← Back</button>
 
 <h2 id="formTitle">Registration Form</h2>
 
-<div class="selected-plan" id="selectedPlan"></div>
+<div class="selected-plan">
+Selected Service:
+<strong id="selectedPlan">---</strong>
+<br>
+Amount:
+<strong id="selectedAmount">₹0</strong>
+</div>
 
-<form id="serviceForm" onsubmit="submitForm(event)">
+<form id="serviceForm" onsubmit="return submitForm(event)">
+
+<input type="hidden" id="serviceType">
 
 <label>Full Name *</label>
-<input type="text" id="name" required>
+<input type="text" id="fullName" required>
 
 <label>Mobile Number *</label>
-<input type="tel" id="mobile" pattern="[0-9]{10}" maxlength="10" required>
+<input type="tel" id="mobile" maxlength="10" pattern="[0-9]{10}" required>
 
 <label>Email ID</label>
 <input type="email" id="email">
 
-<div id="commonStateDistrict">
+<!-- ADDRESS -->
+<div id="addressFields">
+
 <label>State *</label>
 <select id="state" onchange="loadDistricts()" required>
 <option value="">Select State</option>
 </select>
 
 <label>District *</label>
-<select id="district" required>
-<option value="">Select District</option>
+<select id="district" required disabled>
+<option value="">Select State First</option>
 </select>
-</div>
-
-<div id="shopFields">
 
 <label>Shop Name</label>
 <input type="text" id="shopName">
@@ -673,59 +709,74 @@ Get PDF →
 <textarea id="shopAddress"></textarea>
 
 <label>Pin Code</label>
-<input type="text" id="pin" maxlength="6">
+<input type="text" id="pincode" maxlength="6">
+
 </div>
 
+<!-- AADHAAR / PAN -->
 <div id="panAgentFields">
-
-<label>Aadhaar Number *</label>
-<input type="text" id="aadhaar" maxlength="12" pattern="[0-9]{12}" inputmode="numeric">
+   <label>Aadhaar Number *</label>
+<input type="text" id="aadhaar" maxlength="12" pattern="[0-9]{12}">
 
 <label>PAN Number *</label>
 <input type="text" id="panNumber" maxlength="10" style="text-transform:uppercase">
+
 </div>
 
-<div id="newPanFields">
+<!-- NEW PAN FIELDS -->
+<div id="newPanFields" style="display:none">
 
-<label>Father's Name *</label>
+<div class="service-info">
+<h4>📄 New PAN Card Required Documents</h4>
+<ul>
+<li>Passport Size Photo</li>
+<li>Signature</li>
+<li>Father Name</li>
+<li>Aadhaar Card Front & Back</li>
+</ul>
+</div>
+
+<label>Father Name *</label>
 <input type="text" id="fatherName">
 
-<label>Passport Size Photo *</label>
+<label>Upload Passport Size Photo *</label>
 <input type="file" id="photo" accept="image/*">
 
-<label>Signature *</label>
+<label>Upload Signature *</label>
 <input type="file" id="signature" accept="image/*">
 
-<label>Aadhaar Card Front *</label>
+<label>Upload Aadhaar Card Front *</label>
 <input type="file" id="aadhaarFront" accept="image/*,.pdf">
 
-<label>Aadhaar Card Back *</label>
+<label>Upload Aadhaar Card Back *</label>
 <input type="file" id="aadhaarBack" accept="image/*,.pdf">
+
 </div>
 
-<div id="correctionFields">
+<!-- PAN CORRECTION FIELDS -->
+<div id="panCorrectionFields" style="display:none">
 
-<label>Father's Name *</label>
-<input type="text" id="correctionFather">
+<div class="service-info">
+<h4>📄 PAN Correction Required Documents</h4>
+<ul>
+<li>Passport Size Photo</li>
+<li>Signature</li>
+<li>Father Name</li>
+<li>Aadhaar Card Front & Back</li>
+<li>Proof for the details being changed</li>
+</ul>
+</div>
 
-<label>Passport Size Photo *</label>
-<input type="file" id="correctionPhoto" accept="image/*">
+<label>Father Name *</label>
+<input type="text" id="correctionFatherName">
 
-<label>Signature *</label>
-<input type="file" id="correctionSignature" accept="image/*">
+<label>What needs to be changed on PAN Card? *</label>
+<textarea id="changeDetails"
+placeholder="Example: Name, DOB, Father Name, Address etc."></textarea>
 
-<label>Aadhaar Card Front *</label>
-<input type="file" id="correctionAadhaarFront" accept="image/*,.pdf">
-
-<label>Aadhaar Card Back *</label>
-<input type="file" id="correctionAadhaarBack" accept="image/*,.pdf">
-
-<label>What do you want to change on PAN Card? *</label>
-<textarea id="changeDetails"></textarea>
-
-<label>Document Proof for Change *</label>
-<select id="changeProof">
-<option value="">Select Any One</option>
+<label>Select Document Proof *</label>
+<select id="correctionProof">
+<option value="">Select Document</option>
 <option>Birth Certificate</option>
 <option>Matriculation / 10th Class Certificate</option>
 <option>Passport</option>
@@ -734,161 +785,225 @@ Get PDF →
 <option>Affidavit registered by Magistrate</option>
 <option>Marriage Certificate issued by Registrar of Marriages</option>
 <option>Voter ID Card</option>
-<option>Government-issued photo ID/document containing DOB</option>
+<option>Government-issued Photo ID / Document containing DOB</option>
 <option>Other prescribed documents accepted under PAN rules</option>
 </select>
 
+<label>Upload Passport Size Photo *</label>
+<input type="file" id="correctionPhoto" accept="image/*">
+
+<label>Upload Signature *</label>
+<input type="file" id="correctionSignature" accept="image/*">
+
+<label>Upload Aadhaar Card Front *</label>
+<input type="file" id="correctionAadhaarFront" accept="image/*,.pdf">
+
+<label>Upload Aadhaar Card Back *</label>
+<input type="file" id="correctionAadhaarBack" accept="image/*,.pdf">
+
 <label>Upload Document Proof *</label>
-<input type="file" id="proofDocument" accept="image/*,.pdf">
+<input type="file" id="correctionProofFile" accept="image/*,.pdf">
+
 </div>
 
-<div id="panFindFields">
+<!-- PAN FIND -->
+<div id="panFindFields" style="display:none">
+
+<div class="service-info">
+<h4>📄 Required Details</h4>
+<ul>
+<li>Aadhaar Number</li>
+</ul>
+</div>
+
 <label>Aadhaar Number *</label>
-<input type="text" id="findAadhaar" maxlength="12" pattern="[0-9]{12}" inputmode="numeric">
+<input type="text" id="findAadhaar" maxlength="12" pattern="[0-9]{12}">
+
 </div>
 
-<div id="panLinkFields">
+<!-- PAN LINK -->
+<div id="panLinkFields" style="display:none">
+
+<div class="service-info">
+<h4>📄 Required Details</h4>
+<ul>
+<li>PAN Number</li>
+<li>Aadhaar Number</li>
+</ul>
+</div>
+
 <label>PAN Number *</label>
 <input type="text" id="linkPan" maxlength="10" style="text-transform:uppercase">
 
 <label>Aadhaar Number *</label>
-<input type="text" id="linkAadhaar" maxlength="12" pattern="[0-9]{12}" inputmode="numeric">
+<input type="text" id="linkAadhaar" maxlength="12" pattern="[0-9]{12}">
+
 </div>
 
-<div id="voterFields">
+<!-- VOTER FIELDS -->
+<div id="voterFields" style="display:none">
 
 <label>EPIC Number *</label>
-<input type="text" id="epic">
+<input type="text" id="epicNumber" style="text-transform:uppercase">
 
-<label>Voter Mobile Number *</label>
+<label>Mobile Number *</label>
 <input type="tel" id="voterMobile" maxlength="10" pattern="[0-9]{10}">
+
 </div>
 
-<div id="rechargeFields">
-<label>Shop Name</label>
-<input type="text" id="rechargeShop">
+<!-- RECHARGE FIELDS -->
+<div id="rechargeFields" style="display:none">
+
+<label>Business / Shop Name *</label>
+<input type="text" id="rechargeShopName">
+
 </div>
 
 <!-- PAYMENT -->
-
 <div class="payment" id="paymentSection">
 
 <h3>💳 Payment Details</h3>
 
-<div id="paymentOriginal"></div>
-<div id="paymentDiscount" class="payment-discount"></div>
-
-<div class="coupon-area" id="couponArea">
-<h4>🎟️ Apply Coupon</h4>
-<div class="coupon-help">
-20% OFF is available only for PAN Agent ID.
+<div id="paymentOriginal">
+Original Amount:
+<strong class="payment-old" id="paymentOld">₹0</strong>
 </div>
 
-<div class="coupon-row">
-<input type="text" id="coupon" placeholder="Enter SAVE20OFF">
-<button type="button" class="btn" onclick="applyCoupon()">Apply</button>
-</div>
-
-<div id="couponMessage" class="coupon-message"></div>
+<div id="paymentDiscount" class="payment-discount" style="display:none">
+Coupon Discount: 20% OFF
 </div>
 
 <div class="payment-final-box">
-<div class="payment-final-title">Final Amount</div>
+<div class="payment-final-title">Final Payable Amount</div>
 <div class="payment-final" id="finalAmount">₹0</div>
 </div>
 
-<div class="qr-payment-box" id="qrBox">
+<!-- COUPON ONLY PAN AGENT -->
+<div class="coupon-area" id="couponArea" style="display:none">
 
-<div class="qr-title">📲 Scan QR & Pay</div>
+<h4>🎟️ PAN Agent ID Coupon</h4>
 
-<div class="qr-subtitle">
-Pay the exact amount shown above.
+<div class="coupon-help">
+Use <strong>SAVE20OFF</strong> to get 20% OFF.
 </div>
 
-<!--
-IMPORTANT:
-Put your QR image in the same GitHub folder as this HTML file
-and name it exactly:
-qr-code.png
+<div class="coupon-row">
+<input type="text" id="couponCode"
+placeholder="Enter coupon code">
 
-If your QR has another filename, change the src below.
--->
+<button type="button"
+class="btn"
+onclick="applyCoupon()">
+Apply Coupon
+</button>
+</div>
 
-<img
-src="qr-code.png"
-class="payment-qr"
-alt="Payment QR Code"
-onerror="this.style.display='none';document.getElementById('qrError').style.display='block';">
+<div id="couponMessage" class="coupon-message"></div>
 
-<div id="qrError" style="display:none;color:#c62828;font-weight:bold">
+</div>
+
+<!-- QR PAYMENT -->
+<div class="qr-payment-box" id="qrPaymentBox">
+
+<div class="qr-title">
+📲 Scan & Pay
+</div>
+
+<div class="qr-subtitle">
+Scan the QR code using any supported UPI app.
+</div>
+
+<img src="qr.png"
+     class="payment-qr"
+     alt="RJN Digital Pan Center Payment QR Code"
+     onerror="this.style.display='none';document.getElementById('qrError').style.display='block';">
+
+<div id="qrError"
+     style="display:none;color:#c62828;font-weight:bold;margin:15px 0;">
 Payment QR image not found.<br>
-Please upload <b>qr-code.png</b> to the same GitHub folder as this HTML file.
+Please check that your QR file is named <strong>qr.png</strong>
+and uploaded in the same GitHub folder as this HTML file.
 </div>
 
 <div class="qr-note">
 <strong>⚠️ Important:</strong><br>
-After payment, enter your UTR / Transaction ID below and upload the payment screenshot.
+After making payment, enter your UTR / Transaction ID below.
+This helps us verify your payment.
 </div>
 
+</div>
+
+<!-- UTR -->
+<div id="utrBox">
+
 <label>UTR / Transaction ID *</label>
-<input type="text" id="utr" placeholder="Enter UTR / Transaction ID">
+<input type="text"
+       id="utr"
+       placeholder="Enter UTR / Transaction ID"
+       required>
+
+<p style="font-size:13px;color:#667085;margin-top:6px;">
+Enter the UTR / Transaction ID shown in your payment app after successful payment.
+</p>
 
 </div>
 
 <!-- SCREENSHOT -->
-
 <div class="screenshot-box" id="screenshotBox">
 
 <h4>📸 Upload Payment Screenshot *</h4>
 
 <p>
-Upload a clear screenshot showing successful payment.
+Upload a clear screenshot of your successful payment.
 </p>
 
-<input
-type="file"
-id="paymentScreenshot"
-accept="image/*"
-onchange="previewScreenshot(event)">
+<input type="file"
+       id="paymentScreenshot"
+       accept="image/*">
 
-<img id="screenshotPreview" class="screenshot-preview">
+<img id="screenshotPreview"
+     class="screenshot-preview"
+     alt="Payment Screenshot Preview">
 
-</div>
-
-<div class="payment-warning">
-<strong>🔐 Payment Verification:</strong>
-Your UTR / Transaction ID and payment screenshot will be included in the registration message sent to the service WhatsApp number.
 </div>
 
 </div>
 
-<button type="submit" class="btn submit-btn">
-📤 Submit Registration
+<!-- SUBMIT -->
+<button type="submit"
+        class="btn"
+        style="width:100%;margin-top:25px;font-size:18px;">
+📲 Submit Application on WhatsApp
 </button>
 
 </form>
+
 </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-
+<!-- CONTACT -->
 <section id="contact">
+
+<div class="section-title">
+<h2>📞 CONTACT US</h2>
+<p>Need help with any PAN or digital service?</p>
+</div>
 
 <div class="final-notice">
 
-<h2>📞 Need Any PAN Card Help?</h2>
+<h3>🤝 Any PAN Card Work? Message Us on WhatsApp</h3>
 
-<p style="margin-top:10px;font-size:18px">
-For PAN Card any work, message us on WhatsApp.
+<p style="margin-top:10px;font-size:17px;">
+We will solve your PAN card and digital service problems.
 <br>
-<strong>We will solve your PAN Card related problem.</strong>
+<strong>Message us on WhatsApp and get support.</strong>
 </p>
 
 <div class="contact-links">
 
 <a href="https://wa.me/919365414365"
-target="_blank"
-class="btn whatsapp">
+   class="btn whatsapp"
+   target="_blank">
 💬 WhatsApp: 9365414365
 </a>
 
@@ -896,7 +1011,7 @@ class="btn whatsapp">
 
 <div class="address-box">
 <strong>RJN Digital Pan Center</strong><br>
-PAN Card • Digital Services • Recharge • Voter ID
+📱 WhatsApp Support: 9365414365
 </div>
 
 </div>
@@ -905,7 +1020,9 @@ PAN Card • Digital Services • Recharge • Voter ID
 
 <footer>
 
-<strong>RJN Digital Pan Center</strong>
+<div>
+© 2026 <strong>RJN Digital Pan Center</strong>
+</div>
 
 <div class="footer-links">
 <a href="#home">Home</a>
@@ -916,61 +1033,47 @@ PAN Card • Digital Services • Recharge • Voter ID
 <a href="#contact">Contact</a>
 </div>
 
-<p>© 2026 RJN Digital Pan Center. All Rights Reserved.</p>
+<p style="font-size:13px;color:#cbd5e1;">
+Digital service assistance and application support.
+</p>
 
 </footer>
 
 <script>
 
 /* =========================================================
-   IMPORTANT SETTINGS
+   STATE + DISTRICT DATA
    ========================================================= */
 
-const WHATSAPP_NUMBER = "919365414365";
-
-/*
-Your QR file:
-qr-code.png
-
-Your logo file:
-logo.png
-
-Keep both files in the SAME GitHub folder as index.html.
-*/
-
-
-/* =========================================================
-   STATE + DISTRICT DATABASE
-   ========================================================= */
-
-const districts = {
-
-"Arunachal Pradesh":[
-"Anjaw","Changlang","Dibang Valley","East Kameng",
-"East Siang","Itanagar Capital Complex","Kamle","Kra Daadi",
-"Kurung Kumey","Lepa Rada","Lohit","Longding","Lower Dibang Valley",
-"Lower Siang","Lower Subansiri","Namsai","Pakke Kessang",
-"Papum Pare","Shi Yomi","Siang","Tawang","Tirap",
-"Upper Siang","Upper Subansiri","West Kameng","West Siang"
-],
+const stateDistricts = {
 
 "Assam":[
 "Baksa","Bajali","Barpeta","Biswanath","Bongaigaon",
-"Cachar","Charaideo","Chirang","Darrang","Dhemaji",
-"Dhubri","Dibrugarh","Dima Hasao","Goalpara","Golaghat",
-"Hailakandi","Hojai","Jorhat","Kamrup","Kamrup Metropolitan",
-"Karbi Anglong","Kokrajhar","Lakhimpur","Majuli","Morigaon",
+"Charaideo","Chirang","Darrang","Dhemaji","Dhubri",
+"Dibrugarh","Dima Hasao","Goalpara","Golaghat","Hailakandi",
+"Hojai","Jorhat","Kamrup","Kamrup Metropolitan","Karbi Anglong",
+"Karimganj","Kokrajhar","Lakhimpur","Majuli","Morigaon",
 "Nagaon","Nalbari","Sivasagar","Sonitpur","South Salmara-Mankachar",
-"Tamulpur","Tinsukia","Udalguri","West Karbi Anglong"
+"Tinsukia","Udalguri","West Karbi Anglong"
 ],
 
 "Andhra Pradesh":[
-"Alluri Sitharama Raju","Anakapalli","Ananthapuramu","Annamayya",
-"Bapatla","Chittoor","Dr. B. R. Ambedkar Konaseema","East Godavari",
-"Eluru","Guntur","Kakinada","Krishna","Kurnool","Nandyal",
-"NTR","Palnadu","Parvathipuram Manyam","Prakasam","Sri Potti Sriramulu Nellore",
-"Sri Sathya Sai","Srikakulam","Tirupati","Visakhapatnam",
-"Vizianagaram","West Godavari","YSR Kadapa"
+"Alluri Sitharama Raju","Anakapalli","Anantapur",
+"Annamayya","Bapatla","Chittoor","Dr. B.R. Ambedkar Konaseema",
+"East Godavari","Eluru","Guntur","Kakinada","Krishna",
+"Kurnool","Nandyal","NTR","Palnadu","Parvathipuram Manyam",
+"Prakasam","Srikakulam","Sri Potti Sriramulu Nellore",
+"Sri Sathya Sai","Tirupati","Visakhapatnam","Vizianagaram",
+"West Godavari","YSR Kadapa"
+],
+
+"Arunachal Pradesh":[
+"Anjaw","Bichom","Changlang","Dibang Valley","East Kameng",
+"East Siang","Kamle","Keyi Panyor","Kra Daadi","Kurung Kumey",
+"Lepa Rada","Lohit","Longding","Lower Dibang Valley",
+"Lower Siang","Lower Subansiri","Namsai","Pakke-Kessang",
+"Papum Pare","Shi-Yomi","Siang","Tawang","Tirap",
+"Upper Siang","Upper Subansiri","West Kameng","West Siang"
 ],
 
 "Bihar":[
@@ -979,36 +1082,39 @@ const districts = {
 "Gopalganj","Jamui","Jehanabad","Kaimur","Katihar","Khagaria",
 "Kishanganj","Lakhisarai","Madhepura","Madhubani","Munger",
 "Muzaffarpur","Nalanda","Nawada","Patna","Purnia","Rohtas",
-"Saharsa","Samastipur","Saran","Sheikhpura","Sheohar","Sitamarhi",
-"Siwan","Supaul","Vaishali","West Champaran"
+"Saharsa","Samastipur","Saran","Sheikhpura","Sheohar",
+"Sitamarhi","Siwan","Supaul","Vaishali","West Champaran"
 ],
 
 "Chhattisgarh":[
-"Balod","Baloda Bazar","Balrampur-Ramanujganj","Bastar","Bemetara",
-"Bijapur","Bilaspur","Dantewada","Dhamtari","Durg","Gariaband",
-"Gautam Buddha Nagar","Gaurela-Pendra-Marwahi","Janjgir-Champa",
+"Balod","Baloda Bazar","Balrampur-Ramanujganj","Bastar",
+"Bemetara","Bijapur","Bilaspur","Dantewada","Dhamtari",
+"Durg","Gariaband","Gaurela-Pendra-Marwahi","Janjgir-Champa",
 "Jashpur","Kabirdham","Kanker","Khairagarh-Chhuikhadan-Gandai",
 "Kondagaon","Korba","Koriya","Mahasamund","Manendragarh-Chirmiri-Bharatpur",
-"Mohla-Manpur-Ambagarh Chowki","Mungeli","Narayanpur","Raigarh",
-"Rajnandgaon","Sarangarh-Bilaigarh","Sukma","Surajpur","Surguja"
+"Mohla-Manpur-Ambagarh Chowki","Mungeli","Narayanpur",
+"Raigarh","Raipur","Rajnandgaon","Sakti","Sarangarh-Bilaigarh",
+"Surajpur","Surguja"
 ],
 
-"Goa":["North Goa","South Goa"],
+"Goa":[
+"North Goa","South Goa"
+],
 
 "Gujarat":[
 "Ahmedabad","Amreli","Anand","Aravalli","Banaskantha","Bharuch",
-"Bhavnagar","Botad","Chhota Udaipur","Dahod","Dang","Devbhoomi Dwarka",
-"Gandhinagar","Gir Somnath","Jamnagar","Junagadh","Kheda","Kutch",
-"Mahisagar","Mehsana","Morbi","Narmada","Navsari","Panchmahal",
-"Patan","Porbandar","Rajkot","Sabarkantha","Surat","Surendranagar",
-"Tapi","Vadodara","Valsad"
+"Bhavnagar","Botad","Chhota Udaipur","Dahod","Dang",
+"Devbhoomi Dwarka","Gandhinagar","Gir Somnath","Jamnagar",
+"Junagadh","Kheda","Kutch","Mahisagar","Mehsana","Morbi",
+"Narmada","Navsari","Panchmahal","Patan","Porbandar","Rajkot",
+"Sabarkantha","Surat","Surendranagar","Tapi","Vadodara","Valsad"
 ],
 
 "Haryana":[
-"Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad","Gurugram",
-"Hisar","Jhajjar","Jind","Kaithal","Karnal","Kurukshetra","Mahendragarh",
-"Nuh","Palwal","Panchkula","Panipat","Rewari","Rohtak","Sirsa",
-"Sonipat","Yamunanagar"
+"Ambala","Bhiwani","Charkhi Dadri","Faridabad","Fatehabad",
+"Gurugram","Hisar","Jhajjar","Jind","Kaithal","Karnal",
+"Kurukshetra","Mahendragarh","Nuh","Palwal","Panchkula",
+"Panipat","Rewari","Rohtak","Sirsa","Sonipat","Yamunanagar"
 ],
 
 "Himachal Pradesh":[
@@ -1018,176 +1124,209 @@ const districts = {
 
 "Jharkhand":[
 "Bokaro","Chatra","Deoghar","Dhanbad","Dumka","East Singhbhum",
-"Garhwa","Giridih","Godda","Gumla","Hazaribagh","Jamtara","Khunti",
-"Koderma","Latehar","Lohardaga","Pakur","Palamu","Ramgarh","Ranchi",
-"Sahibganj","Seraikela Kharsawan","Simdega","West Singhbhum"
+"Garhwa","Giridih","Godda","Gumla","Hazaribagh","Jamtara",
+"Khunti","Koderma","Latehar","Lohardaga","Pakur","Palamu",
+"Ramgarh","Ranchi","Sahibganj","Seraikela Kharsawan",
+"Simdega","West Singhbhum"
 ],
 
 "Karnataka":[
 "Bagalkot","Ballari","Belagavi","Bengaluru Rural","Bengaluru Urban",
-"Bidar","Chamarajanagar","Chikkaballapur","Chikkamagaluru","Chitradurga",
-"Dakshina Kannada","Davanagere","Dharwad","Gadag","Hassan","Haveri",
-"Kalaburagi","Kodagu","Kolar","Koppal","Mandya","Mysuru","Raichur",
-"Ramanagara","Shivamogga","Tumakuru","Udupi","Uttara Kannada","Vijayapura","Yadgir"
+"Bidar","Chamarajanagar","Chikkaballapur","Chikkamagaluru",
+"Chitradurga","Dakshina Kannada","Davanagere","Dharwad",
+"Gadag","Hassan","Haveri","Kalaburagi","Kodagu","Kolar",
+"Koppal","Mandya","Mysuru","Raichur","Ramanagara",
+"Shivamogga","Tumakuru","Udupi","Uttara Kannada","Vijayapura",
+"Yadgir"
 ],
 
 "Kerala":[
-"Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod","Kollam",
-"Kottayam","Kozhikode","Malappuram","Palakkad","Pathanamthitta",
-"Thiruvananthapuram","Thrissur","Wayanad"
+"Alappuzha","Ernakulam","Idukki","Kannur","Kasaragod",
+"Kollam","Kottayam","Kozhikode","Malappuram","Palakkad",
+"Pathanamthitta","Thiruvananthapuram","Thrissur","Wayanad"
 ],
 
 "Madhya Pradesh":[
-"Alirajpur","Anuppur","Ashoknagar","Balaghat","Barwani","Betul",
-"Bhind","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh",
-"Datia","Dewas","Dhar","Dindori","Guna","Gwalior","Harda","Indore",
-"Jabalpur","Jhabua","Katni","Khandwa","Khargone","Maihar","Mandla",
-"Mandsaur","Mauganj","Morena","Narmadapuram","Narsinghpur","Neemuch",
-"Niwari","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Satna",
-"Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Sidhi",
-"Singrauli","Tikamgarh","Ujjain","Umaria","Vidisha"
+"Agar Malwa","Alirajpur","Anuppur","Ashoknagar","Balaghat",
+"Barwani","Betul","Bhind","Bhopal","Burhanpur","Chhatarpur",
+"Chhindwara","Damoh","Datia","Dewas","Dhar","Dindori",
+"Guna","Gwalior","Harda","Hoshangabad","Indore","Jabalpur",
+"Jhabua","Katni","Khandwa","Khargone","Maihar","Mandla",
+"Mandsaur","Mauganj","Morena","Narmadapuram","Narsinghpur",
+"Neemuch","Niwari","Panna","Raisen","Rajgarh","Ratlam",
+"Rewa","Sagar","Satna","Sehore","Seoni","Shahdol",
+"Shajapur","Sheopur","Shivpuri","Sidhi","Singrauli",
+"Tikamgarh","Ujjain","Umaria","Vidisha"
 ],
 
 "Maharashtra":[
 "Ahmednagar","Akola","Amravati","Aurangabad","Beed","Bhandara",
-"Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia","Hingoli",
-"Jalgaon","Jalna","Kolhapur","Latur","Mumbai City","Mumbai Suburban",
-"Nagpur","Nanded","Nandurbar","Nashik","Osmanabad","Palghar","Parbhani",
-"Pune","Raigad","Ratnagiri","Sangli","Satara","Sindhudurg","Solapur",
-"Thane","Wardha","Washim","Yavatmal"
+"Buldhana","Chandrapur","Dhule","Gadchiroli","Gondia",
+"Hingoli","Jalgaon","Jalna","Kolhapur","Latur","Mumbai City",
+"Mumbai Suburban","Nagpur","Nanded","Nandurbar","Nashik",
+"Osmanabad","Palghar","Parbhani","Pune","Raigad","Ratnagiri",
+"Sangli","Satara","Sindhudurg","Solapur","Thane","Wardha",
+"Washim","Yavatmal"
 ],
 
 "Manipur":[
-"Bishnupur","Chandel","Churachandpur","Imphal East","Imphal West",
-"Jiribam","Kakching","Kamjong","Kangpokpi","Noney","Pherzawl",
-"Senapati","Tamenglong","Tengnoupal","Thoubal","Ukhrul"
+"Bishnupur","Chandel","Churachandpur","Imphal East",
+"Imphal West","Jiribam","Kakching","Kamjong","Kangpokpi",
+"Noney","Pherzawl","Senapati","Tamenglong","Tengnoupal",
+"Thoubal","Ukhrul"
 ],
 
 "Meghalaya":[
 "East Garo Hills","East Jaintia Hills","East Khasi Hills",
-"North Garo Hills","Ri Bhoi","South Garo Hills","South West Garo Hills",
-"South West Khasi Hills","West Garo Hills","West Jaintia Hills",
-"West Khasi Hills"
+"North Garo Hills","Ri Bhoi","South Garo Hills",
+"South West Garo Hills","South West Khasi Hills",
+"West Garo Hills","West Jaintia Hills","West Khasi Hills"
 ],
 
 "Mizoram":[
-"Aizawl","Champhai","Hnahthial","Khawzawl","Kolasib","Lawngtlai",
-"Lunglei","Mamit","Saitual","Serchhip","Siaha"
+"Aizawl","Champhai","Hnahthial","Khawzawl","Kolasib",
+"Lawngtlai","Lunglei","Mamit","Saiha","Saitual","Serchhip"
 ],
 
 "Nagaland":[
-"Chumoukedima","Dimapur","Kiphire","Kohima","Longleng","Mokokchung",
-"Mon","Niuland","Noklak","Peren","Phek","Shamator","Tseminyu",
-"Tuensang","Wokha","Zunheboto"
+"Chumoukedima","Dimapur","Kiphire","Kohima","Longleng",
+"Mokokchung","Mon","Niuland","Noklak","Peren","Phek",
+"Shamator","Tuensang","Wokha","Zunheboto"
 ],
 
 "Odisha":[
-"Angul","Balangir","Balasore","Bargarh","Bhadrak","Boudh","Cuttack",
-"Deogarh","Dhenkanal","Gajapati","Ganjam","Jagatsinghpur","Jajpur",
-"Jharsuguda","Kalahandi","Kandhamal","Kendrapara","Kendujhar","Khordha",
-"Koraput","Malkangiri","Mayurbhanj","Nabarangpur","Nayagarh","Nuapada",
-"Puri","Rayagada","Sambalpur","Subarnapur","Sundargarh"
+"Angul","Balangir","Balasore","Bargarh","Bhadrak","Boudh",
+"Cuttack","Deogarh","Dhenkanal","Gajapati","Ganjam",
+"Jagatsinghpur","Jajpur","Jharsuguda","Kalahandi","Kandhamal",
+"Kendrapara","Keonjhar","Khordha","Koraput","Malkangiri",
+"Mayurbhanj","Nabarangpur","Nayagarh","Nuapada","Puri",
+"Rayagada","Sambalpur","Subarnapur","Sundargarh"
 ],
 
 "Punjab":[
-"Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib","Fazilka",
-"Ferozepur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana",
-"Malerkotla","Mansa","Moga","Pathankot","Patiala","Rupnagar","Sahibzada Ajit Singh Nagar",
-"Sangrur","Shahid Bhagat Singh Nagar","Sri Muktsar Sahib","Tarn Taran"
+"Amritsar","Barnala","Bathinda","Faridkot","Fatehgarh Sahib",
+"Fazilka","Ferozepur","Gurdaspur","Hoshiarpur","Jalandhar",
+"Kapurthala","Ludhiana","Malerkotla","Mansa","Moga",
+"Mohali","Muktsar","Pathankot","Patiala","Rupnagar",
+"Sangrur","Shaheed Bhagat Singh Nagar","Tarn Taran"
 ],
 
 "Rajasthan":[
-"Ajmer","Alwar","Anupgarh","Balotra","Banswara","Baran","Barmer",
-"Beawar","Bharatpur","Bhilwara","Bikaner","Bundi","Chittorgarh",
-"Churu","Dausa","Deeg","Dholpur","Didwana-Kuchamana","Dudu","Dungarpur",
-"Ganganagar","Gangapur City","Hanumangarh","Jaipur","Jaipur Rural",
-"Jaisalmer","Jalore","Jhalawar","Jhunjhunu","Jodhpur","Jodhpur Rural",
-"Karauli","Khairthal-Tijara","Kota","Kotputli-Behror","Nagaur","Neem Ka Thana",
-"Pali","Phalodi","Pratapgarh","Rajsamand","Salumbar","Sawai Madhopur",
+"Ajmer","Alwar","Anupgarh","Balotra","Banswara","Baran",
+"Barmer","Beawar","Bharatpur","Bhilwara","Bikaner","Bundi",
+"Chittorgarh","Churu","Dausa","Deeg","Dholpur","Didwana-Kuchamana",
+"Dudu","Dungarpur","Ganganagar","Gangapur City","Hanumangarh",
+"Jaipur","Jaipur Rural","Jaisalmer","Jalore","Jhalawar",
+"Jhunjhunu","Jodhpur","Jodhpur Rural","Karauli","Khairthal-Tijara",
+"Kota","Kotputli-Behror","Nagaur","Neem Ka Thana","Pali",
+"Phalodi","Pratapgarh","Rajsamand","Salumbar","Sawai Madhopur",
 "Shahpura","Sikar","Sirohi","Tonk","Udaipur"
 ],
 
-"Sikkim":["Gangtok","Gyalshing","Mangan","Namchi","Pakyong","Soreng"],
+"Sikkim":[
+"East Sikkim","North Sikkim","Pakyong","Soreng","South Sikkim",
+"West Sikkim"
+],
 
 "Tamil Nadu":[
-"Ariyalur","Chengalpattu","Chennai","Coimbatore","Cuddalore","Dharmapuri",
-"Dindigul","Erode","Kallakurichi","Kancheepuram","Karur","Krishnagiri",
-"Madurai","Mayiladuthurai","Nagapattinam","Namakkal","Nilgiris",
-"Perambalur","Pudukkottai","Ramanathapuram","Ranipet","Salem","Sivaganga",
-"Tenkasi","Thanjavur","Theni","Thoothukudi","Tiruchirappalli","Tirunelveli",
-"Tirupathur","Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur",
+"Ariyalur","Chengalpattu","Chennai","Coimbatore","Cuddalore",
+"Dharmapuri","Dindigul","Erode","Kallakurichi","Kancheepuram",
+"Karur","Krishnagiri","Madurai","Mayiladuthurai","Nagapattinam",
+"Namakkal","Nilgiris","Perambalur","Pudukkottai","Ramanathapuram",
+"Ranipet","Salem","Sivaganga","Tenkasi","Thanjavur","Theni",
+"Thoothukudi","Tiruchirappalli","Tirunelveli","Tirupathur",
+"Tiruppur","Tiruvallur","Tiruvannamalai","Tiruvarur",
 "Vellore","Viluppuram","Virudhunagar"
 ],
 
 "Telangana":[
-"Adilabad","Bhadradri Kothagudem","Hanamkonda","Hyderabad","Jagtial",
-"Jangaon","Jayashankar Bhupalpally","Jogulamba Gadwal","Kamareddy",
-"Karimnagar","Khammam","Komaram Bheem Asifabad","Mahabubabad","Mahbubnagar",
-"Mancherial","Medak","Medchal-Malkajgiri","Mulugu","Nagarkurnool",
-"Nalgonda","Narayanpet","Nirmal","Nizamabad","Peddapalli","Rajanna Sircilla",
-"Rangareddy","Sangareddy","Siddipet","Suryapet","Vikarabad","Wanaparthy",
+"Adilabad","Bhadradri Kothagudem","Hanamkonda","Hyderabad",
+"Jagtial","Jangaon","Jayashankar Bhupalpally","Jogulamba Gadwal",
+"Kamareddy","Karimnagar","Khammam","Komaram Bheem",
+"Mahabubabad","Mahbubnagar","Mancherial","Medak","Medchal-Malkajgiri",
+"Mulugu","Nagarkurnool","Nalgonda","Narayanpet","Nirmal",
+"Nizamabad","Peddapalli","Rajanna Sircilla","Rangareddy",
+"Sangareddy","Siddipet","Suryapet","Vikarabad","Wanaparthy",
 "Warangal","Yadadri Bhuvanagiri"
 ],
 
 "Tripura":[
-"Dhalai","Gomati","Khowai","North Tripura","Sepahijala","South Tripura",
-"Unakoti","West Tripura"
+"Dhalai","Gomati","Khowai","North Tripura","Sepahijala",
+"South Tripura","Unakoti","West Tripura"
 ],
 
 "Uttar Pradesh":[
-"Agra","Aligarh","Ambedkar Nagar","Amethi","Amroha","Auraiya","Ayodhya",
-"Azamgarh","Baghpat","Bahraich","Ballia","Balrampur","Banda","Barabanki",
-"Bareilly","Basti","Bhadohi","Bijnor","Budaun","Bulandshahr","Chandauli",
-"Chitrakoot","Deoria","Etah","Etawah","Farrukhabad","Fatehpur","Firozabad",
-"Gautam Buddha Nagar","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur",
-"Hapur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur Dehat",
-"Kanpur Nagar","Kasganj","Kaushambi","Kheri","Kushinagar","Lalitpur","Lucknow",
-"Maharajganj","Mahoba","Mainpuri","Mathura","Mau","Meerut","Mirzapur",
-"Moradabad","Muzaffarnagar","Pilibhit","Pratapgarh","Prayagraj","Raebareli",
-"Rampur","Saharanpur","Sambhal","Sant Kabir Nagar","Shahjahanpur","Shamli",
-"Shrawasti","Siddharthnagar","Sitapur","Sonbhadra","Sultanpur","Unnao","Varanasi"
+"Agra","Aligarh","Ambedkar Nagar","Amethi","Amroha","Auraiya",
+"Ayodhya","Azamgarh","Baghpat","Bahraich","Ballia","Balrampur",
+"Banda","Barabanki","Bareilly","Basti","Bhadohi","Bijnor",
+"Budaun","Bulandshahr","Chandauli","Chitrakoot","Deoria",
+"Etah","Etawah","Farrukhabad","Fatehpur","Firozabad",
+"Gautam Buddha Nagar","Ghaziabad","Ghazipur","Gonda","Gorakhpur",
+"Hamirpur","Hapur","Hardoi","Hathras","Jalaun","Jaunpur",
+"Jhansi","Kannauj","Kanpur Dehat","Kanpur Nagar","Kasganj",
+"Kaushambi","Kheri","Kushinagar","Lalitpur","Lucknow",
+"Maharajganj","Mahoba","Mainpuri","Mathura","Mau","Meerut",
+"Mirzapur","Moradabad","Muzaffarnagar","Pilibhit","Pratapgarh",
+"Prayagraj","Raebareli","Rampur","Saharanpur","Sambhal",
+"Sant Kabir Nagar","Shahjahanpur","Shamli","Shravasti","Siddharthnagar",
+"Sitapur","Sonbhadra","Sultanpur","Unnao","Varanasi"
 ],
 
 "Uttarakhand":[
-"Almora","Bageshwar","Chamoli","Champawat","Dehradun","Haridwar",
-"Nainital","Pauri Garhwal","Pithoragarh","Rudraprayag","Tehri Garhwal",
-"Udham Singh Nagar","Uttarkashi"
+"Almora","Bageshwar","Chamoli","Champawat","Dehradun",
+"Haridwar","Nainital","Pauri Garhwal","Pithoragarh",
+"Rudraprayag","Tehri Garhwal","Udham Singh Nagar","Uttarkashi"
 ],
 
 "West Bengal":[
-"Alipurduar","Bankura","Paschim Bardhaman","Purba Bardhaman","Birbhum",
-"Cooch Behar","Dakshin Dinajpur","Darjeeling","Hooghly","Howrah",
-"Jalpaiguri","Jhargram","Kalimpong","Kolkata","Maldah","Murshidabad",
-"Nadia","North 24 Parganas","Paschim Medinipur","Purba Medinipur",
-"South 24 Parganas","Uttar Dinajpur"
+"Alipurduar","Bankura","Paschim Bardhaman","Purba Bardhaman",
+"Birbhum","Cooch Behar","Dakshin Dinajpur","Darjeeling",
+"Hooghly","Howrah","Jalpaiguri","Jhargram","Kalimpong",
+"Kolkata","Maldah","Murshidabad","Nadia","North 24 Parganas",
+"Paschim Medinipur","Purba Medinipur","South 24 Parganas",
+"Uttar Dinajpur"
 ],
 
 "Delhi":[
-"Central Delhi","East Delhi","New Delhi","North Delhi","North East Delhi",
-"North West Delhi","Shahdara","South Delhi","South East Delhi",
-"South West Delhi","West Delhi"
+"Central Delhi","East Delhi","New Delhi","North Delhi",
+"North East Delhi","North West Delhi","Shahdara","South Delhi",
+"South East Delhi","South West Delhi","West Delhi"
 ],
 
 "Jammu and Kashmir":[
 "Anantnag","Bandipora","Baramulla","Budgam","Doda","Ganderbal",
-"Jammu","Kathua","Kishtwar","Kulgam","Kupwara","Poonch","Pulwama",
-"Rajouri","Ramban","Reasi","Samba","Shopian","Srinagar","Udhampur"
+"Jammu","Kathua","Kishtwar","Kulgam","Kupwara","Poonch",
+"Pulwama","Rajouri","Ramban","Reasi","Samba","Shopian",
+"Srinagar","Udhampur"
 ],
 
-"Ladakh":["Kargil","Leh"],
+"Ladakh":[
+"Leh","Kargil"
+],
 
-"Chandigarh":["Chandigarh"],
+"Chandigarh":[
+"Chandigarh"
+],
+
+"Goa":[
+"North Goa","South Goa"
+],
+
+"Puducherry":[
+"Karaikal","Mahe","Puducherry","Yanam"
+],
+
+"Andaman and Nicobar Islands":[
+"Nicobar","North and Middle Andaman","South Andaman"
+],
 
 "Dadra and Nagar Haveli and Daman and Diu":[
 "Dadra and Nagar Haveli","Daman","Diu"
 ],
 
-"Lakshadweep":["Agatti","Amini","Andrott","Bitra","Chetlat","Kadmat","Kalpeni","Kavaratti","Kiltan","Minicoy"],
-
-"Puducherry":["Karaikal","Mahe","Puducherry","Yanam"],
-
-"Andaman and Nicobar Islands":[
-"Nicobar","North and Middle Andaman","South Andaman"
+"Lakshadweep":[
+"Agatti","Amini","Andrott","Bitra","Chetlat","Kadmat",
+"Kalpeni","Kavaratti","Kiltan","Minicoy"
 ]
 };
 
@@ -1196,30 +1335,54 @@ const districts = {
    LOAD STATES
    ========================================================= */
 
-const stateSelect=document.getElementById("state");
+const stateSelect = document.getElementById("state");
+const districtSelect = document.getElementById("district");
 
-Object.keys(districts).sort().forEach(state=>{
-const option=document.createElement("option");
-option.value=state;
-option.textContent=state;
-stateSelect.appendChild(option);
+Object.keys(stateDistricts).sort().forEach(function(state){
+
+    const option = document.createElement("option");
+
+    option.value = state;
+    option.textContent = state;
+
+    stateSelect.appendChild(option);
+
 });
+
+
+/* =========================================================
+   LOAD DISTRICTS
+   ========================================================= */
 
 function loadDistricts(){
 
-const state=stateSelect.value;
-const districtSelect=document.getElementById("district");
+    const selectedState = stateSelect.value;
 
-districtSelect.innerHTML='<option value="">Select District</option>';
+    districtSelect.innerHTML =
+        '<option value="">Select District</option>';
 
-if(!state || !districts[state]) return;
+    districtSelect.disabled = true;
 
-districts[state].forEach(district=>{
-const option=document.createElement("option");
-option.value=district;
-option.textContent=district;
-districtSelect.appendChild(option);
-});
+    if(!selectedState){
+        districtSelect.innerHTML =
+            '<option value="">Select State First</option>';
+        return;
+    }
+
+    const districts = stateDistricts[selectedState] || [];
+
+    districts.forEach(function(district){
+
+        const option = document.createElement("option");
+
+        option.value = district;
+        option.textContent = district;
+
+        districtSelect.appendChild(option);
+
+    });
+
+    districtSelect.disabled = districts.length === 0;
 
 }
 
@@ -1228,186 +1391,303 @@ districtSelect.appendChild(option);
    FORM VARIABLES
    ========================================================= */
 
-let selectedService="";
-let selectedPrice=0;
-let selectedType="";
-let couponApplied=false;
+let currentService = "";
+let currentAmount = 0;
+let currentCategory = "";
+let couponApplied = false;
 
 
 /* =========================================================
    OPEN FORM
    ========================================================= */
 
-function openForm(service,price,type){
+function openForm(service, amount, category){
 
-selectedService=service;
-selectedPrice=price;
-selectedType=type;
-couponApplied=false;
+    currentService = service;
+    currentAmount = amount;
+    currentCategory = category;
+    couponApplied = false;
 
-document.getElementById("formTitle").textContent=service;
-document.getElementById("selectedPlan").textContent=
-"Selected Service: "+service+" | Original Price: ₹"+price;
+    document.getElementById("formPage").style.display = "block";
 
-document.getElementById("formPage").style.display="block";
+    document.getElementById("formTitle").textContent =
+        service + " Registration Form";
 
-document.querySelectorAll(
-"#shopFields,#panAgentFields,#newPanFields,#correctionFields,#panFindFields,#panLinkFields,#voterFields,#rechargeFields"
-).forEach(el=>el.style.display="none");
+    document.getElementById("selectedPlan").textContent =
+        service;
 
-document.getElementById("couponArea").style.display="none";
-document.getElementById("paymentSection").style.display="block";
-document.getElementById("qrBox").style.display="block";
-document.getElementById("screenshotBox").style.display="block";
+    document.getElementById("selectedAmount").textContent =
+        "₹" + amount;
 
-document.getElementById("coupon").value="";
-document.getElementById("couponMessage").textContent="";
+    document.getElementById("serviceType").value =
+        category;
+   /* =========================================================
+       FORM DISPLAY / FIELD CONTROL
+       ========================================================= */
 
-if(type==="pan"){
+    const allConditionalFields = [
+        "panAgentFields",
+        "newPanFields",
+        "panCorrectionFields",
+        "panFindFields",
+        "panLinkFields",
+        "voterFields",
+        "rechargeFields"
+    ];
 
-document.getElementById("shopFields").style.display="block";
-document.getElementById("panAgentFields").style.display="block";
-document.getElementById("couponArea").style.display="block";
+    allConditionalFields.forEach(function(id){
+        document.getElementById(id).style.display = "none";
+    });
 
-document.getElementById("aadhaar").required=true;
-document.getElementById("panNumber").required=true;
+    /* Address fields are required only for PAN Agent ID */
+    document.getElementById("addressFields").style.display = "none";
 
-}
-else if(type==="newpan"){
+    /* Payment */
+    document.getElementById("paymentOld").textContent = "₹" + amount;
+    document.getElementById("finalAmount").textContent = "₹" + amount;
 
-document.getElementById("newPanFields").style.display="block";
-document.getElementById("commonStateDistrict").style.display="none";
-}
-else if(type==="correction"){
+    document.getElementById("paymentDiscount").style.display = "none";
+    document.getElementById("couponArea").style.display = "none";
+    document.getElementById("couponMessage").textContent = "";
+    document.getElementById("couponCode").value = "";
 
-document.getElementById("correctionFields").style.display="block";
-document.getElementById("commonStateDistrict").style.display="none";
-}
-else if(type==="panfind"){
+    /* Show correct fields */
 
-document.getElementById("panFindFields").style.display="block";
-document.getElementById("commonStateDistrict").style.display="none";
-}
-else if(type==="panlink"){
+    if(category === "pan"){
+        document.getElementById("addressFields").style.display = "block";
+        document.getElementById("panAgentFields").style.display = "block";
+        document.getElementById("couponArea").style.display = "block";
 
-document.getElementById("panLinkFields").style.display="block";
-document.getElementById("commonStateDistrict").style.display="none";
-}
-else if(type==="voterlink" || type==="voterpdf"){
+        document.getElementById("state").required = true;
+        document.getElementById("district").required = true;
+        document.getElementById("aadhaar").required = true;
+        document.getElementById("panNumber").required = true;
 
-document.getElementById("voterFields").style.display="block";
-}
-else if(type==="recharge-free"){
+    }else{
 
-document.getElementById("rechargeFields").style.display="block";
-document.getElementById("paymentSection").style.display="none";
-}
-else if(type==="recharge-paid"){
+        document.getElementById("state").required = false;
+        document.getElementById("district").required = false;
+        document.getElementById("aadhaar").required = false;
+        document.getElementById("panNumber").required = false;
 
-document.getElementById("rechargeFields").style.display="block";
-}
+    }
 
-updatePayment();
 
-document.getElementById("formPage").scrollIntoView({
-behavior:"smooth"
-});
+    if(category === "new-pan"){
+
+        document.getElementById("newPanFields").style.display = "block";
+
+        document.getElementById("fatherName").required = true;
+        document.getElementById("photo").required = true;
+        document.getElementById("signature").required = true;
+        document.getElementById("aadhaarFront").required = true;
+        document.getElementById("aadhaarBack").required = true;
+
+    }else{
+
+        document.getElementById("fatherName").required = false;
+        document.getElementById("photo").required = false;
+        document.getElementById("signature").required = false;
+        document.getElementById("aadhaarFront").required = false;
+        document.getElementById("aadhaarBack").required = false;
+
+    }
+
+
+    if(category === "pan-correction"){
+
+        document.getElementById("panCorrectionFields").style.display = "block";
+
+        document.getElementById("correctionFatherName").required = true;
+        document.getElementById("changeDetails").required = true;
+        document.getElementById("correctionProof").required = true;
+        document.getElementById("correctionPhoto").required = true;
+        document.getElementById("correctionSignature").required = true;
+        document.getElementById("correctionAadhaarFront").required = true;
+        document.getElementById("correctionAadhaarBack").required = true;
+        document.getElementById("correctionProofFile").required = true;
+
+    }else{
+
+        document.getElementById("correctionFatherName").required = false;
+        document.getElementById("changeDetails").required = false;
+        document.getElementById("correctionProof").required = false;
+        document.getElementById("correctionPhoto").required = false;
+        document.getElementById("correctionSignature").required = false;
+        document.getElementById("correctionAadhaarFront").required = false;
+        document.getElementById("correctionAadhaarBack").required = false;
+        document.getElementById("correctionProofFile").required = false;
+
+    }
+
+
+    if(category === "pan-find"){
+
+        document.getElementById("panFindFields").style.display = "block";
+        document.getElementById("findAadhaar").required = true;
+
+    }else{
+
+        document.getElementById("findAadhaar").required = false;
+
+    }
+
+
+    if(category === "pan-link"){
+
+        document.getElementById("panLinkFields").style.display = "block";
+
+        document.getElementById("linkPan").required = true;
+        document.getElementById("linkAadhaar").required = true;
+
+    }else{
+
+        document.getElementById("linkPan").required = false;
+        document.getElementById("linkAadhaar").required = false;
+
+    }
+
+
+    if(category === "voter-mobile" || category === "voter-pdf"){
+
+        document.getElementById("voterFields").style.display = "block";
+
+        document.getElementById("epicNumber").required = true;
+        document.getElementById("voterMobile").required = true;
+
+        document.getElementById("addressFields").style.display = "block";
+
+        document.getElementById("state").required = true;
+
+    }else{
+
+        document.getElementById("epicNumber").required = false;
+        document.getElementById("voterMobile").required = false;
+
+    }
+
+
+    if(category === "recharge-free" || category === "recharge-paid"){
+
+        document.getElementById("rechargeFields").style.display = "block";
+
+        document.getElementById("rechargeShopName").required = true;
+
+    }else{
+
+        document.getElementById("rechargeShopName").required = false;
+
+    }
+
+
+    /* FREE SERVICE PAYMENT CONTROL */
+
+    if(amount === 0){
+
+        document.getElementById("paymentSection").style.display = "none";
+
+        document.getElementById("utr").required = false;
+        document.getElementById("paymentScreenshot").required = false;
+
+    }else{
+
+        document.getElementById("paymentSection").style.display = "block";
+
+        document.getElementById("utr").required = true;
+        document.getElementById("paymentScreenshot").required = true;
+
+    }
+
+
+    /* Reset state and district */
+
+    stateSelect.value = "";
+    districtSelect.innerHTML =
+        '<option value="">Select State First</option>';
+    districtSelect.disabled = true;
+
+
+    /* Scroll to form */
+
+    setTimeout(function(){
+
+        document.getElementById("formPage").scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    },100);
 
 }
 
 
 /* =========================================================
-   CLOSE FORM
-   ========================================================= */
-
-function closeForm(){
-
-document.getElementById("formPage").style.display="none";
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-}
-
-
-/* =========================================================
-   COUPON
+   APPLY COUPON
    ========================================================= */
 
 function applyCoupon(){
 
-const coupon=document.getElementById("coupon").value.trim().toUpperCase();
-const message=document.getElementById("couponMessage");
+    const coupon =
+        document.getElementById("couponCode").value
+        .trim()
+        .toUpperCase();
 
-if(selectedType!=="pan"){
+    const message =
+        document.getElementById("couponMessage");
 
-message.textContent="Coupon is available only for PAN Agent ID.";
-message.className="coupon-message error";
-couponApplied=false;
-updatePayment();
-return;
+    if(currentCategory !== "pan"){
 
-}
+        message.textContent =
+            "Coupon is available only for PAN Agent ID.";
 
-if(coupon==="SAVE20OFF"){
+        message.className = "coupon-message error";
 
-couponApplied=true;
-
-message.textContent=
-"✓ Coupon applied successfully. 20% discount added.";
-
-message.className="coupon-message success";
-
-}else{
-
-couponApplied=false;
-
-message.textContent=
-"✕ Invalid coupon code.";
-
-message.className="coupon-message error";
-
-}
-
-updatePayment();
-
-}
+        return;
+    }
 
 
-/* =========================================================
-   PAYMENT
-   ========================================================= */
+    if(coupon === "SAVE20OFF"){
 
-function updatePayment(){
+        couponApplied = true;
 
-const original=document.getElementById("paymentOriginal");
-const discount=document.getElementById("paymentDiscount");
-const final=document.getElementById("finalAmount");
+        const discountedAmount =
+            Math.round(currentAmount * 0.80);
 
-if(selectedType==="recharge-free") return;
+        document.getElementById("finalAmount").textContent =
+            "₹" + discountedAmount;
 
-original.innerHTML=
-"Original Amount: <span class='payment-old'>₹"+
-selectedPrice+"</span>";
+        document.getElementById("selectedAmount").textContent =
+            "₹" + discountedAmount;
 
-let amount=selectedPrice;
+        document.getElementById("paymentDiscount").style.display =
+            "block";
 
-if(selectedType==="pan" && couponApplied){
+        message.textContent =
+            "✓ Coupon applied successfully! 20% discount added.";
 
-amount=Math.round(selectedPrice*0.80);
+        message.className =
+            "coupon-message success";
 
-discount.textContent=
-"✓ SAVE20OFF applied: 20% OFF";
+    }else{
 
-}else{
+        couponApplied = false;
 
-discount.textContent="";
+        document.getElementById("finalAmount").textContent =
+            "₹" + currentAmount;
 
-}
+        document.getElementById("selectedAmount").textContent =
+            "₹" + currentAmount;
 
-final.textContent="₹"+amount;
+        document.getElementById("paymentDiscount").style.display =
+            "none";
+
+        message.textContent =
+            "Invalid coupon code.";
+
+        message.className =
+            "coupon-message error";
+
+    }
 
 }
 
@@ -1416,371 +1696,600 @@ final.textContent="₹"+amount;
    SCREENSHOT PREVIEW
    ========================================================= */
 
-function previewScreenshot(event){
+document.getElementById("paymentScreenshot")
+.addEventListener("change", function(){
 
-const file=event.target.files[0];
-const preview=document.getElementById("screenshotPreview");
+    const file = this.files[0];
+    const preview =
+        document.getElementById("screenshotPreview");
 
-if(!file){
-preview.style.display="none";
-return;
-}
+    if(!file){
 
-if(!file.type.startsWith("image/")){
-preview.style.display="none";
-return;
-}
+        preview.style.display = "none";
+        preview.src = "";
 
-const reader=new FileReader();
+        return;
+    }
 
-reader.onload=function(e){
-preview.src=e.target.result;
-preview.style.display="block";
-};
+    if(!file.type.startsWith("image/")){
 
-reader.readAsDataURL(file);
+        alert("Please upload a payment screenshot image.");
+
+        this.value = "";
+        preview.style.display = "none";
+
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e){
+
+        preview.src = e.target.result;
+        preview.style.display = "block";
+
+    };
+
+    reader.readAsDataURL(file);
+
+});
+
+
+/* =========================================================
+   CLOSE FORM
+   ========================================================= */
+
+function closeForm(){
+
+    document.getElementById("formPage").style.display = "none";
+
+    document.getElementById("serviceForm").reset();
+
+    document.getElementById("paymentSection").style.display = "block";
+
+    document.getElementById("screenshotPreview").style.display =
+        "none";
+
+    document.getElementById("screenshotPreview").src = "";
+
+    window.location.hash = "";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
 
 
 /* =========================================================
-   SUBMIT
+   FILE NAME HELPER
+   ========================================================= */
+
+function getFileName(id){
+
+    const input = document.getElementById(id);
+
+    if(input && input.files && input.files.length > 0){
+
+        return input.files[0].name;
+
+    }
+
+    return "Not uploaded";
+
+}
+
+
+/* =========================================================
+   SUBMIT FORM TO WHATSAPP
    ========================================================= */
 
 function submitForm(event){
 
-event.preventDefault();
+    event.preventDefault();
 
-if(selectedType!=="recharge-free"){
 
-if(selectedType==="pan" && !couponApplied){
+    const name =
+        document.getElementById("fullName").value.trim();
 
-/*
-Coupon is optional.
-Customer can pay original price if coupon is not used.
-*/
+    const mobile =
+        document.getElementById("mobile").value.trim();
 
-}
+    const email =
+        document.getElementById("email").value.trim();
 
-const screenshot=
-document.getElementById("paymentScreenshot").files[0];
+    const state =
+        document.getElementById("state").value;
 
-const utr=
-document.getElementById("utr").value.trim();
+    const district =
+        document.getElementById("district").value;
 
-if(!utr){
+    const shopName =
+        document.getElementById("shopName").value.trim();
 
-alert("Please enter UTR / Transaction ID.");
-document.getElementById("utr").focus();
-return;
+    const shopAddress =
+        document.getElementById("shopAddress").value.trim();
 
-}
+    const pincode =
+        document.getElementById("pincode").value.trim();
 
-if(!screenshot){
+    let finalAmount = currentAmount;
 
-alert("Please upload your payment screenshot.");
-document.getElementById("paymentScreenshot").focus();
-return;
+    if(couponApplied && currentCategory === "pan"){
 
-}
+        finalAmount =
+            Math.round(currentAmount * 0.80);
 
-}
+    }
 
 
-/* ================= COLLECT BASIC DETAILS ================= */
+    let message =
+        "RJN DIGITAL PAN CENTER - NEW APPLICATION\n\n";
 
-const name=document.getElementById("name").value.trim();
-const mobile=document.getElementById("mobile").value.trim();
-const email=document.getElementById("email").value.trim();
+    message +=
+        "Service: " + currentService + "\n";
 
-let message=
-"RJN DIGITAL PAN CENTER - NEW REGISTRATION\n\n"+
-"Service: "+selectedService+"\n"+
-"Name: "+name+"\n"+
-"Mobile: "+mobile+"\n";
+    message +=
+        "Amount: ₹" + finalAmount + "\n\n";
 
-if(email) message+="Email: "+email+"\n";
+    message +=
+        "CUSTOMER DETAILS\n";
 
+    message +=
+        "Name: " + name + "\n";
 
-/* ================= STATE DISTRICT ================= */
+    message +=
+        "Mobile: " + mobile + "\n";
 
-if(
-selectedType==="pan" ||
-selectedType==="voterlink" ||
-selectedType==="voterpdf"
-){
+    if(email){
 
-const state=document.getElementById("state").value;
-const district=document.getElementById("district").value;
+        message +=
+            "Email: " + email + "\n";
 
-if(!state || !district){
+    }
 
-alert("Please select State and District.");
-return;
 
-}
+    /* PAN AGENT */
 
-message+=
-"State: "+state+"\n"+
-"District: "+district+"\n";
+    if(currentCategory === "pan"){
 
-}
+        message +=
+            "\nPAN AGENT ID DETAILS\n";
 
+        message +=
+            "Shop Name: " + shopName + "\n";
 
-/* ================= PAN AGENT ================= */
+        message +=
+            "Shop Address: " + shopAddress + "\n";
 
-if(selectedType==="pan"){
+        message +=
+            "State: " + state + "\n";
 
-const shopName=document.getElementById("shopName").value;
-const shopAddress=document.getElementById("shopAddress").value;
-const pin=document.getElementById("pin").value;
-const aadhaar=document.getElementById("aadhaar").value;
-const pan=document.getElementById("panNumber").value.toUpperCase();
+        message +=
+            "District: " + district + "\n";
 
-if(aadhaar.length!==12){
-alert("Please enter valid 12 digit Aadhaar Number.");
-return;
-}
+        message +=
+            "Pin Code: " + pincode + "\n";
 
-if(!pan){
-alert("Please enter PAN Number.");
-return;
-}
+        message +=
+            "Aadhaar Number: " +
+            document.getElementById("aadhaar").value.trim() +
+            "\n";
 
-message+=
-"Shop Name: "+shopName+"\n"+
-"Shop Address: "+shopAddress+"\n"+
-"Pin Code: "+pin+"\n"+
-"Aadhaar Number: "+aadhaar+"\n"+
-"PAN Number: "+pan+"\n";
+        message +=
+            "PAN Number: " +
+            document.getElementById("panNumber").value.trim().toUpperCase() +
+            "\n";
 
-}
+    }
 
 
-/* ================= NEW PAN ================= */
+    /* NEW PAN */
 
-if(selectedType==="newpan"){
+    if(currentCategory === "new-pan"){
 
-const father=document.getElementById("fatherName").value;
-const photo=document.getElementById("photo").files[0];
-const signature=document.getElementById("signature").files[0];
-const front=document.getElementById("aadhaarFront").files[0];
-const back=document.getElementById("aadhaarBack").files[0];
+        message +=
+            "\nNEW PAN CARD DETAILS\n";
 
-if(!father || !photo || !signature || !front || !back){
+        message +=
+            "Father Name: " +
+            document.getElementById("fatherName").value.trim() +
+            "\n";
 
-alert("Please upload all required New PAN documents.");
-return;
+        message +=
+            "Passport Photo: " +
+            getFileName("photo") +
+            "\n";
 
-}
+        message +=
+            "Signature: " +
+            getFileName("signature") +
+            "\n";
 
-message+=
-"Father's Name: "+father+"\n"+
-"Documents: Photo, Signature, Aadhaar Front, Aadhaar Back\n";
+        message +=
+            "Aadhaar Front: " +
+            getFileName("aadhaarFront") +
+            "\n";
 
-}
+        message +=
+            "Aadhaar Back: " +
+            getFileName("aadhaarBack") +
+            "\n";
 
+    }
 
-/* ================= CORRECTION ================= */
 
-if(selectedType==="correction"){
+    /* PAN CORRECTION */
 
-const father=document.getElementById("correctionFather").value;
-const change=document.getElementById("changeDetails").value;
-const proof=document.getElementById("changeProof").value;
-const photo=document.getElementById("correctionPhoto").files[0];
-const signature=document.getElementById("correctionSignature").files[0];
-const front=document.getElementById("correctionAadhaarFront").files[0];
-const back=document.getElementById("correctionAadhaarBack").files[0];
-const proofFile=document.getElementById("proofDocument").files[0];
+    if(currentCategory === "pan-correction"){
 
-if(
-!father ||
-!change ||
-!proof ||
-!photo ||
-!signature ||
-!front ||
-!back ||
-!proofFile
-){
+        message +=
+            "\nPAN CORRECTION DETAILS\n";
 
-alert("Please complete all PAN correction details and upload required documents.");
-return;
+        message +=
+            "Father Name: " +
+            document.getElementById("correctionFatherName").value.trim() +
+            "\n";
 
-}
+        message +=
+            "Change Required: " +
+            document.getElementById("changeDetails").value.trim() +
+            "\n";
 
-message+=
-"Father's Name: "+father+"\n"+
-"Change Required: "+change+"\n"+
-"Change Proof: "+proof+"\n";
+        message +=
+            "Document Proof: " +
+            document.getElementById("correctionProof").value +
+            "\n";
 
-}
+        message +=
+            "Passport Photo: " +
+            getFileName("correctionPhoto") +
+            "\n";
 
+        message +=
+            "Signature: " +
+            getFileName("correctionSignature") +
+            "\n";
 
-/* ================= PAN FIND ================= */
+        message +=
+            "Aadhaar Front: " +
+            getFileName("correctionAadhaarFront") +
+            "\n";
 
-if(selectedType==="panfind"){
+        message +=
+            "Aadhaar Back: " +
+            getFileName("correctionAadhaarBack") +
+            "\n";
 
-const aadhaar=document.getElementById("findAadhaar").value;
+        message +=
+            "Proof File: " +
+            getFileName("correctionProofFile") +
+            "\n";
 
-if(aadhaar.length!==12){
+    }
 
-alert("Please enter valid 12 digit Aadhaar Number.");
-return;
 
-}
+    /* PAN FIND */
 
-message+="Aadhaar Number: "+aadhaar+"\n";
+    if(currentCategory === "pan-find"){
 
-}
+        message +=
+            "\nPAN FIND BY AADHAAR\n";
 
+        message +=
+            "Aadhaar Number: " +
+            document.getElementById("findAadhaar").value.trim() +
+            "\n";
 
-/* ================= PAN LINK ================= */
+    }
 
-if(selectedType==="panlink"){
 
-const pan=document.getElementById("linkPan").value.toUpperCase();
-const aadhaar=document.getElementById("linkAadhaar").value;
+    /* PAN LINK */
 
-if(!pan || aadhaar.length!==12){
+    if(currentCategory === "pan-link"){
 
-alert("Please enter valid PAN and 12 digit Aadhaar Number.");
-return;
+        message +=
+            "\nPAN-AADHAAR LINK DETAILS\n";
 
-}
+        message +=
+            "PAN Number: " +
+            document.getElementById("linkPan").value.trim().toUpperCase() +
+            "\n";
 
-message+=
-"PAN Number: "+pan+"\n"+
-"Aadhaar Number: "+aadhaar+"\n";
+        message +=
+            "Aadhaar Number: " +
+            document.getElementById("linkAadhaar").value.trim() +
+            "\n";
 
-}
+    }
 
 
-/* ================= VOTER ================= */
+    /* VOTER */
 
-if(selectedType==="voterlink" || selectedType==="voterpdf"){
+    if(
+        currentCategory === "voter-mobile" ||
+        currentCategory === "voter-pdf"
+    ){
 
-const epic=document.getElementById("epic").value;
-const voterMobile=document.getElementById("voterMobile").value;
+        message +=
+            "\nVOTER ID DETAILS\n";
 
-if(!epic || voterMobile.length!==10){
+        message +=
+            "State: " + state + "\n";
 
-alert("Please enter valid EPIC Number and 10 digit mobile number.");
-return;
+        message +=
+            "EPIC Number: " +
+            document.getElementById("epicNumber").value.trim().toUpperCase() +
+            "\n";
 
-}
+        message +=
+            "Voter Mobile: " +
+            document.getElementById("voterMobile").value.trim() +
+            "\n";
 
-message+=
-"EPIC Number: "+epic+"\n"+
-"Voter Mobile Number: "+voterMobile+"\n";
+    }
 
-}
 
+    /* RECHARGE */
 
-/* ================= RECHARGE ================= */
+    if(
+        currentCategory === "recharge-free" ||
+        currentCategory === "recharge-paid"
+    ){
 
-if(selectedType==="recharge-free" || selectedType==="recharge-paid"){
+        message +=
+            "\nRECHARGE ID DETAILS\n";
 
-const shop=document.getElementById("rechargeShop").value;
+        message +=
+            "Business / Shop Name: " +
+            document.getElementById("rechargeShopName").value.trim() +
+            "\n";
 
-message+="Shop Name: "+shop+"\n";
+    }
 
-}
 
+    /* PAYMENT */
 
-/* ================= PAYMENT ================= */
+    if(currentAmount > 0){
 
-if(selectedType!=="recharge-free"){
+        message +=
+            "\nPAYMENT DETAILS\n";
 
-let amount=selectedPrice;
+        message +=
+            "UTR / Transaction ID: " +
+            document.getElementById("utr").value.trim() +
+            "\n";
 
-if(selectedType==="pan" && couponApplied){
-amount=Math.round(selectedPrice*0.80);
-}
+        message +=
+            "Payment Screenshot: " +
+            getFileName("paymentScreenshot") +
+            "\n";
 
-message+=
-"\nPayment Amount: ₹"+amount+"\n"+
-"UTR / Transaction ID: "+
-document.getElementById("utr").value.trim()+"\n"+
-"Payment Screenshot: Uploaded\n";
+        message +=
+            "Payment Status: Screenshot & UTR submitted\n";
 
-}else{
+    }else{
 
-message+=
-"\nPayment: FREE\n"+
-"No payment screenshot required.\n";
+        message +=
+            "\nPayment: FREE\n";
 
-}
+    }
 
 
-/* ================= WHATSAPP ================= */
+    message +=
+        "\nPlease verify the application and payment.";
 
-message+=
-"\nPlease verify the registration and payment details.";
+    /*
+       WhatsApp cannot automatically attach local files
+       through a normal wa.me URL. The file names are
+       included in the message so the customer can attach
+       the actual files manually in WhatsApp.
+    */
 
+    const whatsappNumber = "919365414365";
 
-/*
-WhatsApp opens with all text details.
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
 
-IMPORTANT:
-A normal website cannot force WhatsApp Web/app to automatically
-attach a local file selected by the customer because browsers
-protect local files.
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
 
-The screenshot is therefore uploaded/selected on the website,
-while the WhatsApp message tells you that the screenshot was uploaded.
-
-For actual automatic file storage, connect this form to a backend,
-Google Apps Script, Formspree, Firebase, Cloudinary, etc.
-*/
-
-const whatsappURL=
-"https://wa.me/"+WHATSAPP_NUMBER+
-"?text="+encodeURIComponent(message);
-
-window.open(whatsappURL,"_blank");
+    return false;
 
 }
 
 
 /* =========================================================
-   LIVE DATE + TIME
+   LIVE INDIA DATE & TIME
    ========================================================= */
 
 function updateDateTime(){
 
-const now=new Date();
+    const now = new Date();
 
-const dateText=now.toLocaleDateString(
-"en-IN",
-{
-weekday:"long",
-day:"2-digit",
-month:"long",
-year:"numeric",
-timeZone:"Asia/Kolkata"
-}
-);
+    const dateText =
+        new Intl.DateTimeFormat("en-IN",{
+            timeZone:"Asia/Kolkata",
+            weekday:"long",
+            day:"2-digit",
+            month:"long",
+            year:"numeric"
+        }).format(now);
 
-const timeText=now.toLocaleTimeString(
-"en-IN",
-{
-hour:"2-digit",
-minute:"2-digit",
-second:"2-digit",
-hour12:true,
-timeZone:"Asia/Kolkata"
-}
-);
+    const timeText =
+        new Intl.DateTimeFormat("en-IN",{
+            timeZone:"Asia/Kolkata",
+            hour:"2-digit",
+            minute:"2-digit",
+            second:"2-digit",
+            hour12:true
+        }).format(now);
 
-document.getElementById("currentDate").textContent=dateText;
-document.getElementById("currentTime").textContent=timeText;
+    document.getElementById("currentDate").textContent =
+        dateText;
+
+    document.getElementById("currentTime").textContent =
+        timeText;
 
 }
 
 updateDateTime();
-setInterval(updateDateTime,1000);
+
+setInterval(
+    updateDateTime,
+    1000
+);
+
+
+/* =========================================================
+   INPUT VALIDATION / FORMATTING
+   ========================================================= */
+
+document.getElementById("mobile")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.replace(/\D/g,"").slice(0,10);
+
+});
+
+
+document.getElementById("voterMobile")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.replace(/\D/g,"").slice(0,10);
+
+});
+
+
+document.getElementById("aadhaar")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.replace(/\D/g,"").slice(0,12);
+
+});
+
+
+document.getElementById("findAadhaar")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.replace(/\D/g,"").slice(0,12);
+
+});
+
+
+document.getElementById("linkAadhaar")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.replace(/\D/g,"").slice(0,12);
+
+});
+
+
+document.getElementById("pincode")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.replace(/\D/g,"").slice(0,6);
+
+});
+
+
+document.getElementById("panNumber")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,10);
+
+});
+
+
+document.getElementById("linkPan")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,10);
+
+});
+
+
+document.getElementById("epicNumber")
+.addEventListener("input",function(){
+
+    this.value =
+        this.value.toUpperCase().replace(/[^A-Z0-9]/g,"");
+
+});
+
+
+/* =========================================================
+   INITIAL DISTRICT STATE
+   ========================================================= */
+
+districtSelect.innerHTML =
+    '<option value="">Select State First</option>';
+
+districtSelect.disabled = true;
+
+
+/* =========================================================
+   QR CODE CHECK
+   ========================================================= */
+
+window.addEventListener("load",function(){
+
+    const qr =
+        document.querySelector(".payment-qr");
+
+    if(qr){
+
+        qr.addEventListener("load",function(){
+
+            document.getElementById("qrError").style.display =
+                "none";
+
+            qr.style.display =
+                "block";
+
+        });
+
+    }
+
+});
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        const target =
+            document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+
+        }
+
+    });
+
+});
 
 </script>
 
