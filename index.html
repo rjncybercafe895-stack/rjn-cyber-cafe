@@ -686,12 +686,6 @@ Amount:
 <label>Mobile Number *</label>
 <input type="tel" id="mobile" maxlength="10" pattern="[0-9]{10}" required>
 
-<label>Email ID</label>
-<input type="email" id="email">
-
-<!-- ADDRESS -->
-<div id="addressFields">
-
 <label>State *</label>
 <select id="state" onchange="loadDistricts()" required>
 <option value="">Select State</option>
@@ -701,17 +695,6 @@ Amount:
 <select id="district" required disabled>
 <option value="">Select State First</option>
 </select>
-
-<label>Shop Name</label>
-<input type="text" id="shopName">
-
-<label>Shop Address</label>
-<textarea id="shopAddress"></textarea>
-
-<label>Pin Code</label>
-<input type="text" id="pincode" maxlength="6">
-
-</div>
 
 <!-- AADHAAR / PAN -->
 <div id="panAgentFields">
@@ -913,7 +896,7 @@ Apply Coupon
 Scan the QR code using any supported UPI app.
 </div>
 
-<img src="qr.png"
+<img src="qr-code.png"
      class="payment-qr"
      alt="RJN Digital Pan Center Payment QR Code"
      onerror="this.style.display='none';document.getElementById('qrError').style.display='block';">
